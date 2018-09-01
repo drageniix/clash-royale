@@ -22,7 +22,8 @@ class MemberTable extends React.Component {
                         </tr>
                     </thead>
                     {this.props.members.map((member, index) => (
-                        <tr onClick={this.search.bind(this, member)} key={index} className={(member.eligibleForPromotion ? "promotion " : member.dangerOfDemotion ? "demotion " : "") + "clanMembers__row"}>
+                        <tr onClick={this.search.bind(this, member)} key={index} 
+                            className={(member.eligibleForPromotion ? "promotion " : member.onProbation ? "probation " : member.dangerOfDemotion ? "demotion " : "") + "clanMembers__row"}>
                             <td> #{member.rank}</td>
                             <td> {member.name}</td>
                             <td> {member.donations} ({((member.donations / member.donationsReceived) * 100).toFixed(1)}%)</td>

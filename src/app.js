@@ -24,7 +24,7 @@ class App extends React.Component {
         } else {
             const searchResult = data.clan.members.find(member => member.name.toLowerCase().includes(query.toLowerCase().trim()))
             if (searchResult){
-                const searchClass = searchResult.eligibleForPromotion ? "promote" : searchResult.dangerOfDemotion ? "demote" : "normal"
+                const searchClass = searchResult.eligibleForPromotion ? "promote" : searchResult.onProbation ? "probate" : searchResult.dangerOfDemotion ? "demote" : "normal"
                 this.setState({searchResult, searchClass})
             }
         }

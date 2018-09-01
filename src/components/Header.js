@@ -6,7 +6,7 @@ class Header extends React.Component {
             <header className="header">
                 <div class="header__content">
                     <img src="./favicon.png" /><h1>{this.props.clan.name}</h1>
-                    <p>2+ Years Strong! Please do not miss any war day battles. There are currenly no coleader positions open.</p>
+                    <p>2+ Years Strong! Please do not miss any war day battles. There are currenly no Coleader positions open.</p>
                 </div>
             </header>
         )

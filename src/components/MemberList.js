@@ -7,6 +7,7 @@ const MemberList = ({members, setSearchResult}) => (
         <TabList>
             <Tab>All Members</Tab>
             <Tab>Promotions</Tab>
+            <Tab>Probation</Tab>
             <Tab>Demotions</Tab>
         </TabList>
 
@@ -15,6 +16,9 @@ const MemberList = ({members, setSearchResult}) => (
         </TabPanel>
         <TabPanel>
             <MemberTable members={members.filter(item => item.eligibleForPromotion)} setSearchResult={setSearchResult}/>
+        </TabPanel>
+        <TabPanel>
+            <MemberTable members={members.filter(item => item.onProbation)} setSearchResult={setSearchResult} />
         </TabPanel>
         <TabPanel>
             <MemberTable members={members.filter(item => item.dangerOfDemotion)} setSearchResult={setSearchResult}/>

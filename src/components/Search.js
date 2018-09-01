@@ -9,7 +9,7 @@ class Search extends React.Component {
     render() {
         return (
             <div className="form form__group">
-                <input id="search" type="text" placeholder="Member Search" className={"form__input"} id={this.props.searchClass} onChange={this.submit} />
+                <input id="search" type="text" placeholder="Member Search" className="form__input" id={this.props.searchClass} onChange={this.submit} />
                 <label htmlFor="search" className="form__label">Member Search</label>
             </div>
         )

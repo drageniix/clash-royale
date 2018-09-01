@@ -53,6 +53,8 @@ for member in clanData["members"]:
         member["eligibleForPromotion"] = True
     elif member["donations"] < clanData["minDonations"] or member["warBattles"] < clanData["minWarBattles"] or member["missedWarBattles"] > clanData["maxMissedWarBattles"]:
         member["dangerOfDemotion"] = True
+        if member["donations"] >= clanData["elderDonations"]:
+            member["onProbation"] = True
     
 with open('./gulp/templates/data/_clan.json', 'w') as outfile:
     json.dump(clanData, outfile, indent=4)
