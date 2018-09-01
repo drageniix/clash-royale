@@ -80,7 +80,6 @@
             "cardsEarned": 1400,
             "warBattles": 1,
             "missedWarBattles": 0,
-            "dangerOfDemotion": true,
             "onProbation": true
         },
         {
@@ -168,7 +167,6 @@
             "cardsEarned": 1960,
             "warBattles": 1,
             "missedWarBattles": 1,
-            "dangerOfDemotion": true,
             "onProbation": true
         },
         {
@@ -281,22 +279,10 @@
             "missedWarBattles": 1
         },
         {
-            "tag": "#U9UL9U9U",
-            "name": "Mephobos",
-            "trophies": 4219,
-            "rank": 23,
-            "role": "coLeader",
-            "donations": 1484,
-            "donationsReceived": 680,
-            "cardsEarned": 11480,
-            "warBattles": 10,
-            "missedWarBattles": 0
-        },
-        {
             "tag": "#2YGQQ0V2C",
             "name": "Judah",
             "trophies": 4216,
-            "rank": 24,
+            "rank": 23,
             "role": "elder",
             "donations": 812,
             "donationsReceived": 630,
@@ -308,7 +294,7 @@
             "tag": "#8LV909VR",
             "name": "David_McG_IVB**",
             "trophies": 4211,
-            "rank": 25,
+            "rank": 24,
             "role": "member",
             "donations": 555,
             "donationsReceived": 520,
@@ -321,7 +307,7 @@
             "tag": "#8828PPJP",
             "name": "Reaper",
             "trophies": 4204,
-            "rank": 26,
+            "rank": 25,
             "role": "elder",
             "donations": 130,
             "donationsReceived": 240,
@@ -333,7 +319,7 @@
             "tag": "#8QCRQ8RR",
             "name": "WEL3A",
             "trophies": 4202,
-            "rank": 27,
+            "rank": 26,
             "role": "member",
             "donations": 293,
             "donationsReceived": 360,
@@ -345,12 +331,24 @@
             "tag": "#PULVR2",
             "name": "awesome",
             "trophies": 4192,
-            "rank": 28,
+            "rank": 27,
             "role": "member",
             "donations": 110,
             "donationsReceived": 520,
             "cardsEarned": 5562,
             "warBattles": 5,
+            "missedWarBattles": 0
+        },
+        {
+            "tag": "#U9UL9U9U",
+            "name": "Mephobos",
+            "trophies": 4192,
+            "rank": 28,
+            "role": "coLeader",
+            "donations": 1484,
+            "donationsReceived": 680,
+            "cardsEarned": 11480,
+            "warBattles": 10,
             "missedWarBattles": 0
         },
         {
@@ -483,7 +481,7 @@
             "rank": 39,
             "role": "elder",
             "donations": 1414,
-            "donationsReceived": 680,
+            "donationsReceived": 690,
             "cardsEarned": 2240,
             "warBattles": 2,
             "missedWarBattles": 0
@@ -520,7 +518,7 @@
             "trophies": 4010,
             "rank": 42,
             "role": "member",
-            "donations": 535,
+            "donations": 545,
             "donationsReceived": 480,
             "cardsEarned": 11279,
             "warBattles": 11,
@@ -612,7 +610,6 @@
             "cardsEarned": 1312,
             "warBattles": 1,
             "missedWarBattles": 0,
-            "dangerOfDemotion": true,
             "onProbation": true
         },
         {
