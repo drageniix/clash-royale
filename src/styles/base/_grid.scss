@@ -1,0 +1,20 @@
+.flex-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; //main
+    align-items: stretch;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+.whole {
+    flex-basis: 100%;   
+    margin-bottom: 3rem;
+}
+.half {
+    flex-basis: 48%;
+
+    @include respond(phone) {
+        flex-basis: 100%;
+    }
+}

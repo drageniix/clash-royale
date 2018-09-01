@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import '../../node_modules/react-tabs/style/react-tabs.scss';
 
 @import './abstract/variables';
 @import './abstract/mixins';
 @import './base/base';
+@import './base/grid';
 @import './base/typography';
 @import './components/clanMembers';
+@import './components/description';
+@import './components/header';
+@import './components/search';
+@import './components/searchResult';

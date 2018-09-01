@@ -1,0 +1,60 @@
+
+#normal, {
+    border-bottom: 4px solid $color-normal;
+}   
+
+#promote {
+    border-bottom: 4px solid $color-promote;
+}
+
+#demote {
+    border-bottom: 4px solid $color-demote;
+}
+
+.form {
+    margin: 1rem 0;
+
+    &__input { //doesn't inherit font properties
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: $color-grey-dark-2;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, .9);
+        border: none;
+        width: 100%;
+        display: block;
+        transition: all .2s;
+        border: 2px solid $color-grey-light-2;
+        
+        @include respond(tabPort) {
+            width: 100%;
+        }
+        
+        
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        }
+        
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    
+    &__input:placeholder-shown + &__label { //adjacent sibling
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}

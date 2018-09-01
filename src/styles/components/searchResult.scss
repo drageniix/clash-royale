@@ -1,0 +1,27 @@
+.searchResult {
+    background-color: rgba($color-grey-light-2, .6);
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+        
+    &__table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        td {
+            padding: 0.5rem;
+            white-space: nowrap;
+
+            @include respond(phone) {
+                padding: 0;
+            }
+        }
+        td:nth-child(even) {
+            padding-left: 1rem;
+        }
+        td:nth-child(odd) {
+            text-align: right;
+            padding-right: 1rem;
+            border-right: 1px solid $color-grey-dark-1;
+        }
+    }
+}

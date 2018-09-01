@@ -1,50 +1,51 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
+import ClanDescription from "./components/ClanDescription";
+import Header from "./components/Header";
+import SearchResult from "./components/SearchResult";
+
 import data from './generated/data/data.json'
 import './styles/index.scss'
+import Search from "./components/Search";
+import MemberList from "./components/MemberList";
 
 importAll(require.context('./generated', true))
 function importAll(r){
     r.keys().map(r)
 }
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
 
 class App extends React.Component {
-    state = {members: data.clan.members}
+    state = { searchResult : undefined, searchClass : ""}
 
+    setSearchResult = query => {
+        if (!query){
+            this.setState({ searchResult : undefined, searchClass : "" })
+        } else {
+            const searchResult = data.clan.members.find(member => member.name.toLowerCase().includes(query.toLowerCase()))
+            if (searchResult){
+                const searchClass = searchResult.eligibleForPromotion ? "promote" : searchResult.dangerOfDemotion ? "demote" : "normal"
+                this.setState({searchResult, searchClass})
+            }
+        }
+    }
+    
     render(){ 
         return (
             <div>
-                <table className="clanMembers">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Name</th>
-                            <th>Trophies</th>
-                            <th>Role</th>
-                            <th>Donations</th>
-                            <th>Wars /10</th>
-                            <th>Missed</th>
-                        </tr>
-                    </thead>
-                    {this.state.members.map((member, index) => (
-                        <tr key={index} className={
-                            member.eligibleForPromotion ? "clanMembers__promotion" :
-                            member.dangerOfDemotion ? "clanMembers__demotion" :
-                            "clanMembers__row" }>
-                            <td> #{index + 1}</td>
-                            <td> {member.name}</td>
-                            <td> {member.trophies}</td>
-                            <td> {capitalizeFirstLetter(member.role)}</td>
-                            <td> {member.donations} ({((member.donations / member.donationsReceived) * 100).toFixed(1)}%)</td>
-                            <td> {member.warBattles}</td>
-                            <td> {member.missedWarBattles}</td>
-                        </tr>
-                    ))}
-                </table>
+                <Header clan={data.clan} />
+                <main className="main">
+                    <section className="flex-content">
+                        <ClanDescription clan={data.clan} />
+                        <section className="half">
+                            <Search setSearchResult={this.setSearchResult} searchClass={this.state.searchClass} />
+                            {this.state.searchResult ? <SearchResult member={this.state.searchResult} /> : undefined}
+                        </section>
+                        <section className="whole">
+                            <MemberList members={data.clan.members} />
+                        </section>
+                    </section>
+                </main>
             </div>
         )
     }

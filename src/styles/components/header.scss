@@ -1,0 +1,17 @@
+.header{
+    padding-bottom: 3rem;
+    text-align: center;
+    background-color: $color-grey-dark-3;
+    color: white;
+
+    &__content {
+        text-align: start;
+        margin: 0 auto;
+        padding: 0 3rem;
+        display: inline-block;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+}

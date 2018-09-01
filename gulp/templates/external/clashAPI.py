@@ -14,7 +14,8 @@ clanData = {
     "minTrophies": clan["requiredTrophies"],
     "minDonations": 100,
     "elderDonations": 400,
-    "minWarBattles": 0,
+    "minWarBattles": 2,
+    "elderWarBattles": 6,
     "maxMissedWarBattles": 1,
     "members": []
 }
@@ -24,6 +25,7 @@ for member in clan["memberList"]:
     filteredMember["tag"] = member["tag"]
     filteredMember["name"] = member["name"]
     filteredMember["trophies"] = member["trophies"]
+    filteredMember["rank"] = member["clanRank"]
     filteredMember["role"] = member["role"]
     filteredMember["donations"] = member["donations"]
     filteredMember["donationsReceived"] = member["donationsReceived"]
@@ -47,7 +49,7 @@ for war in wars["items"]:
 # demotion: minDonations, missed war battles, war battle amount
 
 for member in clanData["members"]:
-    if member["role"] == "member" and member["trophies"] >= clanData["minTrophies"] and member["donations"] >= clanData["elderDonations"] and member["missedWarBattles"] == 0 and member["warBattles"] >= clanData["minWarBattles"]:
+    if member["role"] == "member" and member["trophies"] >= clanData["minTrophies"] and member["donations"] >= clanData["elderDonations"] and member["missedWarBattles"] == 0 and member["warBattles"] >= clanData["elderWarBattles"]:
         member["eligibleForPromotion"] = True
     elif member["donations"] < clanData["minDonations"] or member["warBattles"] < clanData["minWarBattles"] or member["missedWarBattles"] > clanData["maxMissedWarBattles"]:
         member["dangerOfDemotion"] = True

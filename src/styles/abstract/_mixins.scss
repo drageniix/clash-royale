@@ -21,7 +21,7 @@
     } @else if $breakpoint == phone {
         @media only screen and (max-width: 44.75em) { @content }
     } @else if $breakpoint == tabPort { 
-        @media only screen and (max-width: 60em) { @content }
+        @media only screen and (max-width: 55em) { @content }
     } @else if $breakpoint == tabLand {
         @media only screen and (max-width: 81.25em) { @content }
     } @else if $breakpoint == desk {
