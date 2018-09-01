@@ -16,7 +16,7 @@
             "role": "elder",
             "donations": 1182,
             "donationsReceived": 680,
-            "cardsEarned": 10774,
+            "cardsEarned": 10861,
             "warBattles": 9,
             "missedWarBattles": 0
         },
@@ -28,7 +28,7 @@
             "role": "member",
             "donations": 710,
             "donationsReceived": 440,
-            "cardsEarned": 9800,
+            "cardsEarned": 9520,
             "warBattles": 10,
             "missedWarBattles": 0,
             "eligibleForPromotion": true
@@ -53,8 +53,8 @@
             "role": "member",
             "donations": 380,
             "donationsReceived": 560,
-            "cardsEarned": 3920,
-            "warBattles": 4,
+            "cardsEarned": 5320,
+            "warBattles": 5,
             "missedWarBattles": 0
         },
         {
@@ -77,10 +77,9 @@
             "role": "member",
             "donations": 466,
             "donationsReceived": 320,
-            "cardsEarned": 1400,
-            "warBattles": 1,
-            "missedWarBattles": 0,
-            "onProbation": true
+            "cardsEarned": 2240,
+            "warBattles": 2,
+            "missedWarBattles": 0
         },
         {
             "tag": "#2P2PCRCV",
@@ -102,8 +101,8 @@
             "rank": 8,
             "role": "elder",
             "donations": 154,
-            "donationsReceived": 400,
-            "cardsEarned": 11760,
+            "donationsReceived": 440,
+            "cardsEarned": 12320,
             "warBattles": 12,
             "missedWarBattles": 0
         },
@@ -139,8 +138,8 @@
             "role": "elder",
             "donations": 1175,
             "donationsReceived": 600,
-            "cardsEarned": 3080,
-            "warBattles": 2,
+            "cardsEarned": 4200,
+            "warBattles": 3,
             "missedWarBattles": 0
         },
         {
@@ -151,8 +150,8 @@
             "role": "elder",
             "donations": 124,
             "donationsReceived": 200,
-            "cardsEarned": 8120,
-            "warBattles": 6,
+            "cardsEarned": 6720,
+            "warBattles": 5,
             "missedWarBattles": 2,
             "dangerOfDemotion": true
         },
@@ -164,10 +163,9 @@
             "role": "member",
             "donations": 528,
             "donationsReceived": 430,
-            "cardsEarned": 1960,
-            "warBattles": 1,
-            "missedWarBattles": 1,
-            "onProbation": true
+            "cardsEarned": 3640,
+            "warBattles": 2,
+            "missedWarBattles": 1
         },
         {
             "tag": "#20YUG0CQU",
@@ -202,8 +200,8 @@
             "role": "member",
             "donations": 194,
             "donationsReceived": 360,
-            "cardsEarned": 3080,
-            "warBattles": 4,
+            "cardsEarned": 2520,
+            "warBattles": 3,
             "missedWarBattles": 0
         },
         {
@@ -214,7 +212,7 @@
             "role": "elder",
             "donations": 520,
             "donationsReceived": 400,
-            "cardsEarned": 10080,
+            "cardsEarned": 9800,
             "warBattles": 8,
             "missedWarBattles": 1
         },
@@ -226,7 +224,7 @@
             "role": "elder",
             "donations": 682,
             "donationsReceived": 520,
-            "cardsEarned": 7560,
+            "cardsEarned": 8120,
             "warBattles": 6,
             "missedWarBattles": 0
         },
@@ -238,7 +236,7 @@
             "role": "member",
             "donations": 360,
             "donationsReceived": 350,
-            "cardsEarned": 11480,
+            "cardsEarned": 11760,
             "warBattles": 8,
             "missedWarBattles": 1
         },
@@ -248,10 +246,10 @@
             "trophies": 4304,
             "rank": 20,
             "role": "coLeader",
-            "donations": 278,
+            "donations": 286,
             "donationsReceived": 550,
-            "cardsEarned": 9240,
-            "warBattles": 9,
+            "cardsEarned": 10360,
+            "warBattles": 10,
             "missedWarBattles": 0
         },
         {
@@ -262,9 +260,10 @@
             "role": "member",
             "donations": 216,
             "donationsReceived": 400,
-            "cardsEarned": 8680,
-            "warBattles": 6,
-            "missedWarBattles": 1
+            "cardsEarned": 9240,
+            "warBattles": 5,
+            "missedWarBattles": 2,
+            "dangerOfDemotion": true
         },
         {
             "tag": "#9VUJVGVU",
@@ -274,8 +273,8 @@
             "role": "member",
             "donations": 832,
             "donationsReceived": 400,
-            "cardsEarned": 7000,
-            "warBattles": 5,
+            "cardsEarned": 7560,
+            "warBattles": 6,
             "missedWarBattles": 1
         },
         {
@@ -284,9 +283,9 @@
             "trophies": 4216,
             "rank": 23,
             "role": "elder",
-            "donations": 812,
+            "donations": 830,
             "donationsReceived": 630,
-            "cardsEarned": 12040,
+            "cardsEarned": 12600,
             "warBattles": 10,
             "missedWarBattles": 0
         },
@@ -298,7 +297,7 @@
             "role": "member",
             "donations": 555,
             "donationsReceived": 520,
-            "cardsEarned": 6422,
+            "cardsEarned": 7262,
             "warBattles": 8,
             "missedWarBattles": 0,
             "eligibleForPromotion": true
@@ -311,8 +310,8 @@
             "role": "elder",
             "donations": 130,
             "donationsReceived": 240,
-            "cardsEarned": 3640,
-            "warBattles": 4,
+            "cardsEarned": 2520,
+            "warBattles": 3,
             "missedWarBattles": 0
         },
         {
@@ -323,8 +322,8 @@
             "role": "member",
             "donations": 293,
             "donationsReceived": 360,
-            "cardsEarned": 5320,
-            "warBattles": 5,
+            "cardsEarned": 6720,
+            "warBattles": 6,
             "missedWarBattles": 1
         },
         {
@@ -335,43 +334,31 @@
             "role": "member",
             "donations": 110,
             "donationsReceived": 520,
-            "cardsEarned": 5562,
-            "warBattles": 5,
-            "missedWarBattles": 0
-        },
-        {
-            "tag": "#U9UL9U9U",
-            "name": "Mephobos",
-            "trophies": 4192,
-            "rank": 28,
-            "role": "coLeader",
-            "donations": 1484,
-            "donationsReceived": 680,
-            "cardsEarned": 11480,
-            "warBattles": 10,
+            "cardsEarned": 6682,
+            "warBattles": 6,
             "missedWarBattles": 0
         },
         {
             "tag": "#2PUYVLVCU",
             "name": "SukonDeezNUTZ",
             "trophies": 4190,
-            "rank": 29,
+            "rank": 28,
             "role": "member",
             "donations": 234,
             "donationsReceived": 200,
-            "cardsEarned": 9695,
-            "warBattles": 8,
-            "missedWarBattles": 0
+            "cardsEarned": 9415,
+            "warBattles": 7,
+            "missedWarBattles": 1
         },
         {
             "tag": "#22PUP0C",
             "name": "Kyle",
             "trophies": 4177,
-            "rank": 30,
+            "rank": 29,
             "role": "member",
             "donations": 570,
             "donationsReceived": 480,
-            "cardsEarned": 12600,
+            "cardsEarned": 12320,
             "warBattles": 9,
             "missedWarBattles": 1
         },
@@ -379,11 +366,11 @@
             "tag": "#28GVQ0G98",
             "name": "Ryan",
             "trophies": 4162,
-            "rank": 31,
+            "rank": 30,
             "role": "member",
             "donations": 270,
             "donationsReceived": 630,
-            "cardsEarned": 7280,
+            "cardsEarned": 7000,
             "warBattles": 5,
             "missedWarBattles": 0
         },
@@ -391,11 +378,11 @@
             "tag": "#8CCJPJGR",
             "name": "GECKO<ABB>",
             "trophies": 4146,
-            "rank": 32,
+            "rank": 31,
             "role": "member",
             "donations": 178,
             "donationsReceived": 240,
-            "cardsEarned": 9152,
+            "cardsEarned": 8872,
             "warBattles": 8,
             "missedWarBattles": 0
         },
@@ -403,12 +390,24 @@
             "tag": "#22LRV9G8V",
             "name": "TM0N3Y",
             "trophies": 4145,
-            "rank": 33,
+            "rank": 32,
             "role": "member",
             "donations": 144,
             "donationsReceived": 240,
             "cardsEarned": 9710,
             "warBattles": 8,
+            "missedWarBattles": 0
+        },
+        {
+            "tag": "#U9UL9U9U",
+            "name": "Mephobos",
+            "trophies": 4144,
+            "rank": 33,
+            "role": "coLeader",
+            "donations": 1502,
+            "donationsReceived": 680,
+            "cardsEarned": 10920,
+            "warBattles": 10,
             "missedWarBattles": 0
         },
         {
@@ -419,7 +418,7 @@
             "role": "member",
             "donations": 454,
             "donationsReceived": 390,
-            "cardsEarned": 13929,
+            "cardsEarned": 13369,
             "warBattles": 12,
             "missedWarBattles": 0,
             "eligibleForPromotion": true
@@ -432,9 +431,9 @@
             "role": "member",
             "donations": 186,
             "donationsReceived": 160,
-            "cardsEarned": 1960,
+            "cardsEarned": 2520,
             "warBattles": 2,
-            "missedWarBattles": 0
+            "missedWarBattles": 1
         },
         {
             "tag": "#8P8R2V0J",
@@ -457,7 +456,7 @@
             "role": "member",
             "donations": 362,
             "donationsReceived": 520,
-            "cardsEarned": 12600,
+            "cardsEarned": 12320,
             "warBattles": 11,
             "missedWarBattles": 0
         },
@@ -481,9 +480,9 @@
             "rank": 39,
             "role": "elder",
             "donations": 1414,
-            "donationsReceived": 690,
-            "cardsEarned": 2240,
-            "warBattles": 2,
+            "donationsReceived": 720,
+            "cardsEarned": 3360,
+            "warBattles": 3,
             "missedWarBattles": 0
         },
         {
@@ -494,8 +493,8 @@
             "role": "member",
             "donations": 438,
             "donationsReceived": 440,
-            "cardsEarned": 5320,
-            "warBattles": 6,
+            "cardsEarned": 6440,
+            "warBattles": 7,
             "missedWarBattles": 0,
             "eligibleForPromotion": true
         },
@@ -505,11 +504,11 @@
             "trophies": 4010,
             "rank": 41,
             "role": "member",
-            "donations": 67,
+            "donations": 75,
             "donationsReceived": 160,
-            "cardsEarned": 2520,
+            "cardsEarned": 2240,
             "warBattles": 2,
-            "missedWarBattles": 1,
+            "missedWarBattles": 0,
             "dangerOfDemotion": true
         },
         {
@@ -557,8 +556,8 @@
             "role": "member",
             "donations": 146,
             "donationsReceived": 280,
-            "cardsEarned": 7840,
-            "warBattles": 8,
+            "cardsEarned": 6720,
+            "warBattles": 6,
             "missedWarBattles": 0
         },
         {
@@ -569,7 +568,7 @@
             "role": "leader",
             "donations": 240,
             "donationsReceived": 480,
-            "cardsEarned": 10920,
+            "cardsEarned": 11480,
             "warBattles": 9,
             "missedWarBattles": 0
         },
@@ -579,12 +578,11 @@
             "trophies": 3981,
             "rank": 47,
             "role": "member",
-            "donations": 294,
+            "donations": 304,
             "donationsReceived": 200,
-            "cardsEarned": 1400,
-            "warBattles": 1,
-            "missedWarBattles": 0,
-            "dangerOfDemotion": true
+            "cardsEarned": 2712,
+            "warBattles": 2,
+            "missedWarBattles": 0
         },
         {
             "tag": "#2CQVV8LUR",
@@ -594,9 +592,9 @@
             "role": "member",
             "donations": 96,
             "donationsReceived": 240,
-            "cardsEarned": 9184,
+            "cardsEarned": 8135,
             "warBattles": 6,
-            "missedWarBattles": 1,
+            "missedWarBattles": 0,
             "dangerOfDemotion": true
         },
         {
@@ -605,7 +603,7 @@
             "trophies": 3873,
             "rank": 49,
             "role": "member",
-            "donations": 582,
+            "donations": 590,
             "donationsReceived": 590,
             "cardsEarned": 1312,
             "warBattles": 1,
