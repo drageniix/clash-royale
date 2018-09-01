@@ -1,12 +1,14 @@
 .header{
     padding-bottom: 3rem;
-    text-align: center;
+    padding-left: 14.5%;
     background-color: $color-grey-dark-3;
     color: white;
 
+    @include respond(tabPort) {
+        padding-left: 2%;
+    }
+
     &__content {
-        text-align: start;
-        margin: 0 auto;
         padding: 0 3rem;
         display: inline-block;
     }
