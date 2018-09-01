@@ -5,7 +5,11 @@ const SearchResult = ({member}) => (
         <table className="searchResult__table">
             <tr>
                 <td>Name</td>
-                <td>{member.name} ({member.tag})</td>
+                <td>{member.name}</td>
+            </tr>
+            <tr>
+                <td>Tag</td>
+                <td>{member.tag}</td>
             </tr>
             <tr>
                 <td>Trophies</td>

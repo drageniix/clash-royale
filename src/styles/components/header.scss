@@ -1,11 +1,12 @@
 .header{
+    padding-top: 3rem;
     padding-bottom: 3rem;
     padding-left: 14.5%;
     background-color: $color-grey-dark-3;
     color: white;
 
     @include respond(tabPort) {
-        padding-left: 2%;
+        padding-left: 1.75%;
     }
 
     &__content {
@@ -14,6 +15,29 @@
     }
 
     h1 {
+        display: inline-block;
         font-size: 5rem;
+
+        @include respond(phone){
+            font-size: 4rem;
+        }
+
+        @include respond(tinyPhone){
+            font-size: 3rem;
+        }
+    }
+    img {
+        margin-top: 1rem;
+        padding-right: 1.5rem;
+        height: 5rem;
+        width: auto;
+
+        @include respond(phone){
+            height: 4rem;   
+        }
+        
+        @include respond(tinyPhone){
+            height: 3rem;
+        }
     }
 }

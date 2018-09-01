@@ -3,6 +3,7 @@ import React from 'react'
 class Search extends React.Component {
     submit = (event) => {
         this.props.setSearchResult(event.target.value)
+        event.preventDefault()
     }
 
     render() {

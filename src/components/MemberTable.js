@@ -4,6 +4,7 @@ import React from 'react'
 class MemberTable extends React.Component {
     search = (member, event) => {
         this.props.setSearchResult(member.name)
+        window.scrollTo(0, 0)
         event.preventDefault()
     }
 
