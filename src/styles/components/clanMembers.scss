@@ -1,0 +1,32 @@
+.clanMembers {
+    padding: 5rem 0rem;
+    border: 1px solid $color-border;
+    border-collapse: collapse;
+    margin: 0 auto;
+
+    td {
+        padding: 0.5rem;
+        color: $color-font-cell;
+        border: 1px solid $color-border;
+    }
+
+    th {
+        font-weight: 500;
+        color: $color-font-head;
+        background-color: $color-head;
+        padding: 3px 2px;
+    }
+    
+    &__promotion {
+        background-color: rgb(60, 172, 107);    
+    }
+    &__demotion {
+        background-color: rgb(168, 25, 25);    
+    }    
+    &__row:nth-child(even) {
+        background: $color-cell-alternate;
+    }
+    &__row:nth-child(odd) {
+        background: $color-cell;
+    }
+}

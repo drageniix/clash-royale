@@ -1,0 +1,48 @@
+{
+  "name": "drageniix-clash-royale",
+  "version": "1.0.0",
+  "description": "Clash Royale - 3 Dark Towers Clan Manager",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drageniix/clash-royale.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp build"
+  },
+  "keywords": [],
+  "author": "Ashley Barrow",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.1",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "fs-extra": "^7.0.0",
+    "gulp": "^4.0.0",
+    "gulp-svg-sprite": "^1.4.0",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.3.1",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.0.3",
+    "sharp": "^0.20.5",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

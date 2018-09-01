@@ -1,0 +1,33 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(deskBig) {
+        font-size: 75%;
+    }
+    
+    @include respond(tabLand) {
+        font-size: 56.25%;
+    }
+    
+    @include respond(tabPort) {
+        font-size: 50%;
+    }
+}
+
+body {
+    padding: 2rem;
+    box-sizing: border-box;
+    background-image: url($wallpaper);
+    background-attachment: fixed;
+    background-position: bottom;
+
+    @include respond(tabPort) {
+        padding: 0;
+    }
+}
