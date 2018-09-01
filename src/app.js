@@ -22,7 +22,7 @@ class App extends React.Component {
         if (!query){
             this.setState({ searchResult : undefined, searchClass : "" })
         } else {
-            const searchResult = data.clan.members.find(member => member.name.toLowerCase().includes(query.toLowerCase()))
+            const searchResult = data.clan.members.find(member => member.name.toLowerCase().includes(query.toLowerCase().trim()))
             if (searchResult){
                 const searchClass = searchResult.eligibleForPromotion ? "promote" : searchResult.dangerOfDemotion ? "demote" : "normal"
                 this.setState({searchResult, searchClass})
@@ -42,7 +42,7 @@ class App extends React.Component {
                             {this.state.searchResult ? <SearchResult member={this.state.searchResult} /> : undefined}
                         </section>
                         <section className="whole">
-                            <MemberList members={data.clan.members} />
+                            <MemberList members={data.clan.members} setSearchResult={this.setSearchResult} />
                         </section>
                     </section>
                 </main>

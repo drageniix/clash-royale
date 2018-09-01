@@ -2,7 +2,7 @@ import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import MemberTable from './MemberTable'
 
-const MemberList = ({members}) => (
+const MemberList = ({members, setSearchResult}) => (
     <Tabs>
         <TabList>
             <Tab>All Members</Tab>
@@ -11,13 +11,13 @@ const MemberList = ({members}) => (
         </TabList>
 
         <TabPanel>
-            <MemberTable members={members} />
+            <MemberTable members={members} setSearchResult={setSearchResult}/>
         </TabPanel>
         <TabPanel>
-            <MemberTable members={members.filter(item => item.eligibleForPromotion)} />
+            <MemberTable members={members.filter(item => item.eligibleForPromotion)} setSearchResult={setSearchResult}/>
         </TabPanel>
         <TabPanel>
-            <MemberTable members={members.filter(item => item.dangerOfDemotion)} />
+            <MemberTable members={members.filter(item => item.dangerOfDemotion)} setSearchResult={setSearchResult}/>
         </TabPanel>
     </Tabs>
 )
