@@ -28,7 +28,7 @@ const SearchResult = ({member}) => (
                 <td>{member.donationsReceived}</td>
             </tr>
             <tr>
-                <td>War Battles (Last 100)</td>
+                <td>War Battles (Last 10)</td>
                 <td>{member.warBattles}</td>
             </tr>
             <tr>
