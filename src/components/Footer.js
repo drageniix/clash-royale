@@ -7,6 +7,7 @@ const Footer = ({ time }) => (
             <a href="https://discord.gg/XvFGctt"><div className="icon--discord"></div></a>
         </div>
         <p className="footer__updated">Clan data last updated {moment.unix(time).fromNow()}.</p>
+        <p className="footer__credits">@meliaesc</p>
     </footer>
 )
 

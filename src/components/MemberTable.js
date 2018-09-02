@@ -32,7 +32,7 @@ class MemberTable extends React.Component {
             case "DONATIONS":
                 members.sort((a, b) => dir ? b.donations - a.donations : a.donations - b.donations)
                 break; 
-            case "WARS /10":
+            case "WARS":
                 members.sort((a, b) => dir ? b.warBattles - a.warBattles : a.warBattles - b.warBattles)
                 break; 
             case "MISSED":
@@ -79,19 +79,19 @@ class MemberTable extends React.Component {
                                 className="pointer align-left">{this.getDirectionString("NAME")}</th>
                             <th onClick={this.sort.bind(this, "DONATIONS")}
                                 className="pointer align-right">{this.getDirectionString("DONATIONS")}</th>
-                            <th onClick={this.sort.bind(this, "WARS /10")}
-                                className="pointer align-right">{this.getDirectionString("WARS /10")}</th>
+                            <th onClick={this.sort.bind(this, "WARS")}
+                                className="pointer align-right">{this.getDirectionString("WARS")}</th>
                             <th onClick={this.sort.bind(this, "MISSED")} 
                                 className="pointer align-right">{this.getDirectionString("MISSED")}</th>
                         </tr>
                     </thead>
                     {this.state.sortedMembers.map((member, index) => (
                         <tr key={index} className={"clanMembers__" + (member.eligibleForPromotion ? "promotion " : member.onProbation ? "probation " : member.dangerOfDemotion ? "demotion " : "row")}>
-                            <td className="align-left"> #{member.rank} ~{member.trophies}</td>
+                            <td className="align-left"> #{member.rank} ({member.trophies})</td>
                             <td className="align-right">{capitalizeFirstLetter(member.role)}</td>
                             <td className="pointer align-left" onClick={this.search.bind(this, member)}> {member.name}</td>
                             <td className="align-right">{checkDonations(member)}</td>
-                            <td className="align-right"> {member.warBattles}</td>
+                            <td className="align-right"> {member.warBattles}/10</td>
                             <td className="align-right"> {member.missedWarBattles}</td>
                         </tr>
                     ))}
