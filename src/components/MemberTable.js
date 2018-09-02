@@ -74,7 +74,7 @@ class MemberTable extends React.Component {
                             <th onClick={this.sort.bind(this, "RANK")} 
                                 className="pointer align-left">{this.getDirectionString("RANK")}</th>
                             <th onClick={this.sort.bind(this, "ROLE")}
-                                className="pointer align-left">{this.getDirectionString("ROLE")}</th>
+                                className="pointer align-right">{this.getDirectionString("ROLE")}</th>
                             <th onClick={this.sort.bind(this, "NAME")}
                                 className="pointer align-left">{this.getDirectionString("NAME")}</th>
                             <th onClick={this.sort.bind(this, "DONATIONS")}
@@ -88,7 +88,7 @@ class MemberTable extends React.Component {
                     {this.state.sortedMembers.map((member, index) => (
                         <tr key={index} className={"clanMembers__" + (member.eligibleForPromotion ? "promotion " : member.onProbation ? "probation " : member.dangerOfDemotion ? "demotion " : "row")}>
                             <td className="align-left"> #{member.rank} ~{member.trophies}</td>
-                            <td className="align-left">{capitalizeFirstLetter(member.role)}</td>
+                            <td className="align-right">{capitalizeFirstLetter(member.role)}</td>
                             <td className="pointer align-left" onClick={this.search.bind(this, member)}> {member.name}</td>
                             <td className="align-right">{checkDonations(member)}</td>
                             <td className="align-right"> {member.warBattles}</td>

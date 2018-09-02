@@ -3,8 +3,11 @@ import React from 'react'
 const Header = ({clan}) => (
     <header className="header">
         <div class="header__content">
-            <img src="./favicon.png" /><h1>{clan.name}</h1>
-            <p>2+ Years Strong! Please do not miss any war day battles. There are currenly no Coleader positions available.</p>
+            <img src="./favicon.png" />
+            <div className="header__text">
+                <h1>{clan.name}</h1>
+                <p>2+ Years Strong! Come chat with us on <a href="https://discord.gg/XvFGctt">Discord</a>.</p>
+            </div>
         </div>
     </header>
 )

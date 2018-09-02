@@ -4,5 +4,7 @@
         height: {{height.outer}}px;
         background-image: url('../assets/images/{{{sprite}}}');
         background-position: {{position.relative.xy}};
+        background-repeat: no-repeat;
+        display: inline-block;
     }
 {{/shapes}}

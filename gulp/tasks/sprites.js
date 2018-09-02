@@ -9,8 +9,8 @@ gulp.task('cleanSprites', () => fs.emptyDir(`${outputDirectory}/view`))
 const config = {
     shape: {
         dimension: { // Set maximum dimensions
-            maxWidth: 48,
-            maxHeight: 48
+            maxWidth: 150,
+            maxHeight: 51
         }
     },
     mode: {

@@ -9,3 +9,7 @@ body {
 strong {
     color: $color-primary
 }
+
+a:link, a:active, a:hover, a {
+    color: $color-grey-light-1;
+}
