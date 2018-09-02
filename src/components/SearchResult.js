@@ -1,11 +1,7 @@
 import React from 'react'
 
 const SearchResult = ({member}) => (
-    <section className="searchResult" id={
-            member.eligibleForPromotion ? "promotion" :
-            member.onProbation ? "probation" : 
-            member.dangerOfDemotion ? "demotion" : 
-            "normal"}>
+    <section className="searchResult" id={getMemberColor(member)}>
         <table className="searchResult__table">
             <tr>
                 <td>Name</td>
@@ -47,4 +43,21 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
+function getMemberColor(member){
+    if(member.eligibleForPromotion){
+        return "promotion"
+    } else if (member.onProbation){
+        return "probation"
+    } else if (member.dangerOfDemotion) {
+        return "demotion"
+    } else if (member.role.toLowerCase() === 'member') {
+        return "member"
+    } else if (member.role.toLowerCase() === 'elder') {
+        return "elder"
+    } else if (member.role.toLowerCase() === 'coleader') {
+        return "coleader"
+    } else if (member.role.toLowerCase() === 'leader') {
+        return "leader"
+    }
+}
 export default SearchResult

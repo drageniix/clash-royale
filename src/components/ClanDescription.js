@@ -6,7 +6,7 @@ class ClanDescription extends React.Component {
             <section className="half description">
                 <div className="description__reqs">
                     <h2>Clan Requirements</h2>
-                    <p><strong>Member:</strong> Donate at least {this.props.clan.minDonations} cards weekly and participate in {this.props.clan.minWarBattles}/10 war battles. Be respectful to others.</p>
+                    <p><strong>Member:</strong> Donate at least {this.props.clan.minDonations} cards weekly and participate in {this.props.clan.minWarBattles}/10 war battles, missing a maximum of 1 war day battle when you participated in collection day.</p>
                     <p><strong>Elder:</strong> Have at least {this.props.clan.minTrophies} trophies and donate more than {this.props.clan.elderDonations} cards. Must participate in at least {this.props.clan.elderWarBattles}/10 war battles. Kicking members and invitations to those below basic member requirements requires permission.</p>
                 </div>
             </section>

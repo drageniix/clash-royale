@@ -4,7 +4,8 @@
     background-color: $color-grey-dark-3;
     color: white;
     padding: 3rem;
-
+    flex-shrink: 0;
+    
     &__updated {
         font-style: italic;
     }

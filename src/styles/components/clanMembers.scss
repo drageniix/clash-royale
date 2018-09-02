@@ -1,29 +1,38 @@
-.promotion {
-    background-color: rgba($color-promote, 0.4); 
-    font-weight: 400;
-}
-
-.probation {
-    background-color: rgba($color-probation, 0.4); 
-    font-weight: 400;
-}
-
-.demotion {
-    background-color: rgba($color-demote, 0.4); 
-    font-weight: 400;
-}
-
 .clanMembers {
     border-collapse: collapse;
     width: 100%;
     
+    &__promotion {
+        background-color: rgba($color-promote, 0.4); 
+        font-weight: 400;
+    }
+
+    &__probation {
+        background-color: rgba($color-probation, 0.4); 
+        font-weight: 400;
+    }
+
+    &__demotion {
+        background-color: rgba($color-demote, 0.4); 
+        font-weight: 400;
+    }
+
     td {
         padding: 0.5rem; 
     }
 
     th {
-        text-align: start;
         padding: 3px 2px;
         border-bottom: 1px solid #aaa;;
     }  
+}
+
+.align-left{
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.pointer {
+    cursor: pointer;
 }

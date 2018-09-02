@@ -6,6 +6,7 @@
 
 html {
     font-size: 62.5%;
+    height: 100%;
 
     @include respond(deskBig) {
         font-size: 75%;
@@ -22,12 +23,14 @@ html {
 
 body {
     box-sizing: border-box;
+    height: 100%;
 }
 
 .main {
     padding: 2rem;
     margin: 0 auto;
     width: 70%;
+    flex: 1 0 auto;
 
     @include respond(tabPort) {
         padding: 1rem;
