@@ -12,32 +12,33 @@
     &__content {
         padding: 0 3rem;
         display: inline-block;
-    }
-
-    h1 {
-        display: inline-block;
-        font-size: 5rem;
-
-        @include respond(phone){
-            font-size: 4rem;
-        }
-
-        @include respond(tinyPhone){
-            font-size: 3rem;
-        }
-    }
-    img {
-        margin-top: 1rem;
-        padding-right: 1.5rem;
-        height: 5rem;
-        width: auto;
-
-        @include respond(phone){
-            height: 4rem;   
-        }
         
-        @include respond(tinyPhone){
-            height: 3rem;
+        h1 {
+            display: inline-block;
+            font-size: 5rem;
+
+            @include respond(phone){
+                font-size: 4rem;
+            }
+
+            @include respond(tinyPhone){
+                font-size: 3rem;
+            }
+        }
+
+        img {
+            margin-top: 1rem;
+            padding-right: 1.5rem;
+            height: 5rem;
+            width: auto;
+
+            @include respond(phone){
+                height: 4rem;   
+            }
+            
+            @include respond(tinyPhone){
+                height: 3rem;
+            }
         }
     }
 }

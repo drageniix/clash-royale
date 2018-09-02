@@ -26,7 +26,7 @@ class MemberTable extends React.Component {
                             className={(member.eligibleForPromotion ? "promotion " : member.onProbation ? "probation " : member.dangerOfDemotion ? "demotion " : "") + "clanMembers__row"}>
                             <td> #{member.rank}</td>
                             <td> {member.name}</td>
-                            <td> {member.donations} ({((member.donations / member.donationsReceived) * 100).toFixed(1)}%)</td>
+                            <td>{checkDonations(member)}</td>
                             <td> {member.warBattles}</td>
                             <td> {member.missedWarBattles}</td>
                         </tr>
@@ -34,6 +34,14 @@ class MemberTable extends React.Component {
                 </table>
             </section>
         )
+    }
+}
+
+function checkDonations(member){
+    if (member.donations === 0 & member.donationsReceived === 0){
+        return "none"
+    } else {
+        return `${ member.donations } (${((member.donations / member.donationsReceived) * 100).toFixed(1)}%)`
     }
 }
 

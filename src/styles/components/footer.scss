@@ -1,0 +1,17 @@
+
+.footer {
+    text-align: center;
+    background-color: $color-grey-dark-3;
+    color: white;
+    padding: 3rem;
+
+    &__updated {
+        font-style: italic;
+    }
+    
+    &__credits {
+        font-size: 1.8rem;
+        font-weight: 500;
+        letter-spacing: 0.15rem;
+    }
+}

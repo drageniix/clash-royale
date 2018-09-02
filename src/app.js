@@ -4,11 +4,12 @@ import ReactDOM from "react-dom"
 import ClanDescription from "./components/ClanDescription";
 import Header from "./components/Header";
 import SearchResult from "./components/SearchResult";
+import Search from "./components/Search";
+import MemberList from "./components/MemberList";
+import Footer from "./components/Footer";
 
 import data from './generated/data/data.json'
 import './styles/index.scss'
-import Search from "./components/Search";
-import MemberList from "./components/MemberList";
 
 importAll(require.context('./generated', true))
 function importAll(r){
@@ -24,8 +25,7 @@ class App extends React.Component {
         } else {
             const searchResult = data.clan.members.find(member => member.name.toLowerCase().includes(query.toLowerCase().trim()))
             if (searchResult){
-                const searchClass = searchResult.eligibleForPromotion ? "promote" : searchResult.onProbation ? "probate" : searchResult.dangerOfDemotion ? "demote" : "normal"
-                this.setState({searchResult, searchClass})
+                this.setState({searchResult})
             }
         }
     }
@@ -38,7 +38,7 @@ class App extends React.Component {
                     <section className="flex-content">
                         <ClanDescription clan={data.clan} />
                         <section className="half">
-                            <Search setSearchResult={this.setSearchResult} searchClass={this.state.searchClass} />
+                            <Search setSearchResult={this.setSearchResult}/>
                             {this.state.searchResult ? <SearchResult member={this.state.searchResult} /> : undefined}
                         </section>
                         <section className="whole">
@@ -46,6 +46,7 @@ class App extends React.Component {
                         </section>
                     </section>
                 </main>
+                <Footer time={data.clan.time}/>
             </div>
         )
     }

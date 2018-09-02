@@ -15,6 +15,7 @@
   "author": "Ashley Barrow",
   "license": "ISC",
   "dependencies": {
+    "moment": "^2.22.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-tabs": "^2.3.0"

@@ -2,5 +2,9 @@
     &__reqs {
         margin-bottom: 3rem;
         text-align: justify;
+
+        @include respond(tinyPhone) {
+            text-align: start;
+        }
     }
 }

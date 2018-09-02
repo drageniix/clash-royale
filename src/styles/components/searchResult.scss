@@ -25,3 +25,21 @@
         }
     }
 }
+
+
+#normal, {
+    border-top: 4px solid $color-normal;
+    border-bottom: 4px solid $color-normal;
+}   
+#promotion {
+    border-top: 4px solid $color-promote;
+    border-bottom: 4px solid $color-promote;
+}
+#probation {
+    border-top: 4px solid $color-probation;
+    border-bottom: 4px solid $color-probation;
+}
+#demotion {
+    border-top: 4px solid $color-demote;
+    border-bottom: 4px solid $color-demote;
+}

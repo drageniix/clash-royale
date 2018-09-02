@@ -1,7 +1,11 @@
 import React from 'react'
 
 const SearchResult = ({member}) => (
-    <section className="searchResult">
+    <section className="searchResult" id={
+            member.eligibleForPromotion ? "promotion" :
+            member.onProbation ? "probation" : 
+            member.dangerOfDemotion ? "demotion" : 
+            "normal"}>
         <table className="searchResult__table">
             <tr>
                 <td>Name</td>
