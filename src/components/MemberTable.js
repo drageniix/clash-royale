@@ -86,7 +86,7 @@ class MemberTable extends React.Component {
                         </tr>
                     </thead>
                     {this.state.sortedMembers.map((member, index) => (
-                        <tr key={index} className={"clanMembers__" + (member.eligibleForPromotion ? "promotion " : member.onProbation ? "probation " : member.dangerOfDemotion ? "demotion " : "row")}>
+                        <tr key={index} className={"clanMembers__" + (member.eligibleForPromotion ? "promotion" : member.onProbation ? "probation" : member.dangerOfDemotion ? "demotion" : "row")}>
                             <td className="align-left"> #{member.rank} ({member.trophies})</td>
                             <td className="align-right">{capitalizeFirstLetter(member.role)}</td>
                             <td className="pointer align-left" onClick={this.search.bind(this, member)}> {member.name}</td>
