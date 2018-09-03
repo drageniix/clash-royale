@@ -53,11 +53,11 @@ for war in wars["items"]:
 for member in clanData["members"]:
     if member["role"] == "member" and member["trophies"] >= clanData["minTrophies"] and member["donations"] >= clanData["elderDonations"] and member["missedWarBattles"] == 0 and member["warBattles"] >= clanData["elderWarBattles"]:
         member["eligibleForPromotion"] = True
-    elif member["donations"] < clanData["minDonations"] or member["warBattles"] < clanData["minWarBattles"] or member["missedWarBattles"] > clanData["maxMissedWarBattles"]:
-        if member["donations"] >= clanData["elderDonations"] or member["warBattles"] >= clanData["elderWarBattles"]:
-            member["onProbation"] = True
-        else:
-            member["dangerOfDemotion"] = True
+    # elif member["donations"] < clanData["minDonations"] or member["warBattles"] < clanData["minWarBattles"] or member["missedWarBattles"] > clanData["maxMissedWarBattles"]:
+    #     if member["donations"] >= clanData["elderDonations"] or member["warBattles"] >= clanData["elderWarBattles"]:
+    #         member["onProbation"] = True
+    #     else:
+    #         member["dangerOfDemotion"] = True
     
 with open('./gulp/templates/data/_clan--' + str(clanData["time"]) + '.json', 'w') as outfile:
     json.dump(clanData, outfile, indent=4)

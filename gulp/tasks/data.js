@@ -21,6 +21,7 @@ gulp.task('createDataJSON', () => (
 ))
 
 function createJSON(dataFiles, saveImages) {
+    
     return new Promise((resolve, reject) => {
         const combinedJSON = {}
         let count = -1;

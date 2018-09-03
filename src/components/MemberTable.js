@@ -104,6 +104,10 @@ class MemberTable extends React.Component {
 function checkDonations(member){
     if (member.donations === 0 && member.donationsReceived === 0){
         return "none"
+    } else if(member.donationsReceived == 0) {
+        return `${ member.donations } - 0` 
+    } else if(member.donations == 0) {
+        return `0 - ${member.donationsReceived }` 
     } else {
         return `${ member.donations } (${((member.donations / member.donationsReceived) * 100).toFixed(1)}%)`
     }
