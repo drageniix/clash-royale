@@ -21,7 +21,7 @@ class App extends React.Component {
         if (!query){
             this.setState({ searchResult : undefined, searchClass : "" })
         } else {
-            const searchResult = thaqis.state.clan.members.find(member => member.name.toLowerCase().includes(query.toLowerCase().trim()))
+            const searchResult = this.state.clan.members.find(member => member.name.toLowerCase().includes(query.toLowerCase().trim()))
             if (searchResult){
                 this.setState({searchResult})
             }

@@ -11,7 +11,6 @@ class MemberTable extends React.Component {
     }
 
     sort = (order) => {
-        console.log(this.state)
         const members = this.state.sortedMembers
         const dir = this.state.order === order ? !this.state.dir : true
         switch (order){
