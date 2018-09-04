@@ -8,6 +8,10 @@ import Search from "./components/Search";
 import MemberList from "./components/MemberList";
 import Footer from "./components/Footer";
 
+import fetch from 'isomorphic-fetch'
+import promise from 'es6-promise';
+promise.polyfill()
+
 import './styles/index.scss'
 
 importAll(require.context('./generated', true))
