@@ -23,7 +23,7 @@ class App extends React.Component {
     state = {}
     setSearchResult = query => {
         if (!query){
-            this.setState({ searchResult : undefined, searchClass : "" })
+            this.setState({ searchResult : undefined })
         } else {
             const searchResult = this.state.clan.members.find(member => member.name.toLowerCase().includes(query.toLowerCase().trim()))
             if (searchResult){
@@ -37,8 +37,7 @@ class App extends React.Component {
         .then(response => response.json())
         .then(api => {
             this.setState(prevState => ({ 
-                searchResult: undefined, 
-                searchClass: "", 
+                searchResult: undefined,
                 clan: api 
             }))
         })

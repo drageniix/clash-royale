@@ -40,7 +40,7 @@ const SearchResult = ({member}) => (
 )
 
 function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function getMemberColor(member){
@@ -50,13 +50,13 @@ function getMemberColor(member){
         return "probation"
     } else if (member.dangerOfDemotion) {
         return "demotion"
-    } else if (member.role.toLowerCase() === 'member') {
+    } else if (member.role === 'member' || member.role === 'new') {
         return "member"
-    } else if (member.role.toLowerCase() === 'elder') {
+    } else if (member.role === 'elder') {
         return "elder"
-    } else if (member.role.toLowerCase() === 'coleader') {
+    } else if (member.role === 'coleader') {
         return "coleader"
-    } else if (member.role.toLowerCase() === 'leader') {
+    } else if (member.role === 'leader') {
         return "leader"
     }
 }

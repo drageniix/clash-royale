@@ -40,7 +40,7 @@ class MemberTable extends React.Component {
             case "ROLE":
                 members.sort((a, b) => {
                     const getValue = (role) => {
-                        switch(role.toLowerCase()) {
+                        switch(role) {
                             case 'leader':
                                 return 1
                             case 'coleader':
@@ -49,6 +49,8 @@ class MemberTable extends React.Component {
                                 return 3
                             case 'member':
                                 return 4
+                            case 'new':
+                                return 5
                         }
                     }
 
@@ -87,7 +89,7 @@ class MemberTable extends React.Component {
                     {this.state.sortedMembers.map((member, index) => (
                         <tr key={index} className={"clanMembers__" + (member.eligibleForPromotion ? "promotion" : member.onProbation ? "probation" : member.dangerOfDemotion ? "demotion" : "row")}>
                             <td className="align-left"> #{member.rank} ({member.trophies})</td>
-                            <td className="align-right">{member.new ? "👋 " : ""}{capitalizeFirstLetter(member.role)}</td>
+                            <td className="align-right">{capitalizeFirstLetter(member.role)}</td>
                             <td className="pointer align-left" onClick={this.search.bind(this, member)}> {member.name}</td>
                             <td className="align-right">{checkDonations(member)}</td>
                             <td className="align-right"> {member.warBattles}/10</td>
@@ -98,7 +100,7 @@ class MemberTable extends React.Component {
             </section>
         )
     }
-}
+}   
 
 function checkDonations(member){
     if (member.donations === 0 && member.donationsReceived === 0){
@@ -113,7 +115,7 @@ function checkDonations(member){
 }
 
 function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 export default MemberTable
