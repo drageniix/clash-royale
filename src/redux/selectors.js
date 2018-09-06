@@ -14,7 +14,7 @@ const sortOptions = {
         ascending: (a, b) => {
             const aName = a.name.toLowerCase()
             const bName = b.name.toLowerCase()
-            return aName < bName ? 1 : aName > bName ? -1 : 0
+            return aName < bName ? -1 : aName > bName ? 1 : 0
         },
         descending: (a, b) => {
             const aName = a.name.toLowerCase()
@@ -35,45 +35,29 @@ const sortOptions = {
         descending: (a, b) =>  a.missedWarBattles - b.missedWarBattles
     },
     role: {
-        ascending: (a, b) => {
-            const getValue = (role) => {
-                switch(role) {
-                    case 'leader':
-                        return 1
-                    case 'coleader':
-                        return 2
-                    case 'elder':
-                        return 3
-                    case 'member':
-                        return 4
-                    case 'new':
-                        return 5
-                }
+        getValue(role){
+            switch(role) {
+                case 'leader':
+                    return 1
+                case 'coleader':
+                    return 2
+                case 'elder':
+                    return 3
+                case 'member':
+                    return 4
+                case 'new':
+                    return 5
             }
-
-            const aRole = getValue(a.role)
-            const bRole = getValue(b.role)
+        },
+        ascending(a, b){
+            const aRole = this.getValue(a.role)
+            const bRole = this.getValue(b.role)
 
             return aRole - bRole
         },
-        descending: (a, b) => {
-            const getValue = (role) => {
-                switch(role) {
-                    case 'leader':
-                        return 1
-                    case 'coleader':
-                        return 2
-                    case 'elder':
-                        return 3
-                    case 'member':
-                        return 4
-                    case 'new':
-                        return 5
-                }
-            }
-
-            const aRole = getValue(a.role)
-            const bRole = getValue(b.role)
+        descending(a, b){
+            const aRole = this.getValue(a.role)
+            const bRole = this.getValue(b.role)
 
             return bRole - aRole
         },
