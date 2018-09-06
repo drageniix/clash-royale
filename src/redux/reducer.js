@@ -13,7 +13,7 @@ const defaultState = {
     clan: {},
     members: [],
     lastWeeks: [{
-        url: "/clanv2.json",
+        url: "/clan.json",
         display: "Current Week"
     }]
 }
