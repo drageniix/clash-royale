@@ -1,16 +1,16 @@
 import React from 'react'
 import { capitalizeFirstLetter, checkDonations } from '../utilities/basic'
-import { getDirectionIndicator, getMembers } from '../redux/selectors'
+import { getDirectionIndicator, getMembers, getSelectedFilterClass } from '../redux/selectors'
 import { setOrder, setFilter, setQuery } from '../redux/actions'
 import { connect } from 'react-redux'
 
-const MemberList = ({ members, getDirectionIndicator, dispatch }) => (
-    <section>
-        <ul>
-            <li className="pointer" onClick={() => dispatch(setFilter.byNone)}>All Members</li>
-            <li className="pointer" onClick={() => dispatch(setFilter.byPromotion)}>Promotions</li>
-            <li className="pointer" onClick={() => dispatch(setFilter.byProbation)}>Probation</li>
-            <li className="pointer" onClick={() => dispatch(setFilter.byDemotion)}>Demotions</li>
+const MemberList = ({ members, getDirectionIndicator, getSelectedFilterClass, dispatch}) => (
+    <section className="filter">
+        <ul className="filter__list">
+            <li className={getSelectedFilterClass("none")} onClick={() => dispatch(setFilter.byNone)}>All Members</li>
+            <li className={getSelectedFilterClass("promotion")} onClick={() => dispatch(setFilter.byPromotion)}>Promotions</li>
+            <li className={getSelectedFilterClass("probation")} onClick={() => dispatch(setFilter.byProbation)}>Probation</li>
+            <li className={getSelectedFilterClass("demotion")} onClick={() => dispatch(setFilter.byDemotion)}>Demotions</li>
         </ul>
 
         <table className="clanMembers">
@@ -28,8 +28,9 @@ const MemberList = ({ members, getDirectionIndicator, dispatch }) => (
                 <tr key={index} className={"clanMembers__" + (member.eligibleForPromotion ? "promotion" : member.onProbation ? "probation" : member.dangerOfDemotion ? "demotion" : "row")}>
                     <td className="align-left"> #{member.clanRank} ({member.trophies})</td>
                     <td className="align-right">{capitalizeFirstLetter(member.role)}</td>
-                    <td className="pointer align-left" 
-                        onClick={() => dispatch(setQuery(member.tag))}>
+                    <td className="pointer align-left" onClick={() => {
+                        dispatch(setQuery(member.tag))
+                        window.scroll({top: 0, left: 0, behavior: 'smooth'})}}>
                         {member.name}
                     </td>
                     <td className="align-right">{checkDonations(member)}</td>
@@ -43,5 +44,6 @@ const MemberList = ({ members, getDirectionIndicator, dispatch }) => (
 
 export default connect(state => ({
     members: getMembers(state.members, state.filter, state.order, state.dir),
-    getDirectionIndicator: order => getDirectionIndicator(state.order, state.dir, order)
+    getDirectionIndicator: order => getDirectionIndicator(state.order, state.dir, order),
+    getSelectedFilterClass: filter => getSelectedFilterClass(state.filter, filter)
 }))(MemberList)

@@ -79,3 +79,5 @@ export const getDirectionIndicator = (stateOrder, stateDir, order) => (
     order.replace(/^./, function (str) { return str.toUpperCase(); }) +
     (stateOrder === order ? (stateDir === 'ascending' ? " ▼" : " ▲") : "")
 )
+
+export const getSelectedFilterClass = (stateFilter, filter) => "pointer filter__list--item" + (stateFilter === filter ? " filter__list--item--selected" : "")

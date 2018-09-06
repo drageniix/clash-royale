@@ -1,6 +1,6 @@
 const defaultState = {
     current: 0,
-
+    ref: undefined,
     query: "",
     filter: "none", //none, promotion, probation, demotion
     order: "rank", //rank, name, donations, wars, missed, role
@@ -14,7 +14,7 @@ const defaultState = {
     members: [],
     lastWeeks: [{
         url: "/clanv2.json",
-        display: "Current"
+        display: "Current Week"
     }]
 }
 

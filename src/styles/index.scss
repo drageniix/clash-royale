@@ -3,11 +3,13 @@
 @import './abstract/variables';
 @import './abstract/mixins';
 @import './base/base';
-@import './base/grid';
 @import './base/typography';
 @import './components/clanMembers';
 @import './components/description';
-@import './components/header';
-@import './components/footer';
 @import './components/search';
 @import './components/searchResult';
+@import './components/filter';
+@import './components/weekSelection';
+@import './layout/header';
+@import './layout/footer';
+@import './layout/grid';
