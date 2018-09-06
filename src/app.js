@@ -4,15 +4,18 @@ import ReactDOM from "react-dom"
 import ClanDescription from "./components/ClanDescription";
 import Header from "./components/Header";
 import SearchResult from "./components/SearchResult";
+import Search from "./components/Search";
 import MemberList from "./components/MemberList";
 import Footer from "./components/Footer";
 
 import { Provider } from 'react-redux'
 import configureStore from './redux/configureStore'
-import { setNewWeek } from './redux/actions'
+import { setNewWeek, setCurrent } from './redux/actions'
 import fetch from 'isomorphic-fetch'
 import promise from 'es6-promise';
 import './styles/index.scss'
+import { getAPIURL } from "./redux/selectors";
+import ChooseWeek from "./components/ChooseWeek";
 
 promise.polyfill()
 importAll(require.context('./generated', true))
@@ -20,10 +23,19 @@ function importAll(r){
     r.keys().map(r)
 }
 
+let currentValue = -1
 const store = configureStore()
-fetch('https://drageniix.github.io/api/clanv2.json')
-    .then(response => response.json())
-    .then(api => store.dispatch(setNewWeek(api)))
+store.subscribe(() => {
+    if (store.getState().current != currentValue){
+        currentValue = store.getState().current
+        fetch(getAPIURL(currentValue, store.getState().lastWeeks))
+            .then(response => response.json())
+            .then(api => store.dispatch(setNewWeek(api)))
+    }
+})
+
+//initialize
+store.dispatch(setCurrent(0))
 
 const App = props => (
     <Provider store={store}>
@@ -31,8 +43,12 @@ const App = props => (
             <Header />
             <main className="main">
                 <section className="flex-content">
-                    <ClanDescription />
                     <section className="half">
+                        <ClanDescription />
+                        <ChooseWeek />
+                    </section>
+                    <section className="half">
+                        <Search />
                         <SearchResult />
                     </section>
                     <section className="whole">

@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const ClanDescription = ({admin}) => (
-    <section className="half description">
+    <section className="description">
         <div className="description__reqs">
             <h2>Clan Requirements</h2>
             <p><strong>Member:</strong> Donate at least {admin.minDonations} cards weekly and participate in {admin.minWarBattles}/10 war battles, missing a maximum of 1 war day battle when you participated in collection day.</p>

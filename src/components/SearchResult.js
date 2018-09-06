@@ -4,7 +4,7 @@ import { getSearchResult } from '../redux/selectors'
 import { connect } from 'react-redux'
 
 const SearchResult = ({ member }) => {
-    if (!member) return <section className="searchResult"/>
+    if (!member) return <section/>
     else return (
         <section className="searchResult" id={getMemberColor(member)}>
             <table className="searchResult__table">

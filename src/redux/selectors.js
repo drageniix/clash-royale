@@ -1,5 +1,3 @@
-import { capitalizeFirstLetter } from '../utilities/basic'
-
 const filterOptions = {
     none: member => member,
     promotion: member => member.eligibleForPromotion,
@@ -28,7 +26,7 @@ const sortOptions = {
         ascending: (a, b) => b.donations - a.donations,
         descending: (a, b) => a.donations - b.donations
     },
-    warBattltes: {
+    wars: {
         ascending: (a, b) => b.warBattles - a.warBattles,
         descending: (a, b) => a.warBattles - b.warBattles
     },
@@ -37,34 +35,37 @@ const sortOptions = {
         descending: (a, b) =>  a.missedWarBattles - b.missedWarBattles
     },
     role: {
-        getValue(role){
-            switch(role) {
-                case 'leader':
-                    return 1
-                case 'coleader':
-                    return 2
-                case 'elder':
-                    return 3
-                case 'member':
-                    return 4
-                case 'new':
-                    return 5
-            }
-        },
         ascending(a, b){
-            const aRole = this.getValue(a.role)
-            const bRole = this.getValue(b.role)
+            const aRole = getRoleValue(a.role)
+            const bRole = getRoleValue(b.role)
 
             return aRole - bRole
         },
         descending(a, b){
-            const aRole = this.getValue(a.role)
-            const bRole = this.getValue(b.role)
+            const aRole = getRoleValue(a.role)
+            const bRole = getRoleValue(b.role)
 
             return bRole - aRole
         },
     }
 }
+
+function getRoleValue(role){
+    switch (role) {
+        case 'leader':
+            return 1
+        case 'coleader':
+            return 2
+        case 'elder':
+            return 3
+        case 'member':
+            return 4
+        case 'new':
+            return 5
+    }
+}
+
+export const getAPIURL = (stateCurrent, stateLastWeeks) => 'https://drageniix.github.io/api' + stateLastWeeks[stateCurrent].url
 
 export const getMembers = (stateMembers, stateFilter, stateOrder, stateDir) => stateMembers
     .filter(filterOptions[stateFilter])
@@ -74,4 +75,7 @@ export const getSearchResult = (stateQuery, stateMembers) => stateQuery ? stateM
     member.name.toLowerCase().includes(stateQuery.toLowerCase().trim()) ||
     member.tag === stateQuery)) : undefined
 
-export const getDirectionIndicator = (stateOrder, stateDir, order) => capitalizeFirstLetter(order) + (stateOrder === order ? (stateDir === 'ascending' ? " ▼" : " ▲") : "")
+export const getDirectionIndicator = (stateOrder, stateDir, order) => (
+    order.replace(/^./, function (str) { return str.toUpperCase(); }) +
+    (stateOrder === order ? (stateDir === 'ascending' ? " ▼" : " ▲") : "")
+)
