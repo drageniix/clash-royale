@@ -29,7 +29,7 @@ const runWebpack = (server,
                     loader: 'babel-loader',
                     options: {
                         presets: ['env', 'react'],
-                        plugins: ['transform-class-properties']
+                        plugins: ['transform-object-rest-spread', 'transform-class-properties']
                     }
                 }
             }, {

@@ -1,6 +1,12 @@
 const defaultState = {
-    clan: {members: []}, //from api
-    lastWeeks: [], //from initial clan data
+    //from api
+    time: 0,
+    admin: {},
+    clan: {},
+    members: [], //member
+    lastWeeks: [], //string
+    discord: "",
+    
     query: "", //member from query with case insensitive name portion or exact tag
     filter: "none", //none, promotion, probation, demotion
     order : "rank", //rank, name, donations, warBattles, missed, role
@@ -11,9 +17,13 @@ export default (state = defaultState, action) => {
     switch(action.type){
         case "SET_WEEK":
             return {
-                ...defaultState,
-                lastWeeks: state.lastWeeks,
-                clan: action.json
+                ...action.json,
+                lastWeeks: state.lastWeeks.length == 0 ? action.json.lastWeeks : state.lastWeeks,
+                query: "",
+                filter: state.filter,
+                order: state.order,
+                dir: state.dir,
+               
             }
         case "SET_QUERY":
             return {

@@ -1,5 +1,6 @@
 import moment from 'moment'
 import React from 'react'
+import { connect } from 'react-redux'
 
 const Footer = ({ time }) => (
     <footer className="footer">
@@ -11,4 +12,6 @@ const Footer = ({ time }) => (
     </footer>
 )
 
-export default Footer
+export default connect(state => ({
+    time : state.time
+}))(Footer)

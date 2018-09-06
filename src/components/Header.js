@@ -1,15 +1,19 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-const Header = ({clan}) => (
+const Header = ({ name, discord }) => (
     <header className="header">
         <div class="header__content">
             <img src="./favicon.png" />
             <div className="header__text">
-                <h1>{clan.name}</h1>
-                <p>2+ Years Strong! Come chat with us on <a href="https://discord.gg/XvFGctt">Discord</a>.</p>
+                <h1>{name}</h1>
+                <p>2+ Years Strong! Come chat with us on <a href={discord}>Discord</a>.</p>
             </div>
         </div>
     </header>
 )
 
-export default Header
+export default connect(state => ({
+    name: state.clan.name,
+    discord: state.discord
+}))(Header)

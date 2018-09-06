@@ -1,3 +1,5 @@
+import { capitalizeFirstLetter } from '../utilities/basic'
+
 const filterOptions = {
     none: member => member,
     promotion: member => member.eligibleForPromotion,
@@ -7,8 +9,8 @@ const filterOptions = {
 
 const sortOptions = {
     rank: {
-        ascending : (a, b) => a.rank - b.rank,
-        descending : (a, b) => b.rank - a.rank
+        ascending : (a, b) => a.clanRank - b.clanRank,
+        descending : (a, b) => b.clanRank - a.clanRank
     },
     name: {
         ascending: (a, b) => {
@@ -64,12 +66,12 @@ const sortOptions = {
     }
 }
 
-export default {
-    getMembers: state => state.clan.members
-        .filter(filterOptions[state.filter])
-        .sort(sortOptions[state.sort][state.dir]),
+export const getMembers = (stateMembers, stateFilter, stateOrder, stateDir) => stateMembers
+    .filter(filterOptions[stateFilter])
+    .sort(sortOptions[stateOrder][stateDir])
     
-    getSearchResult: (state, query) => query ? state.clan.members.find(member => (
-        member.name.toLowerCase().includes(query.toLowerCase().trim() ||
-        member.tag  === query))) : undefined
-}
+export const getSearchResult = (stateQuery, stateMembers) => stateQuery ? stateMembers.find(member => (
+    member.name.toLowerCase().includes(stateQuery.toLowerCase().trim()) ||
+    member.tag === stateQuery)) : undefined
+
+export const getDirectionIndicator = (stateOrder, stateDir, order) => capitalizeFirstLetter(order) + (stateOrder === order ? (stateDir === 'ascending' ? " ▼" : " ▲") : "")
