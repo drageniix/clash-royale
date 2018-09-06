@@ -33,7 +33,7 @@ export default (state = defaultState, action) => {
                 filter: state.filter,
                 order: state.order,
                 dir: state.dir,
-                lastWeeks: state.lastWeeks.length == 1 ? [...state.lastWeeks, ...action.json.lastWeeks] : state.lastWeeks,
+                lastWeeks: state.lastWeeks.length == 1 && action.json.lastWeeks ? [...state.lastWeeks, ...action.json.lastWeeks] : state.lastWeeks,
             }
         case "SET_QUERY":
             return {
