@@ -6,23 +6,26 @@ import promise from 'es6-promise';
 promise.polyfill()
 
 export default () => {
-    let currentValue = -1
     const getAPIURL = (stateCurrent, stateLastWeeks) => 'https://drageniix.github.io/api' + stateLastWeeks[stateCurrent].url
 
     const store = createStore(
         reducer,
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
     
+    let currentValue = store.getState().current
+
     store.subscribe(() => {
         if (store.getState().current != currentValue) {
-            currentValue = store.getState().current
-            fetch(getAPIURL(currentValue, store.getState().lastWeeks))
+            fetch(getAPIURL(currentValue = store.getState().current, store.getState().lastWeeks))
                 .then(response => response.json())
                 .then(api => store.dispatch(setNewWeek(api)))
         }
     })
 
     //initialize
-    store.dispatch(setCurrent())
+    fetch(getAPIURL(store.getState().current, store.getState().lastWeeks))
+        .then(response => response.json())
+        .then(api => store.dispatch(setNewWeek(api)))
+
     return store
 }

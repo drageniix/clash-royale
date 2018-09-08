@@ -43,7 +43,7 @@ const MemberList = ({ members, getDirectionIndicator, getSelectedFilterClass, di
 )
 
 export default connect(state => ({
-    members: getMembers(state.members, state.filter, state.order, state.dir),
-    getDirectionIndicator: order => getDirectionIndicator(state.order, state.dir, order),
-    getSelectedFilterClass: filter => getSelectedFilterClass(state.filter, filter)
+    members: getMembers(state.members, state.filters),
+    getDirectionIndicator: order => getDirectionIndicator(state.filters, order),
+    getSelectedFilterClass: filter => getSelectedFilterClass(state.filters.filter, filter)
 }))(MemberList)

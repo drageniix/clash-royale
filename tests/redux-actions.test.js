@@ -48,7 +48,6 @@ test('action: set filter', () => {
         type: "SET_FILTER",
         filter: "demotion"
     })
-    
 })
 
 test('action: set order', () => {

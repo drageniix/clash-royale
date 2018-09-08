@@ -21,7 +21,7 @@ test('selector: search', () => {
 
 //sorts by rank, only guaranteed unique sort key
 test('selector: filter', () => {
-    expect(getMembers(sampleMembers, "none", "rank", "ascending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "rank", dir: "ascending" })).toEqual([
         sampleMembers[3],
         sampleMembers[6],
         sampleMembers[1],
@@ -30,19 +30,19 @@ test('selector: filter', () => {
         sampleMembers[5],
         sampleMembers[2]
     ])
-    expect(getMembers(sampleMembers, "promotion", "rank", "ascending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "promotion", order: "rank", dir: "ascending" })).toEqual([
         sampleMembers[3]
     ])
-    expect(getMembers(sampleMembers, "probation", "rank", "ascending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "probation", order: "rank", dir: "ascending" })).toEqual([
         sampleMembers[4]
     ])
-    expect(getMembers(sampleMembers, "demotion", "rank", "ascending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "demotion", order: "rank", dir: "ascending" })).toEqual([
         sampleMembers[5]
     ])
 })
 
 test('selector: sort', () => {
-    expect(getMembers(sampleMembers, "none", "rank", "descending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "rank", dir: "descending" })).toEqual([
         sampleMembers[2],
         sampleMembers[5],
         sampleMembers[4],
@@ -51,7 +51,7 @@ test('selector: sort', () => {
         sampleMembers[6],
         sampleMembers[3]
     ])
-    expect(getMembers(sampleMembers, "none", "name", "ascending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "name", dir: "ascending" })).toEqual([
         sampleMembers[3],
         sampleMembers[2],
         sampleMembers[1],
@@ -60,7 +60,7 @@ test('selector: sort', () => {
         sampleMembers[5],
         sampleMembers[4]
     ])
-    expect(getMembers(sampleMembers, "none", "name", "descending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "name", dir: "descending" })).toEqual([
         sampleMembers[4],
         sampleMembers[5],
         sampleMembers[0],
@@ -69,7 +69,7 @@ test('selector: sort', () => {
         sampleMembers[2],
         sampleMembers[3]
     ])
-    expect(getMembers(sampleMembers, "none", "donations", "ascending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "donations", dir: "ascending" })).toEqual([
         sampleMembers[2],
         sampleMembers[6],
         sampleMembers[3],
@@ -78,7 +78,7 @@ test('selector: sort', () => {
         sampleMembers[4],
         sampleMembers[5]
     ])
-    expect(getMembers(sampleMembers, "none", "donations", "descending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "donations", dir: "descending" })).toEqual([
         sampleMembers[5],
         sampleMembers[4],
         sampleMembers[1],
@@ -87,7 +87,7 @@ test('selector: sort', () => {
         sampleMembers[6],
         sampleMembers[2]
     ])
-    expect(getMembers(sampleMembers, "none", "wars", "ascending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "wars", dir: "ascending" })).toEqual([
         sampleMembers[0],
         sampleMembers[1],
         sampleMembers[3],
@@ -96,7 +96,7 @@ test('selector: sort', () => {
         sampleMembers[6],
         sampleMembers[5]
     ])
-    expect(getMembers(sampleMembers, "none", "wars", "descending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "wars", dir: "descending" })).toEqual([
         sampleMembers[5],
         sampleMembers[6],
         sampleMembers[4],
@@ -105,7 +105,7 @@ test('selector: sort', () => {
         sampleMembers[1],
         sampleMembers[3]
     ])
-    expect(getMembers(sampleMembers, "none", "missed", "ascending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "missed", dir: "ascending" })).toEqual([
         sampleMembers[2],
         sampleMembers[4],
         sampleMembers[0],
@@ -114,7 +114,7 @@ test('selector: sort', () => {
         sampleMembers[5],
         sampleMembers[6]
     ])
-    expect(getMembers(sampleMembers, "none", "missed", "descending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "missed", dir: "descending" })).toEqual([
         sampleMembers[0],
         sampleMembers[1],
         sampleMembers[3],
@@ -123,7 +123,7 @@ test('selector: sort', () => {
         sampleMembers[2],
         sampleMembers[4]
     ])
-    expect(getMembers(sampleMembers, "none", "role", "ascending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "role", dir: "ascending" })).toEqual([
         sampleMembers[2],
         sampleMembers[0],
         sampleMembers[1],
@@ -132,7 +132,7 @@ test('selector: sort', () => {
         sampleMembers[3],
         sampleMembers[6]
     ])
-    expect(getMembers(sampleMembers, "none", "role", "descending")).toEqual([
+    expect(getMembers(sampleMembers, { filter: "none", order: "role", dir: "descending" })).toEqual([
         sampleMembers[3],
         sampleMembers[6],
         sampleMembers[1],

@@ -1,11 +1,11 @@
-export const setCurrent = (current = 0) => ({ 
-    type: "SET_CURRENT",
-    current
-})
-
 export const setNewWeek = json => ({ //from api response
     type: "SET_WEEK",
     json
+})
+
+export const setCurrent = (current = 0) => ({
+    type: "SET_CURRENT",
+    current
 })
 
 export const setQuery = (query = '') => ({

@@ -65,18 +65,18 @@ function getRoleValue(role){
     }
 }
 
-export const getMembers = (stateMembers, stateFilter, stateOrder, stateDir) => stateMembers
-    .filter(filterOptions[stateFilter])
-    .sort(sortOptions[stateOrder][stateDir])
+export const getMembers = (stateMembers, { filter, order, dir }) => stateMembers
+    .filter(filterOptions[filter])
+    .sort(sortOptions[order][dir])
     
 export const getSearchResult = (stateQuery, stateMembers) => stateQuery ? stateMembers.find(member => (
     member.name.toLowerCase().includes(stateQuery.toLowerCase().trim()) ||
     member.tag === stateQuery)) : undefined
 
 //Tangent Styling -- Untested
-export const getDirectionIndicator = (stateOrder, stateDir, order) => (
-    order.replace(/^./, function (str) { return str.toUpperCase(); }) +
-    (stateOrder === order ? (stateDir === 'ascending' ? " ▼" : " ▲") : "")
+export const getDirectionIndicator = ({ order , dir }, currentOrder) => (
+    currentOrder.replace(/^./, function (str) { return str.toUpperCase(); }) +
+    (order  === currentOrder ? (dir === 'ascending' ? " ▼" : " ▲") : "")
 )
 
 export const getSelectedFilterClass = (stateFilter, filter) => "pointer filter__list--item" + (stateFilter === filter ? " filter__list--item--selected" : "")
