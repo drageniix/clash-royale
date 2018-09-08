@@ -9,7 +9,8 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp start",
-    "build": "gulp build"
+    "build": "gulp build",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Ashley Barrow",
@@ -41,6 +42,7 @@
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.3.1",
     "jest": "^23.5.0",
+    "jest-cli": "^23.5.0",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.2",
     "optimize-css-assets-webpack-plugin": "^5.0.0",

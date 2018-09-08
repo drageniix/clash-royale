@@ -65,8 +65,6 @@ function getRoleValue(role){
     }
 }
 
-export const getAPIURL = (stateCurrent, stateLastWeeks) => 'https://drageniix.github.io/api' + stateLastWeeks[stateCurrent].url
-
 export const getMembers = (stateMembers, stateFilter, stateOrder, stateDir) => stateMembers
     .filter(filterOptions[stateFilter])
     .sort(sortOptions[stateOrder][stateDir])
@@ -75,6 +73,7 @@ export const getSearchResult = (stateQuery, stateMembers) => stateQuery ? stateM
     member.name.toLowerCase().includes(stateQuery.toLowerCase().trim()) ||
     member.tag === stateQuery)) : undefined
 
+//Tangent Styling -- Untested
 export const getDirectionIndicator = (stateOrder, stateDir, order) => (
     order.replace(/^./, function (str) { return str.toUpperCase(); }) +
     (stateOrder === order ? (stateDir === 'ascending' ? " ▼" : " ▲") : "")

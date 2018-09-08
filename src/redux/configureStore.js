@@ -1,6 +1,5 @@
 import {createStore} from 'redux'
 import reducer from './reducer'
-import { getAPIURL } from "./selectors";
 import { setNewWeek, setCurrent } from './actions'
 import fetch from 'isomorphic-fetch'
 import promise from 'es6-promise';
@@ -8,7 +7,8 @@ promise.polyfill()
 
 export default () => {
     let currentValue = -1
-    
+    const getAPIURL = (stateCurrent, stateLastWeeks) => 'https://drageniix.github.io/api' + stateLastWeeks[stateCurrent].url
+
     const store = createStore(
         reducer,
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
@@ -23,6 +23,6 @@ export default () => {
     })
 
     //initialize
-    store.dispatch(setCurrent(0))
+    store.dispatch(setCurrent())
     return store
 }

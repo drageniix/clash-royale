@@ -1,4 +1,4 @@
-export const setCurrent = current => ({ 
+export const setCurrent = (current = 0) => ({ 
     type: "SET_CURRENT",
     current
 })
@@ -14,47 +14,47 @@ export const setQuery = (query = '') => ({
 })
 
 export const setFilter = {
-    byNone : {
+    byNone : () => ({
         type: "SET_FILTER",
         filter: "none"
-    },
-    byPromotion : {
+    }),
+    byPromotion : () => ({
         type: "SET_FILTER",
         filter: "promotion"
-    },
-    byProbation : {
+    }),
+    byProbation : () => ({
         type: "SET_FILTER",
         filter: "probation"
-    },
-    byDemotion : {
+    }),
+    byDemotion : () => ({
         type: "SET_FILTER",
         filter: "demotion"
-    }
+    })
 }
 
 export const setOrder = {
-    byRank: {
+    byRank: () => ({
         type: "SET_ORDER",
         order: 'rank'
-    },
-    byName: {
+    }),
+    byName: () => ({
         type: "SET_ORDER",
         order: 'name'
-    },
-    byDonations: {
+    }),
+    byDonations: () => ({
         type: "SET_ORDER",
         order: 'donations'
-    },
-    byWarBattles: {
+    }),
+    byWarBattles: () => ({
         type: "SET_ORDER",
         order: 'wars'
-    },
-    byMissed: {
+    }),
+    byMissed: () => ({
         type: "SET_ORDER",
         order: 'missed'
-    },
-    byRole: {
+    }),
+    byRole: () => ({
         type: "SET_ORDER",
         order: 'role'
-    },
+    }),
 }
