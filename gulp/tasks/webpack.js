@@ -1,9 +1,6 @@
 const gulp = require('gulp')
 const fs = require('fs-extra')
-const webpackConfig = require('../templates/webpack.config')
-
-gulp.task('playground', () => webpackConfig(true, 
-    './src/playground/redux.js', 'Playground'))
+const webpackConfig = require('../templates/webpackRunner')
 
 gulp.task('webpack-server', () => webpackConfig(true))
 gulp.task('start', gulp.series([

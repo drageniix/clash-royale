@@ -5,7 +5,9 @@ import moment from 'moment'
 
 const ChooseWeek = ({ current, lastWeeks, dispatch }) => (
     <section className="weekSelection">
-        <select onChange={e => dispatch(setCurrent(e.target.value))} value={current}>
+        <select onChange={e => {
+            const value = e.target.value
+            dispatch(setCurrent(value))}} value={current}>
             {lastWeeks.map((item, index) => (
                 <option className="weekSelection__option" value={index} key={index}>{typeof item.display === 'number' ? moment.unix(item.display).fromNow() : item.display}</option>
             ))}

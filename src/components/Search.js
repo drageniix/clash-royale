@@ -4,8 +4,9 @@ import { connect } from 'react-redux'
 
 const Search = ({query, dispatch}) => (
     <div className="form form__group">
-        <input id="search" type="text" placeholder="Member Search" className="form__input" onChange={(event) => {
-            dispatch(setQuery(event.target.value))
+        <input id="search" type="text" placeholder="Member Search" className="form__input" autoFocus onChange={(event) => {
+            const query = event.target.value
+            dispatch(setQuery(query))
         }} value={query}/>
         <label htmlFor="search" className="form__label">Member Search</label>
     </div>

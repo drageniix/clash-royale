@@ -30,7 +30,7 @@ const MemberList = ({ members, getDirectionIndicator, getSelectedFilterClass, di
                     <td className="align-right">{capitalizeFirstLetter(member.role)}</td>
                     <td className="pointer align-left" onClick={() => {
                         dispatch(setQuery(member.tag))
-                        window.scroll({top: 0, left: 0, behavior: 'smooth'})}}>
+                        window.scroll({top: 200, left: 0, behavior: 'smooth'})}}>
                         {member.name}
                     </td>
                     <td className="align-right">{checkDonations(member)}</td>
