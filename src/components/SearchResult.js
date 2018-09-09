@@ -3,7 +3,7 @@ import { capitalizeFirstLetter, getMemberColor } from '../utilities/basic'
 import { getSearchResult } from '../redux/selectors'
 import { connect } from 'react-redux'
 
-const SearchResult = ({ member }) => {
+export const SearchResult = ({ member }) => {
     if (!member) {
         return <section />
     } else {

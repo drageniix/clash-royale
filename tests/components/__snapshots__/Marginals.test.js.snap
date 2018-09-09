@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render: Header 1`] = `
+<header
+  className="header"
+>
+  <div
+    class="header__content"
+  >
+    <img
+      src="./favicon.png"
+    />
+    <div
+      className="header__text"
+    >
+      <h1>
+        3 Dark Towers
+      </h1>
+      <p>
+        2+ Years Strong! Come chat with us on 
+        <a
+          href="https://discord.gg/XvFGctt"
+        >
+          Discord
+        </a>
+        .
+      </p>
+    </div>
+  </div>
+</header>
+`;

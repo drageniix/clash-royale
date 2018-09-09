@@ -9,7 +9,7 @@ gulp.task('start', gulp.series([
     'createImageCSSJSON',
     'createImageJSON'], 
     gulp.parallel('webpack-server', function watchTemplates(){ 
-        gulp.watch(['./tests/*'],
+        gulp.watch(['./tests/*/*'],
             gulp.series('testSuites'))
         gulp.watch(['./gulp/templates/data/*'],
             gulp.series('createDataJSON'))

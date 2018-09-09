@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const ClanDescription = ({admin}) => (
+export const ClanDescription = ({admin}) => (
     <section className="description">
         <div className="description__reqs">
             <h2>Clan Requirements</h2>

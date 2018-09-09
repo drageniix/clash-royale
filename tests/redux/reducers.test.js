@@ -1,5 +1,4 @@
 import reducer from '../../src/redux/reducer'
-import clan from '../resources/clan.json'
 
 test('default state', () => {
     expect(reducer(undefined, { 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const Header = ({ name, discord }) => (
+export const Header = ({ name, discord }) => (
     <header className="header">
         <div class="header__content">
             <img src="./favicon.png" />

@@ -88,9 +88,8 @@ export const getSearchResult = (stateQuery, stateMembers) => stateQuery ? stateM
     member.name.toLowerCase().includes(stateQuery.toLowerCase().trim()) ||
     member.tag === stateQuery)) : undefined
 
-//Tangent Styling -- Untested
 export const getDirectionIndicator = ({ order , dir }, currentOrder) => (
-    currentOrder.replace(/([A-Z])/g, ' $1').replace(/^./, function (str) { return str.toUpperCase(); }) +
+    currentOrder.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()) +
     (order  === currentOrder ? (dir === 'ascending' ? " ▼" : " ▲") : "")
 )
 

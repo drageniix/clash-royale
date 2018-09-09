@@ -1,9 +1,8 @@
 import React from 'react'
 import { setCurrent } from '../redux/actions'
 import { connect } from 'react-redux'
-import moment from 'moment'
 
-const ChooseWeek = ({ current, lastWeeks, dispatch }) => (
+export const ChooseWeek = ({ current, lastWeeks, dispatch }) => (
     <section className="weekSelection">
         <select onChange={e => {
             const value = e.target.value

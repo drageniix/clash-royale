@@ -1,6 +1,5 @@
-const jestCLI = require('jest-cli')
 const gulp = require('gulp')
+const jestCLI = require('jest-cli')
+const jestConfig = require('../../jest.config.json')
 
-gulp.task('testSuites', () => jestCLI.runCLI({
-    //todo: jest options
-}, ['./']))
+gulp.task('testSuites', () => jestCLI.runCLI(jestConfig, ['./']))

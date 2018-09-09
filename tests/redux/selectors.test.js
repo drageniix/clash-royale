@@ -1,4 +1,4 @@
-import { getSearchResult, getMembers } from "../../src/redux/selectors";
+import { getSearchResult, getMembers, getDirectionIndicator, getSelectedFilterClass } from "../../src/redux/selectors";
 import sampleMembers from '../resources/sampleMembers'
 
 const reorder = (array, indicies) => {
@@ -16,6 +16,14 @@ test('selector: search', () => {
     expect(getSearchResult('#80UUG9R2U', sampleMembers)).toBe(sampleMembers[0])
     expect(getSearchResult('potato', sampleMembers)).toBe(undefined)
     expect(getSearchResult('', sampleMembers)).toBe(undefined)
+})
+
+test('selector: style', () => {
+    expect(getDirectionIndicator({ filter: "none", order: 'rank', dir: 'ascending' }, 'role')).toBe("Role")
+    expect(getDirectionIndicator({ filter: "none", order: 'warBattles', dir: 'ascending' }, 'warBattles')).toBe("War Battles ▼")
+    expect(getDirectionIndicator({ filter: "none", order: 'warBattles', dir: 'descending' }, 'warBattles')).toBe("War Battles ▲")
+    expect(getSelectedFilterClass('none', 'none')).toBe('pointer filter__list--item filter__list--item--selected')
+    expect(getSelectedFilterClass('promotion', 'none')).toBe('pointer filter__list--item')
 })
 
 test('selector: dir', () => {
