@@ -80,7 +80,7 @@ function getRoleValue(role){
     }
 }
 
-export const getMembers = (stateMembers, { filter, order, dir }) => stateMembers
+export const getMembers = (stateMembers, { filter = 'none', order = 'rank', dir = 'ascending' } = {}) => stateMembers
     .filter(filterOptions[filter])
     .sort(sortOptions[order][dir])
     

@@ -4,13 +4,13 @@ const webpackConfig = require('../templates/webpackRunner')
 
 gulp.task('webpack-server', () => webpackConfig(true))
 gulp.task('start', gulp.series([
-    'testSuites',
+    'test',
     'createSprites',
     'createImageCSSJSON',
     'createImageJSON'], 
     gulp.parallel('webpack-server', function watchTemplates(){ 
         gulp.watch(['./tests/*/*'],
-            gulp.series('testSuites'))
+            gulp.series('test'))
         gulp.watch(['./gulp/templates/data/*'],
             gulp.series('createDataJSON'))
         gulp.watch(['./gulp/templates/images/*', './src/assets/images/*'],
@@ -25,7 +25,7 @@ gulp.task('start', gulp.series([
 gulp.task('cleanBuild', () => fs.emptyDir('./public'))
 gulp.task('webpack-build', () => webpackConfig())
 gulp.task('build', gulp.series([
-    'testSuites',
+    'test',
     'cleanBuild',
     'createSprites',
     'createImageCSSJSON',

@@ -1,4 +1,4 @@
-require('./gulp/tasks/jest')
+require('./gulp/tasks/tests')
 require('./gulp/tasks/sprites')
 require('./gulp/tasks/images-css')
 require('./gulp/tasks/data')

@@ -19,5 +19,5 @@ test('render: Footer', () => {
             discord={clan.discord}
         />
     )
-    expect(wrapper.find(".footer__updated").text()).toMatch(/Clan data last updated .* ago\./)
+    expect(wrapper.find(".footer__updated").text()).toBe("Clan data last updated 49 years ago.")
 })

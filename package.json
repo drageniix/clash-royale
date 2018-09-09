@@ -10,13 +10,12 @@
   "scripts": {
     "start": "gulp start",
     "build": "gulp build",
-    "test": "jest --config=jest.config.json"
+    "test": "gulp test"
   },
   "keywords": [],
   "author": "Ashley Barrow",
   "license": "ISC",
   "dependencies": {
-    "enzyme-to-json": "^3.3.4",
     "es6-promise": "^4.2.4",
     "isomorphic-fetch": "^2.2.1",
     "moment": "^2.22.2",
@@ -38,6 +37,7 @@
     "css-loader": "^1.0.0",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
     "file-loader": "^1.1.11",
     "fs-extra": "^7.0.0",
     "gulp": "^4.0.0",
