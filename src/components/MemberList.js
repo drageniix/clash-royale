@@ -20,8 +20,7 @@ const MemberList = ({ members, getDirectionIndicator, getSelectedFilterClass, di
                     <th className="pointer align-right" onClick={() => dispatch(setOrder.byRole())}>{getDirectionIndicator("role")}</th>
                     <th className="pointer align-left" onClick={() => dispatch(setOrder.byName())}>{getDirectionIndicator("name")}</th>
                     <th className="pointer align-right" onClick={() => dispatch(setOrder.byDonations())}>{getDirectionIndicator("donations")}</th>
-                    <th className="pointer align-right" onClick={() => dispatch(setOrder.byWarBattles())}>{getDirectionIndicator("wars")}</th>
-                    <th className="pointer align-right" onClick={() => dispatch(setOrder.byMissed())}>{getDirectionIndicator("missed")}</th>
+                    <th className="pointer align-right" onClick={() => dispatch(setOrder.byWars())}>{getDirectionIndicator("wars")}</th>
                 </tr>
             </thead>
             {members.map((member, index) => (
@@ -34,8 +33,7 @@ const MemberList = ({ members, getDirectionIndicator, getSelectedFilterClass, di
                         {member.name}
                     </td>
                     <td className="align-right">{checkDonations(member)}</td>
-                    <td className="align-right"> {member.warBattles}/10</td>
-                    <td className="align-right"> {member.missedWarBattles}</td>
+                    <td className="align-right">{member.warBattles}{member.missedWarBattles ? (" (" + member.missedWarBattles + "M)") : ""}</td>
                 </tr>
             ))}
         </table>

@@ -45,9 +45,21 @@ export const setOrder = {
         type: "SET_ORDER",
         order: 'donations'
     }),
-    byWarBattles: () => ({
+    byWars: () => ({
         type: "SET_ORDER",
         order: 'wars'
+    }),
+    byWarBattles: () => ({
+        type: "SET_ORDER",
+        order: 'warBattles'
+    }),
+    byLosses: () => ({
+        type: 'SET_ORDER',
+        order: 'losses'
+    }),
+    byWins: () => ({
+        type: 'SET_ORDER',
+        order: 'wins'
     }),
     byMissed: () => ({
         type: "SET_ORDER",

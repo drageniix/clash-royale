@@ -1,3 +1,5 @@
+import { firstBy } from "../utilities/basic";
+
 const filterOptions = {
     none: member => member,
     promotion: member => member.eligibleForPromotion,
@@ -26,13 +28,21 @@ const sortOptions = {
         ascending: (a, b) => b.donations - a.donations,
         descending: (a, b) => a.donations - b.donations
     },
-    wars: {
+    warBattles : {
         ascending: (a, b) => b.warBattles - a.warBattles,
         descending: (a, b) => a.warBattles - b.warBattles
     },
+    wins : {
+        ascending: (a, b) => b.wins - a.wins,
+        descending: (a, b) => a.wins - b.wins
+    },
+    losses : {
+        ascending: (a, b) => b.losses - a.losses,
+        descending: (a, b) => a.losses - b.losses
+    },
     missed: {
         ascending: (a, b) => b.missedWarBattles - a.missedWarBattles,
-        descending: (a, b) =>  a.missedWarBattles - b.missedWarBattles
+        descending: (a, b) => a.missedWarBattles - b.missedWarBattles
     },
     role: {
         ascending(a, b){
@@ -47,7 +57,12 @@ const sortOptions = {
 
             return bRole - aRole
         },
-    }
+    },
+}
+
+sortOptions.wars = {
+    ascending: firstBy(sortOptions.warBattles.ascending).thenBy(sortOptions.wins.ascending),
+    descending: firstBy(sortOptions.missed.ascending).thenBy(sortOptions.warBattles.descending).thenBy(sortOptions.losses.ascending)
 }
 
 function getRoleValue(role){
@@ -75,7 +90,7 @@ export const getSearchResult = (stateQuery, stateMembers) => stateQuery ? stateM
 
 //Tangent Styling -- Untested
 export const getDirectionIndicator = ({ order , dir }, currentOrder) => (
-    currentOrder.replace(/^./, function (str) { return str.toUpperCase(); }) +
+    currentOrder.replace(/([A-Z])/g, ' $1').replace(/^./, function (str) { return str.toUpperCase(); }) +
     (order  === currentOrder ? (dir === 'ascending' ? " ▼" : " ▲") : "")
 )
 

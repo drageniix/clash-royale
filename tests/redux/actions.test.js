@@ -1,4 +1,4 @@
-import { setCurrent, setQuery, setFilter, setOrder, setNewWeek } from "../src/redux/actions";
+import { setCurrent, setQuery, setFilter, setOrder, setNewWeek } from "../../src/redux/actions";
 
 test('action: set current', () => {
     expect(setCurrent(123)).toEqual({
@@ -63,9 +63,21 @@ test('action: set order', () => {
         type: "SET_ORDER",
         order: "donations"
     })
-    expect(setOrder.byWarBattles()).toEqual({
+    expect(setOrder.byWars()).toEqual({
         type: "SET_ORDER",
         order: "wars"
+    })
+    expect(setOrder.byWarBattles()).toEqual({
+        type: "SET_ORDER",
+        order: "warBattles"
+    })
+    expect(setOrder.byWins()).toEqual({
+        type: "SET_ORDER",
+        order: "wins"
+    })
+    expect(setOrder.byLosses()).toEqual({
+        type: "SET_ORDER",
+        order: "losses"
     })
     expect(setOrder.byMissed()).toEqual({
         type: "SET_ORDER",

@@ -26,7 +26,7 @@ export default (state = defaultState, action) => {
             return {
                 ...action.json,
                 current: state.current,
-                query: "",
+                query: state.query,
                 filters: {
                     ...state.filters,
                 },

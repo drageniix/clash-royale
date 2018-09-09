@@ -1,6 +1,6 @@
 import {createStore} from 'redux'
 import reducer from './reducer'
-import { setNewWeek, setCurrent } from './actions'
+import { setNewWeek } from './actions'
 import fetch from 'isomorphic-fetch'
 import promise from 'es6-promise';
 promise.polyfill()

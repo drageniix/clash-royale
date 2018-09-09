@@ -9,7 +9,7 @@ const ChooseWeek = ({ current, lastWeeks, dispatch }) => (
             const value = e.target.value
             dispatch(setCurrent(value))}} value={current}>
             {lastWeeks.map((item, index) => (
-                <option className="weekSelection__option" value={index} key={index}>{typeof item.display === 'number' ? moment.unix(item.display).fromNow() : item.display}</option>
+                <option className="weekSelection__option" value={index} key={index}>{item.display}</option>
             ))}
         </select>
     </section>
