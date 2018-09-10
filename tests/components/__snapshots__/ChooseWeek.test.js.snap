@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChooseWeek: set current 1`] = `
+<section
+  className="weekSelection"
+>
+  <select
+    onChange={[Function]}
+    value={0}
+  >
+    <option
+      className="weekSelection__option"
+      key="0"
+      value={0}
+    >
+      Current Week
+    </option>
+    <option
+      className="weekSelection__option"
+      key="1"
+      value={1}
+    >
+      2018-09-09
+    </option>
+  </select>
+</section>
+`;

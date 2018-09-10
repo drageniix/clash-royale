@@ -1,5 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`render: Footer 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="footer__links"
+  >
+    <a
+      href="https://discord.gg/XvFGctt"
+    >
+      <div
+        className="icon--discord"
+      />
+    </a>
+  </div>
+  <p
+    className="footer__updated"
+  >
+    Clan data last updated 
+    49 years ago
+    .
+  </p>
+  <p
+    className="footer__credits"
+  >
+    @meliaesc
+  </p>
+</footer>
+`;
+
 exports[`render: Header 1`] = `
 <header
   className="header"

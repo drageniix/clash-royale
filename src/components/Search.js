@@ -2,7 +2,7 @@ import React from 'react'
 import { setQuery } from '../redux/actions'
 import { connect } from 'react-redux'
 
-const Search = ({query, dispatch}) => (
+export const Search = ({query, dispatch}) => (
     <div className="form form__group">
         <input id="search" type="text" placeholder="Member Search" className="form__input" autoFocus onChange={(event) => {
             const query = event.target.value

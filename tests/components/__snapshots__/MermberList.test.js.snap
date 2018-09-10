@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MemberList: set current 1`] = `
+<section
+  className="filter"
+>
+  <ul
+    className="filter__list"
+  >
+    <li
+      className="pointer filter__list--item filter__list--item--selected"
+      onClick={[Function]}
+    >
+      All Members
+    </li>
+    <li
+      className="pointer filter__list--item"
+      onClick={[Function]}
+    >
+      Promotions
+    </li>
+    <li
+      className="pointer filter__list--item"
+      onClick={[Function]}
+    >
+      Probation
+    </li>
+    <li
+      className="pointer filter__list--item"
+      onClick={[Function]}
+    >
+      Demotions
+    </li>
+  </ul>
+  <table
+    className="clanMembers"
+  >
+    <thead
+      className="clanMembers__header"
+    >
+      <tr>
+        <th
+          className="pointer align-left"
+          onClick={[Function]}
+        >
+          Rank ▼
+        </th>
+        <th
+          className="pointer align-right"
+          onClick={[Function]}
+        >
+          Role
+        </th>
+        <th
+          className="pointer align-left"
+          onClick={[Function]}
+        >
+          Name
+        </th>
+        <th
+          className="pointer align-right"
+          onClick={[Function]}
+        >
+          Donations
+        </th>
+        <th
+          className="pointer align-right"
+          onClick={[Function]}
+        >
+          Wars
+        </th>
+      </tr>
+    </thead>
+    <tr
+      className="clanMembers__row"
+      key="0"
+    >
+      <td
+        className="align-left"
+      >
+         #
+        27
+         (
+        4118
+        )
+      </td>
+      <td
+        className="align-right"
+      >
+        Coleader
+      </td>
+      <td
+        className="pointer align-left member-link"
+        onClick={[Function]}
+      >
+        Meliaesc
+      </td>
+      <td
+        className="align-right"
+      >
+        380 (67.9%)
+      </td>
+      <td
+        className="align-right"
+      >
+        10
+      </td>
+    </tr>
+    <tr
+      className="clanMembers__row"
+      key="1"
+    >
+      <td
+        className="align-left"
+      >
+         #
+        14
+         (
+        4221
+        )
+      </td>
+      <td
+        className="align-right"
+      >
+        Elder
+      </td>
+      <td
+        className="pointer align-left member-link"
+        onClick={[Function]}
+      >
+        lDrago45
+      </td>
+      <td
+        className="align-right"
+      >
+        178 (63.6%)
+      </td>
+      <td
+        className="align-right"
+      >
+        10
+      </td>
+    </tr>
+    <tr
+      className="clanMembers__row"
+      key="2"
+    >
+      <td
+        className="align-left"
+      >
+         #
+        37
+         (
+        4032
+        )
+      </td>
+      <td
+        className="align-right"
+      >
+        Leader
+      </td>
+      <td
+        className="pointer align-left member-link"
+        onClick={[Function]}
+      >
+        lauren
+      </td>
+      <td
+        className="align-right"
+      >
+        489 (95.5%)
+      </td>
+      <td
+        className="align-right"
+      >
+        9
+         (1M)
+      </td>
+    </tr>
+    <tr
+      className="clanMembers__promotion"
+      key="3"
+    >
+      <td
+        className="align-left"
+      >
+         #
+        2
+         (
+        4514
+        )
+      </td>
+      <td
+        className="align-right"
+      >
+        Member
+      </td>
+      <td
+        className="pointer align-left member-link"
+        onClick={[Function]}
+      >
+        Jurgen
+      </td>
+      <td
+        className="align-right"
+      >
+        434 (90.4%)
+      </td>
+      <td
+        className="align-right"
+      >
+        10
+      </td>
+    </tr>
+    <tr
+      className="clanMembers__probation"
+      key="4"
+    >
+      <td
+        className="align-left"
+      >
+         #
+        30
+         (
+        4086
+        )
+      </td>
+      <td
+        className="align-right"
+      >
+        Elder
+      </td>
+      <td
+        className="pointer align-left member-link"
+        onClick={[Function]}
+      >
+        Vanilla
+      </td>
+      <td
+        className="align-right"
+      >
+        30 (37.5%)
+      </td>
+      <td
+        className="align-right"
+      >
+        6
+         (1M)
+      </td>
+    </tr>
+    <tr
+      className="clanMembers__demotion"
+      key="5"
+    >
+      <td
+        className="align-left"
+      >
+         #
+        35
+         (
+        4033
+        )
+      </td>
+      <td
+        className="align-right"
+      >
+        Elder
+      </td>
+      <td
+        className="pointer align-left member-link"
+        onClick={[Function]}
+      >
+        Tavlinos
+      </td>
+      <td
+        className="align-right"
+      >
+        none
+      </td>
+      <td
+        className="align-right"
+      >
+        0
+      </td>
+    </tr>
+    <tr
+      className="clanMembers__row"
+      key="6"
+    >
+      <td
+        className="align-left"
+      >
+         #
+        8
+         (
+        4307
+        )
+      </td>
+      <td
+        className="align-right"
+      >
+        Member
+      </td>
+      <td
+        className="pointer align-left member-link"
+        onClick={[Function]}
+      >
+        luc
+      </td>
+      <td
+        className="align-right"
+      >
+        486 (86.8%)
+      </td>
+      <td
+        className="align-right"
+      >
+        4
+      </td>
+    </tr>
+  </table>
+</section>
+`;

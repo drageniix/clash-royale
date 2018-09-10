@@ -4,7 +4,7 @@ import { getDirectionIndicator, getMembers, getSelectedFilterClass } from '../re
 import { setOrder, setFilter, setQuery } from '../redux/actions'
 import { connect } from 'react-redux'
 
-const MemberList = ({ members, getDirectionIndicator, getSelectedFilterClass, dispatch}) => (
+export const MemberList = ({ members, getDirectionIndicator, getSelectedFilterClass, dispatch}) => (
     <section className="filter">
         <ul className="filter__list">
             <li className={getSelectedFilterClass("none")} onClick={() => dispatch(setFilter.byNone())}>All Members</li>
@@ -27,7 +27,7 @@ const MemberList = ({ members, getDirectionIndicator, getSelectedFilterClass, di
                 <tr key={index} className={"clanMembers__" + (member.eligibleForPromotion ? "promotion" : member.onProbation ? "probation" : member.dangerOfDemotion ? "demotion" : "row")}>
                     <td className="align-left"> #{member.clanRank} ({member.trophies})</td>
                     <td className="align-right">{capitalizeFirstLetter(member.role)}</td>
-                    <td className="pointer align-left" onClick={() => {
+                    <td className="pointer align-left member-link" onClick={() => {
                         dispatch(setQuery(member.tag))
                         window.scroll({top: 200, left: 0, behavior: 'smooth'})}}>
                         {member.name}
