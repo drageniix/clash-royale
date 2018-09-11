@@ -6,11 +6,10 @@ const HOST = 'localhost'//'192.168.1.165'
 const PORT = 8080
 
 const runWebpack = (server) => {
-    
     return new Promise((resolve, reject) => {
         server ? 
         
-            new WebpackDevServer(webpack(config), {
+            new WebpackDevServer(webpack(config('development')), {
                 contentBase: outputPath,
                 historyApiFallback: false,
                 hot: true,
@@ -29,7 +28,7 @@ const runWebpack = (server) => {
 
         :
         
-        webpack(config, (err, stats) => {
+        webpack(config('production'), (err, stats) => {
             if (err) {
                 reject(err)
             } else {
