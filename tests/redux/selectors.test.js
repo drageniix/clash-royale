@@ -8,6 +8,7 @@ const reorder = (array, indicies) => {
     }
     return newArray
 }
+
 test('selector: isCurrent', () => {
     let current = 0
     const lastWeeks = [

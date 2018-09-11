@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -62,9 +61,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('production')
-        }),
+        
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html",
@@ -76,7 +73,6 @@ module.exports = {
             chunkFilename: "[id].css"
         })
     ],
-    devtool: 'cheap-module-eval-source-map',
     optimization: {
         minimizer: [
             new UglifyJsPlugin({
@@ -87,8 +83,5 @@ module.exports = {
             new OptimizeCSSAssetsPlugin({})
         ]
     },
-    devServer: {
-        contentBase: outputPath,
-        historyApiFallback: false
-    }
+    mode: 'production'
 }
