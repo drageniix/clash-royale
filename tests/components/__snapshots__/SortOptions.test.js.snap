@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortOptions: set and display sort 1`] = `
+<thead
+  className="clanMembers__header"
+>
+  <tr>
+    <th
+      className="pointer align-left"
+    >
+      Rank ▼
+    </th>
+    <th
+      className="pointer align-right"
+    >
+      Role
+    </th>
+    <th
+      className="pointer align-left"
+    >
+      Name
+    </th>
+    <th
+      className="pointer align-right"
+    >
+      Donations
+    </th>
+    <th
+      className="pointer align-right"
+    >
+      Wars
+    </th>
+  </tr>
+</thead>
+`;
