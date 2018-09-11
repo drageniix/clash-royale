@@ -13,6 +13,6 @@ export const Footer = ({ time, discord }) => (
 )
 
 export default connect(state => ({
-    time : state.time,
-    discord: state.discord
+    time: state.api.time,
+    discord: state.api.discord
 }))(Footer)

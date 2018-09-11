@@ -24,7 +24,7 @@ export class ChooseWeek extends React.Component {
 
 const mapStateToProps = state => ({
     current: state.current,
-    lastWeeks: state.lastWeeks
+    lastWeeks: state.api.lastWeeks
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -8,5 +8,3 @@ Enzyme.configure({
 
 global.shallow = shallow
 global.clan = clan
-
-//todo: memberlist, search, chooseweek

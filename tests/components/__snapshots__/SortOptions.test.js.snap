@@ -8,7 +8,7 @@ exports[`SortOptions: set and display sort 1`] = `
     <th
       className="pointer align-left"
     >
-      Rank ▼
+      Rank ▲
     </th>
     <th
       className="pointer align-right"

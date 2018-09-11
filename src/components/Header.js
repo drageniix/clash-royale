@@ -14,6 +14,6 @@ export const Header = ({ name, discord }) => (
 )
 
 export default connect(state => ({
-    name: state.clan.name,
-    discord: state.discord
+    name: state.api.clan.name,
+    discord: state.api.discord
 }))(Header)

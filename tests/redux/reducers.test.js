@@ -1,26 +1,30 @@
 import reducer from '../../src/redux/reducer'
 
-test('default state', () => {
-    expect(reducer(undefined, { 
-        type: '@@INIT' 
-    })).toEqual({
-        query: "",
-        filters: {
-            filter: "none",
-            order: "rank",
-            dir: "ascending"
-        },
-        current: 0,
-        lastWeeks: [{
-            url: "/clan.json",
-            display: "Current Week"
-        }],
+const defaultState = {
+    current: 0,
+    api: {
         time: 0,
         discord: "",
         admin: {},
         clan: {},
-        members: []
-     })
+        members: [],
+        lastWeeks: [{
+            url: "/clan.json",
+            display: "Current Week"
+        }]
+    },
+    query: "",
+    filters: {
+        filter: "none", //none, promotion, probation, demotion
+        order: "rank", //rank, name, donations, wars, missed, role
+        dir: "ascending" //ascending and descending, automatic from order
+    }
+}
+
+test('default state', () => {
+    expect(reducer(undefined, { 
+        type: '@@INIT' 
+    })).toEqual(defaultState)
 })
 
 test('reducer: set week', () => {
@@ -28,21 +32,13 @@ test('reducer: set week', () => {
         type: 'SET_WEEK',
         json: clan
     })).toEqual({
-        ...clan,
-        query: "",
-        filters: {
-            filter: "none",
-            order: "rank",
-            dir: "ascending"
-        },
-        current: 0,
-        lastWeeks: (clan.lastWeeks ? [{
-            url: "/clan.json",
-            display: "Current Week"
-        }, ...clan.lastWeeks] : [{
-            url: "/clan.json",
-            display: "Current Week"
-        }])
+        ...defaultState,
+        api : {
+            ...clan,
+            lastWeeks: (clan.lastWeeks ? 
+                [...defaultState.api.lastWeeks, ...clan.lastWeeks] : 
+                [...defaultState.api.lastWeeks])
+        }
     })
 })
 

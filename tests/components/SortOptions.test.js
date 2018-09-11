@@ -9,14 +9,15 @@ test('SortOptions: set and display sort', () => {
         onSort={dispatchSpy}
     />)
 
-    wrapper.find('th').at(0).simulate('click', {
-        preventDefault: () => { }
-    })
-
     expect(dispatchSpy).toHaveBeenNthCalledWith(1, "byRank")
     expect(dispatchSpy).toHaveBeenNthCalledWith(2, "byRole")
     expect(dispatchSpy).toHaveBeenNthCalledWith(3, "byName")
     expect(dispatchSpy).toHaveBeenNthCalledWith(4, "byDonations")
     expect(dispatchSpy).toHaveBeenNthCalledWith(5, "byWars")
+    
+    expect(wrapper.find('th').at(0).text()).toBe("Rank ▼")
+    wrapper.setProps({getDirectionIndicator: order => getDirectionIndicator({ order: "rank", dir: "descending" }, order)})
+    expect(wrapper.find('th').at(0).text()).toBe("Rank ▲")
+    
     expect(wrapper).toMatchSnapshot()
 })

@@ -12,5 +12,5 @@ export const ClanDescription = ({admin}) => (
 )
 
 export default connect(state => ({
-    admin: state.admin
+    admin: state.api.admin
 }))(ClanDescription)

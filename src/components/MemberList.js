@@ -27,7 +27,7 @@ export const MemberList = ( { members, onClick }) => (
 )
 
 const mapStateToProps = state => ({
-    members: getMembers(state.members, state.filters)
+    members: getMembers(state.api.members, state.filters)
 })
 
 const mapDispatchToProps = dispatch => ({

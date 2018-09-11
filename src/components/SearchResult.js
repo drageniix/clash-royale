@@ -49,5 +49,5 @@ export const SearchResult = ({ member }) => {
 }
 
 export default connect(state => ({
-    member: getSearchResult(state.query, state.members)
+    member: getSearchResult(state.query, state.api.members)
 }))(SearchResult)
