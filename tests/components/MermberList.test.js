@@ -9,7 +9,10 @@ test('MemberList: set query and view members', () => {
         onClick = {dispatchSpy}
     />)
     
-    expect(dispatchSpy).toHaveBeenCalledTimes(members.length)
-    expect(dispatchSpy).toHaveBeenLastCalledWith("#92G8UPJU")
+    wrapper.find('.member-link').at(0).simulate('click', {
+        preventDefault: () => { }
+    })
+
+    expect(dispatchSpy).toHaveBeenCalledWith("#80UUG9R2U")
     expect(wrapper).toMatchSnapshot()
 })

@@ -6,21 +6,25 @@ exports[`FilterOptions: set and display filter 1`] = `
 >
   <li
     className="pointer filter__list--item filter__list--item--selected"
+    onClick={[Function]}
   >
     All Members
   </li>
   <li
     className="pointer filter__list--item"
+    onClick={[Function]}
   >
     Promotions
   </li>
   <li
     className="pointer filter__list--item"
+    onClick={[Function]}
   >
     Probation
   </li>
   <li
     className="pointer filter__list--item"
+    onClick={[Function]}
   >
     Demotions
   </li>

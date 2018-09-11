@@ -7,26 +7,31 @@ exports[`SortOptions: set and display sort 1`] = `
   <tr>
     <th
       className="pointer align-left"
+      onClick={[Function]}
     >
       Rank ▲
     </th>
     <th
       className="pointer align-right"
+      onClick={[Function]}
     >
       Role
     </th>
     <th
       className="pointer align-left"
+      onClick={[Function]}
     >
       Name
     </th>
     <th
       className="pointer align-right"
+      onClick={[Function]}
     >
       Donations
     </th>
     <th
       className="pointer align-right"
+      onClick={[Function]}
     >
       Wars
     </th>

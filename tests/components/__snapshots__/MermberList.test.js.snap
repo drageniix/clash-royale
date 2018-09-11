@@ -29,6 +29,7 @@ exports[`MemberList: set query and view members 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
+        onClick={[Function]}
       >
         Meliaesc
       </td>
@@ -63,6 +64,7 @@ exports[`MemberList: set query and view members 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
+        onClick={[Function]}
       >
         lDrago45
       </td>
@@ -97,6 +99,7 @@ exports[`MemberList: set query and view members 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
+        onClick={[Function]}
       >
         lauren
       </td>
@@ -132,6 +135,7 @@ exports[`MemberList: set query and view members 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
+        onClick={[Function]}
       >
         Jurgen
       </td>
@@ -166,6 +170,7 @@ exports[`MemberList: set query and view members 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
+        onClick={[Function]}
       >
         Vanilla
       </td>
@@ -201,6 +206,7 @@ exports[`MemberList: set query and view members 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
+        onClick={[Function]}
       >
         Tavlinos
       </td>
@@ -235,6 +241,7 @@ exports[`MemberList: set query and view members 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
+        onClick={[Function]}
       >
         luc
       </td>

@@ -10,9 +10,8 @@ test('FilterOptions: set and display filter', () => {
         onFilter={dispatchSpy}
     />)
 
-    expect(dispatchSpy).toHaveBeenNthCalledWith(1, "byNone")
-    expect(dispatchSpy).toHaveBeenNthCalledWith(2, "byPromotion")
-    expect(dispatchSpy).toHaveBeenNthCalledWith(3, "byProbation")
-    expect(dispatchSpy).toHaveBeenNthCalledWith(4, "byDemotion")    
+    wrapper.find('li').at(0).simulate('click', { preventDefault: () => { } })
+    expect(dispatchSpy).toHaveBeenCalledWith('byNone')
+
     expect(wrapper).toMatchSnapshot()
 })
