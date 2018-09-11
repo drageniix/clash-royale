@@ -30,6 +30,35 @@ exports[`render: Footer 1`] = `
 </footer>
 `;
 
+exports[`render: Footer 2`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="footer__links"
+  >
+    <a
+      href="https://discord.gg/XvFGctt"
+    >
+      <div
+        className="icon--discord"
+      />
+    </a>
+  </div>
+  <p
+    className="footer__updated"
+  >
+    Clan data from 
+    2018-09-09
+  </p>
+  <p
+    className="footer__credits"
+  >
+    @meliaesc
+  </p>
+</footer>
+`;
+
 exports[`render: Header 1`] = `
 <header
   className="header"

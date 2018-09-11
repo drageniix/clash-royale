@@ -6,7 +6,9 @@ import ChooseWeek from "./components/ChooseWeek";
 import Header from "./components/Header";
 import SearchResult from "./components/SearchResult";
 import Search from "./components/Search";
-import MemberList from "./components/MemberList";
+import MemberTable from "./components/MemberTable";
+import SortOptions from "./components/SortOptions";
+import FilterOptions from "./components/FilterOptions";
 import Footer from "./components/Footer";
 
 import { Provider } from 'react-redux'
@@ -19,8 +21,7 @@ function importAll(r){
 }
 
 const store = configureStore()
-
-const App = props => (
+const App = () => (
     <Provider store={store}>
         <div>
             <Header />
@@ -35,7 +36,11 @@ const App = props => (
                         <SearchResult />
                     </section>
                     <section className="whole">
-                        <MemberList />
+                        <FilterOptions />
+                        <table className="clanMembers">
+                            <SortOptions />
+                            <MemberTable />
+                        </table>
                     </section>
                 </section>
             </main>

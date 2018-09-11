@@ -1,10 +1,10 @@
 import React from 'react'
 import members from '../resources/sampleMembers'
-import { MemberList } from '../../src/components/MemberList';
+import { MemberTable } from '../../src/components/MemberTable';
 
-test('MemberList: set query and view members', () => {
+test('MemberTable: set query and view members', () => {
     const dispatchSpy = jest.fn()
-    const wrapper = shallow(<MemberList
+    const wrapper = shallow(<MemberTable
         members={members}
         onClick = {dispatchSpy}
     />)

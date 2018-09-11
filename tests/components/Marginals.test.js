@@ -15,9 +15,21 @@ test('render: Header', () => {
 test('render: Footer', () => {
     const wrapper = shallow(
         <Footer 
+            pastDate={undefined}
             time={clan.time}
             discord={clan.discord}
         />
     )
+
     expect(wrapper).toMatchSnapshot()
+
+    const pastWrapper = shallow(
+        <Footer
+            pastDate={"2018-09-09"}
+            time={clan.time}
+            discord={clan.discord}
+        />
+    )
+
+    expect(pastWrapper).toMatchSnapshot()
 })

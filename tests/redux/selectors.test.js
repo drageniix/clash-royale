@@ -1,4 +1,4 @@
-import { getSearchResult, getMembers, getDirectionIndicator, getSelectedFilterClass } from "../../src/redux/selectors";
+import { getSearchResult, getMembers, getDirectionIndicator, getSelectedFilterClass, isCurrent } from "../../src/redux/selectors";
 import sampleMembers from '../resources/sampleMembers'
 
 const reorder = (array, indicies) => {
@@ -8,6 +8,25 @@ const reorder = (array, indicies) => {
     }
     return newArray
 }
+test('selector: isCurrent', () => {
+    let current = 0
+    const lastWeeks = [
+        {
+            url: '/clan.json',
+            display: 'Current Week'
+        },
+        {
+            url: '/clash-royale/2018-09-09.json',
+            display: '2018-09-09'
+        }
+    ]
+
+    expect(isCurrent(current, lastWeeks)).toBeFalsy()
+
+    current = 1
+    expect(isCurrent(current, lastWeeks)).toBe(lastWeeks[current].display)
+
+})
 
 test('selector: search', () => {
     expect(getSearchResult('Meliaesc', sampleMembers)).toBe(sampleMembers[0])

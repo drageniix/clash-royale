@@ -16,14 +16,14 @@ export default () => {
 
     store.subscribe(() => {
         if (store.getState().current != currentValue) {
-            fetch(getAPIURL(currentValue = store.getState().current, store.getState().lastWeeks))
+            fetch(getAPIURL(currentValue = store.getState().current, store.getState().api.lastWeeks))
                 .then(response => response.json())
                 .then(api => store.dispatch(setNewWeek(api)))
         }
     })
 
     //initialize
-    fetch(getAPIURL(store.getState().current, store.getState().lastWeeks))
+    fetch(getAPIURL(store.getState().current, store.getState().api.lastWeeks))
         .then(response => response.json())
         .then(api => store.dispatch(setNewWeek(api)))
 
