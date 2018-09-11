@@ -10,7 +10,7 @@
   "scripts": {
     "start": "gulp start",
     "build": "gulp build",
-    "test": "gulp test"
+    "test": "jest --config=jest.config.json"
   },
   "keywords": [],
   "author": "Ashley Barrow",

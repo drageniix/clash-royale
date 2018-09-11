@@ -2,16 +2,29 @@ import React from 'react'
 import { setQuery } from '../redux/actions'
 import { connect } from 'react-redux'
 
-export const Search = ({query, dispatch}) => (
-    <div className="form form__group">
-        <input id="search" type="text" placeholder="Member Search" className="form__input" autoFocus onChange={(event) => {
-            const query = event.target.value
-            dispatch(setQuery(query))
-        }} value={query}/>
-        <label htmlFor="search" className="form__label">Member Search</label>
-    </div>
-)
+export class Search extends React.Component {
+    setQuery = e => {
+        const query = e.target.value
+        this.props.setQuery(query)
+    }
 
-export default connect(state => ({
+    render(){
+        return (
+            <div className="form form__group">
+                <input onChange={this.setQuery} value={this.props.query} type="text" placeholder="Member Search" 
+                    id="search" className="form__input" autoFocus />
+                <label htmlFor="search" className="form__label">Member Search</label>
+            </div>
+        )
+    }
+}
+
+const mapStateToProps = state => ({
     query: state.query
-}))(Search)
+})
+
+const mapDispatchToProps = dispatch => ({
+    setQuery: query => dispatch(setQuery(query))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search)

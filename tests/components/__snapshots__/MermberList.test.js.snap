@@ -1,76 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MemberList: set current 1`] = `
+exports[`FilterOptions: set and display filter 1`] = `
+<ul
+  className="filter__list"
+>
+  <li
+    className="pointer filter__list--item filter__list--item--selected"
+  >
+    All Members
+  </li>
+  <li
+    className="pointer filter__list--item"
+  >
+    Promotions
+  </li>
+  <li
+    className="pointer filter__list--item"
+  >
+    Probation
+  </li>
+  <li
+    className="pointer filter__list--item"
+  >
+    Demotions
+  </li>
+</ul>
+`;
+
+exports[`MemberList: set query and view members 1`] = `
 <section
   className="filter"
 >
-  <ul
-    className="filter__list"
-  >
-    <li
-      className="pointer filter__list--item filter__list--item--selected"
-      onClick={[Function]}
-    >
-      All Members
-    </li>
-    <li
-      className="pointer filter__list--item"
-      onClick={[Function]}
-    >
-      Promotions
-    </li>
-    <li
-      className="pointer filter__list--item"
-      onClick={[Function]}
-    >
-      Probation
-    </li>
-    <li
-      className="pointer filter__list--item"
-      onClick={[Function]}
-    >
-      Demotions
-    </li>
-  </ul>
+  <Connect(FilterOptions) />
   <table
     className="clanMembers"
   >
-    <thead
-      className="clanMembers__header"
-    >
-      <tr>
-        <th
-          className="pointer align-left"
-          onClick={[Function]}
-        >
-          Rank ▼
-        </th>
-        <th
-          className="pointer align-right"
-          onClick={[Function]}
-        >
-          Role
-        </th>
-        <th
-          className="pointer align-left"
-          onClick={[Function]}
-        >
-          Name
-        </th>
-        <th
-          className="pointer align-right"
-          onClick={[Function]}
-        >
-          Donations
-        </th>
-        <th
-          className="pointer align-right"
-          onClick={[Function]}
-        >
-          Wars
-        </th>
-      </tr>
-    </thead>
+    <Connect(SortOptions) />
     <tr
       className="clanMembers__row"
       key="0"
@@ -91,7 +56,6 @@ exports[`MemberList: set current 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
-        onClick={[Function]}
       >
         Meliaesc
       </td>
@@ -126,7 +90,6 @@ exports[`MemberList: set current 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
-        onClick={[Function]}
       >
         lDrago45
       </td>
@@ -161,7 +124,6 @@ exports[`MemberList: set current 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
-        onClick={[Function]}
       >
         lauren
       </td>
@@ -197,7 +159,6 @@ exports[`MemberList: set current 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
-        onClick={[Function]}
       >
         Jurgen
       </td>
@@ -232,7 +193,6 @@ exports[`MemberList: set current 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
-        onClick={[Function]}
       >
         Vanilla
       </td>
@@ -268,7 +228,6 @@ exports[`MemberList: set current 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
-        onClick={[Function]}
       >
         Tavlinos
       </td>
@@ -303,7 +262,6 @@ exports[`MemberList: set current 1`] = `
       </td>
       <td
         className="pointer align-left member-link"
-        onClick={[Function]}
       >
         luc
       </td>
@@ -320,4 +278,38 @@ exports[`MemberList: set current 1`] = `
     </tr>
   </table>
 </section>
+`;
+
+exports[`SortOptions: set and display sort 1`] = `
+<thead
+  className="clanMembers__header"
+>
+  <tr>
+    <th
+      className="pointer align-left"
+    >
+      Rank ▼
+    </th>
+    <th
+      className="pointer align-right"
+    >
+      Role
+    </th>
+    <th
+      className="pointer align-left"
+    >
+      Name
+    </th>
+    <th
+      className="pointer align-right"
+    >
+      Donations
+    </th>
+    <th
+      className="pointer align-right"
+    >
+      Wars
+    </th>
+  </tr>
+</thead>
 `;
