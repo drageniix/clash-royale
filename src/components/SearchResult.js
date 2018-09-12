@@ -1,5 +1,5 @@
 import React from 'react'
-import { capitalizeFirstLetter, getMemberColor } from '../utilities/basic'
+import { capitalizeRole, getMemberColor } from '../utilities/members'
 import { getSearchResult } from '../redux/selectors'
 import { connect } from 'react-redux'
 
@@ -24,7 +24,7 @@ export const SearchResult = ({ member }) => {
                     </tr>
                     <tr>
                         <td>Role</td>
-                        <td>{capitalizeFirstLetter(member.role)}</td>
+                        <td>{capitalizeRole(member)}</td>
                     </tr>
                     <tr>
                         <td>Donations</td>

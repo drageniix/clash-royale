@@ -32,7 +32,8 @@ body {
     padding: 2rem;
     margin: 0 auto;
     width: 70%;
-    flex: 1 0 auto;
+    display: block;
+    text-align: center;
 
     @include respond(tabPort) {
         padding: 1rem;

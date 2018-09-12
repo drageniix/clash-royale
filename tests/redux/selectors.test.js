@@ -1,4 +1,4 @@
-import { getSearchResult, getMembers, getDirectionIndicator, getSelectedFilterClass, isCurrent } from "../../src/redux/selectors";
+import { getSearchResult, getMembers, getDirectionIndicator, getSelectedFilterClass, isPastDate } from "../../src/redux/selectors";
 import sampleMembers from '../resources/sampleMembers'
 
 const reorder = (array, indicies) => {
@@ -9,8 +9,7 @@ const reorder = (array, indicies) => {
     return newArray
 }
 
-test('selector: isCurrent', () => {
-    let current = 0
+test('selector: isPastDate', () => {
     const lastWeeks = [
         {
             url: '/clan.json',
@@ -22,10 +21,8 @@ test('selector: isCurrent', () => {
         }
     ]
 
-    expect(isCurrent(current, lastWeeks)).toBeFalsy()
-
-    current = 1
-    expect(isCurrent(current, lastWeeks)).toBe(lastWeeks[current].display)
+    expect(isPastDate(0, lastWeeks)).toBeFalsy()
+    expect(isPastDate(1, lastWeeks)).toBe(lastWeeks[1].display)
 
 })
 

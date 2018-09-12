@@ -1,7 +1,7 @@
 import moment from 'moment'
 import React from 'react'
 import { connect } from 'react-redux'
-import { isCurrent } from '../redux/selectors';
+import { isPastDate } from '../redux/selectors';
 
 export const Footer = ({ pastDate, time, discord }) => (
     <footer className="footer">
@@ -17,7 +17,7 @@ export const Footer = ({ pastDate, time, discord }) => (
 )
 
 export default connect(state => ({
-    pastDate: isCurrent(state.current, state.api.lastWeeks),
+    pastDate: isPastDate(state.current, state.api.lastWeeks),
     time: state.api.time,
     discord: state.api.discord
 }))(Footer)

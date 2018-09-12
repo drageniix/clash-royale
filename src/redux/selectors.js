@@ -79,7 +79,7 @@ function getRoleValue(role){
             return 5
     }
 }
-export const isCurrent = (stateCurrent, stateLastWeeks) => stateCurrent === 0 ? undefined : stateLastWeeks[stateCurrent].display
+export const isPastDate = (stateCurrent, stateLastWeeks) => stateCurrent === 0 ? undefined : stateLastWeeks[stateCurrent].display
 
 export const getMembers = (stateMembers, { filter = 'none', order = 'rank', dir = 'ascending' } = {}) => stateMembers
     .filter(filterOptions[filter])

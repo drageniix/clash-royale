@@ -6,22 +6,23 @@
     align-content: flex-start;
     flex-wrap: wrap;
     margin-top: 3rem;
+
+    & > * {
+        display: inline-block;
+    }
 }
+
 .whole {
+    width: 100%;
     flex-basis: 100%;   
     margin-bottom: 3rem;
 }
 
 .half {
+    width: 48%;
     flex-basis: 48%;
 
     @include respond(phone) {
         flex-basis: 100%;
     }
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
 }
