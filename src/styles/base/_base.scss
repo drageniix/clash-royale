@@ -33,8 +33,7 @@ body {
     margin: 0 auto;
     width: 70%;
     display: block;
-    text-align: center;
-
+    
     @include respond(tabPort) {
         padding: 1rem;
         width: 95%;
