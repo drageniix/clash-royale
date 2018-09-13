@@ -5,7 +5,7 @@ import { Footer } from '../../src/components/Footer'
 test('render: Header', () => {
     const wrapper = shallow(
         <Header 
-            name={clan.clan.name}
+            name={clan.name}
             discord={clan.discord}
         />
     )

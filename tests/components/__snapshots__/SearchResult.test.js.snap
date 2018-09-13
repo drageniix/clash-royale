@@ -8,73 +8,75 @@ exports[`render: Search Result 1`] = `
   <table
     className="searchResult__table"
   >
-    <tr>
-      <td>
-        Name
-      </td>
-      <td>
-        Goofyjay2
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Tag
-      </td>
-      <td>
-        #PYP8VCRG
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Trophies
-      </td>
-      <td>
-        4704
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Role
-      </td>
-      <td>
-        Elder
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Donations
-      </td>
-      <td>
-        1230
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Donations Received
-      </td>
-      <td>
-        720
-      </td>
-    </tr>
-    <tr>
-      <td>
-        War Battles (Last 10)
-      </td>
-      <td>
-        8
-        W - 
-        3
-        L
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Missed War Battles
-      </td>
-      <td>
-        0
-      </td>
-    </tr>
+    <tbody>
+      <tr>
+        <td>
+          Name
+        </td>
+        <td>
+          Goofyjay2
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Tag
+        </td>
+        <td>
+          #PYP8VCRG
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Trophies
+        </td>
+        <td>
+          4704
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Role
+        </td>
+        <td>
+          Elder
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Donations
+        </td>
+        <td>
+          1230
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Donations Received
+        </td>
+        <td>
+          720
+        </td>
+      </tr>
+      <tr>
+        <td>
+          War Battles (Last 10)
+        </td>
+        <td>
+          8
+          W - 
+          3
+          L
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Missed War Battles
+        </td>
+        <td>
+          0
+        </td>
+      </tr>
+    </tbody>
   </table>
 </section>
 `;

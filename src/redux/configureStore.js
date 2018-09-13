@@ -1,6 +1,6 @@
 import {createStore} from 'redux'
 import reducer from './reducer'
-import { setNewWeek } from './actions'
+import { setNewWeek, setQuery } from './actions'
 import fetch from 'isomorphic-fetch'
 import promise from 'es6-promise';
 promise.polyfill()
@@ -25,7 +25,13 @@ export default () => {
     //initialize
     fetch(getAPIURL(store.getState().current, store.getState().api.lastWeeks))
         .then(response => response.json())
-        .then(api => store.dispatch(setNewWeek(api)))
+        .then(api => {
+            store.dispatch(setNewWeek(api))
+            const query = window.location.href.split('#')
+            if (query.length > 1){
+                store.dispatch(setQuery(query[1]))
+            }
+        })
 
     return store
 }

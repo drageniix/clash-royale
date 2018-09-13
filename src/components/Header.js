@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 export const Header = ({ name, discord }) => (
     <header className="header">
-        <div class="header__content">
+        <div className="header__content">
             <img src="./favicon.png" />
             <div className="header__text">
                 <h1>{name}</h1>

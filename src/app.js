@@ -8,6 +8,7 @@ import SearchResult from "./components/SearchResult";
 import Search from "./components/Search";
 import MemberTable from "./components/MemberTable";
 import SortOptions from "./components/SortOptions";
+import TopPlayers from "./components/TopPlayers";
 import FilterOptions from "./components/FilterOptions";
 import Footer from "./components/Footer";
 
@@ -30,6 +31,10 @@ const App = () => (
                     <section className="half">
                         <ClanDescription />
                         <ChooseWeek />
+                        <section className="top">
+                            <TopPlayers order="wins" title="Most Wins"/>
+                            <TopPlayers order="donations" title="Top Donators"/>
+                        </section>
                     </section>
                     <section className="half">
                         <Search />

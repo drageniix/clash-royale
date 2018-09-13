@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render: Description 1`] = `
+<div
+  className="top__type"
+>
+  <h4>
+    Most Wins
+  </h4>
+  <table>
+    <tbody>
+      <tr
+        key="0"
+      >
+        <td>
+          1
+          .
+        </td>
+        <td
+          className="pointer member-link"
+          onClick={[Function]}
+        >
+          Jurgen
+        </td>
+      </tr>
+      <tr
+        key="1"
+      >
+        <td>
+          2
+          .
+        </td>
+        <td
+          className="pointer member-link"
+          onClick={[Function]}
+        >
+          Meliaesc
+        </td>
+      </tr>
+      <tr
+        key="2"
+      >
+        <td>
+          3
+          .
+        </td>
+        <td
+          className="pointer member-link"
+          onClick={[Function]}
+        >
+          lDrago45
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

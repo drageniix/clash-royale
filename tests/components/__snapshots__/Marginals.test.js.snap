@@ -64,7 +64,7 @@ exports[`render: Header 1`] = `
   className="header"
 >
   <div
-    class="header__content"
+    className="header__content"
   >
     <img
       src="./favicon.png"
@@ -72,9 +72,7 @@ exports[`render: Header 1`] = `
     <div
       className="header__text"
     >
-      <h1>
-        3 Dark Towers
-      </h1>
+      <h1 />
       <p>
         2+ Years Strong! Come chat with us on 
         <a
