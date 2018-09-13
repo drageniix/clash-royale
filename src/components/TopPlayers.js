@@ -10,7 +10,7 @@ export class TopPlayers extends React.Component {
 
     render() {
         return (
-            <div className="top__type">
+            <div className="topPlayers__type">
                 <h4>{this.props.title}</h4>
                 <table>
                     <tbody>

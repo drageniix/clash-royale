@@ -31,7 +31,7 @@ const App = () => (
                     <section className="half">
                         <ClanDescription />
                         <ChooseWeek />
-                        <section className="top">
+                        <section className="topPlayers">
                             <TopPlayers order="wins" title="Most Wins"/>
                             <TopPlayers order="donations" title="Top Donators"/>
                         </section>
