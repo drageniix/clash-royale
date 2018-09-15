@@ -2,17 +2,17 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const outputPath = require('path').resolve(__dirname, "public")
-const entryPoint = './src/app.js'
 const appTitle = '3 Dark Towers'
 
-module.exports = (env) => {
+module.exports = env => {
     const isProduction = env == 'production'
-    
+
     return {
         entry: {
-            index: ['babel-polyfill', entryPoint]
+            index: ['babel-polyfill', './src/app.js', './src/styles/index.scss'],
         },
         output: {
             path: outputPath,
@@ -36,7 +36,7 @@ module.exports = (env) => {
                     MiniCssExtractPlugin.loader,
                     {
                         loader: "css-loader",
-                        options: { 
+                        options: {
                             url: false,
                             sourceMap: true
                         }
@@ -50,7 +50,7 @@ module.exports = (env) => {
                             })],
                         }
                     },
-                    {   
+                    {
                         loader: "sass-loader",
                         options: {
                             sourceMap: true
@@ -74,18 +74,32 @@ module.exports = (env) => {
             }]
         },
         plugins: [
+            new CleanWebpackPlugin([
+                'public'
+            ], {
+                    verbose: false
+                }),
             new HtmlWebPackPlugin({
+                chunks: ['index'],
                 template: "./src/index.html",
                 filename: "./index.html",
                 title: appTitle,
-                favicon: "./src/assets/favicon.png"
+                favicon: "./src/assets/favicon.png",
+                minify: {
+                    removeComments: true,
+                    collapseWhitespace: true,
+                    preserveLineBreaks: true
+                }
             }),
             new MiniCssExtractPlugin({
-                filename: "./styles/[name]-[hash].css",
-                chunkFilename: "[id].css"
+                filename: "./styles/[hash].css",
+                chunkFilename: "[hash].css"
             })
         ],
         optimization: {
+            splitChunks: {
+                chunks: 'all'
+            },
             minimizer: [
                 new UglifyJsPlugin({
                     cache: true,
@@ -103,6 +117,14 @@ module.exports = (env) => {
             ]
         },
         devtool: isProduction ? 'source-map' : 'inline-source-map',
-        mode: isProduction ? 'production' : 'development'
+        mode: isProduction ? 'production' : 'development',
+        stats: {
+            colors: true,
+            cachedAssets: false,
+            chunks: false,
+            modules: false,
+            children: false,
+            warnings: false,
+        }
     }
 }

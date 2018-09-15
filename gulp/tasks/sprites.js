@@ -28,6 +28,6 @@ const config = {
 
 gulp.task('createSprites', gulp.series('cleanSprites', function createSVGSprite(){
     return gulp.src('./src/assets/icons/*.svg')
-        .pipe(svgSprite(config))
-        .pipe(gulp.dest(outputDirectory))
+                .pipe(svgSprite(config))
+                .pipe(gulp.dest(outputDirectory))
 }))

@@ -1,34 +1,51 @@
 const gulp = require('gulp')
-const fs = require('fs-extra')
-const webpackConfig = require('../templates/webpackRunner')
+const config = require('../../webpack.config')
+const WebpackDevServer = require('webpack-dev-server');
+const webpack = require('webpack')
+const outputPath = require('path').resolve(__dirname, "../../public")
+const HOST = 'localhost'//'192.168.1.165'
+const PORT = 8080
 
-gulp.task('webpack-server', () => webpackConfig(true))
-gulp.task('start', gulp.series([
-    'test',
-    'createSprites',
-    'createImageCSSJSON',
-    'createImageJSON'], 
-    gulp.parallel('webpack-server', function watchTemplates(){ 
-        gulp.watch(['./tests/*/*'],
-            gulp.series('test'))
-        gulp.watch(['./gulp/templates/data/*'],
-            gulp.series('createDataJSON'))
-        gulp.watch(['./gulp/templates/images/*', './src/assets/images/*'],
-            gulp.series('createImageJSON')) 
-        gulp.watch(['./gulp/templates/styles/_images-css.json', './src/assets/images-css/*'],
-            gulp.series('createImageCSSJSON'))
-        gulp.watch(['./gulp/templates/styles/_sprites.scss', './src/assets/icons/*'],
-            gulp.series('createSprites'))
-    }
-)))
- 
-gulp.task('cleanBuild', () => fs.emptyDir('./public'))
-gulp.task('webpack-build', () => webpackConfig())
-gulp.task('build', gulp.series([
-    'test',
-    'cleanBuild',
-    'createSprites',
-    'createImageCSSJSON',
-    'createImageJSON',
-    'webpack-build'])
-)
+gulp.task('webpack-server', () => runWebpack(true))
+gulp.task('webpack-build', () => runWebpack())
+
+function runWebpack(server){
+    return new Promise((resolve, reject) => {
+        server ?
+
+            new WebpackDevServer(webpack(config('development')), {
+                contentBase: outputPath,
+                historyApiFallback: false,
+                hot: true,
+                inline: true,
+                host: HOST,
+                port: PORT
+            })
+                .listen(PORT, HOST, err => {
+                    if (err) {
+                        reject(err)
+                    } else {
+                        resolve()
+                    }
+                }
+                )
+
+            :
+
+            webpack(config('production'), (err, stats) => {
+                if (err) {
+                    reject(err)
+                } else {
+                    console.log(stats.toString({
+                        colors: true,
+                        cachedAssets: false,
+                        chunks: false,
+                        modules: false,
+                        children: false,
+                        warnings: false,
+                    }))
+                    resolve(stats)
+                }
+            })
+    })
+}
