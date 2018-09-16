@@ -30,9 +30,11 @@ test('default state', () => {
 test('reducer: set week', () => {
     expect(reducer(undefined, {
         type: 'SET_WEEK',
+        current: 0,
         json: clan
     })).toEqual({
         ...defaultState,
+        current: 0,
         api : {
             ...clan,
             lastWeeks: (clan.lastWeeks ? 
@@ -40,14 +42,6 @@ test('reducer: set week', () => {
                 [...defaultState.api.lastWeeks])
         }
     })
-})
-
-test('reducer: set current', () => {
-    const current = 123
-    expect(reducer(undefined, {
-        type: 'SET_CURRENT',
-        current
-    }).current).toBe(current)
 })
 
 test('reducer: set query', () => {

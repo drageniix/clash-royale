@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 
 export class MemberTable extends React.Component {
     onClick = memberTag => e => {
-        window.scroll({ top: 200, left: 0, behavior: 'smooth' }) //can't use in tests
         this.props.onClick(memberTag)
     }
 
@@ -34,7 +33,10 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    onClick: query => dispatch(setQuery(query))
+    onClick: query => {
+        window.scroll({ top: 200, left: 0, behavior: 'smooth' }) //can't use in tests
+        dispatch(setQuery(query))
+    }
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(MemberTable)

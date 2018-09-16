@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 
 export class ChooseWeek extends React.Component {
     setCurrent = e => {
-        const value = e.target.value
-        this.props.setCurrent(value)
+        const value = parseInt(e.target.value)
+        this.props.setCurrent(this.props.lastWeeks, value)
     }
 
     render(){
@@ -28,7 +28,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    setCurrent: value => dispatch(setCurrent(value))
+    setCurrent: (lastWeeks, current) => dispatch(setCurrent(lastWeeks, current))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChooseWeek)

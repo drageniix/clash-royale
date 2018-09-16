@@ -1,21 +1,22 @@
-import { setCurrent, setQuery, setFilter, setOrder, setNewWeek } from "../../src/redux/actions";
+import { setQuery, setFilter, setOrder, setNewWeek } from "../../src/redux/actions";
 
-test('action: set current', () => {
-    expect(setCurrent(123)).toEqual({
-        type: 'SET_CURRENT',
-        current: 123
-    })
-    expect(setCurrent()).toEqual({
-        type: 'SET_CURRENT',
-        current: 0
-    })
-})
+// test('action: set current', () => {
+//     expect(setCurrent(123)).toEqual({
+//         type: 'SET_CURRENT',
+//         current: 123
+//     })
+//     expect(setCurrent()).toEqual({
+//         type: 'SET_CURRENT',
+//         current: 0
+//     })
+// })
 
 test('action: set new week json', () => {
     const jsonData = {test: '123'}
-    expect(setNewWeek(jsonData)).toEqual({
+    expect(setNewWeek(jsonData, 0)).toEqual({
         type: 'SET_WEEK',
-        json: jsonData
+        json: jsonData,
+        current: 0
     })
 })
 

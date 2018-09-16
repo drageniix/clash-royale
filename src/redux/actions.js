@@ -1,10 +1,16 @@
-export const setNewWeek = json => ({ //from api response
-    type: "SET_WEEK",
-    json
-})
+import fetch from 'isomorphic-fetch'
+import promise from 'es6-promise';
+promise.polyfill()
 
-export const setCurrent = (current = 0) => ({
-    type: "SET_CURRENT",
+export const setCurrent = (stateLastWeeks, current = 0) => dispatch => { 
+    fetch('https://drageniix.github.io/api' + stateLastWeeks[current].url)
+    .then(response => response.json())
+    .then(api => dispatch(setNewWeek(api, current)))
+}
+
+export const setNewWeek = (json, current) => ({ //from setCurrent
+    type: "SET_WEEK",
+    json,
     current
 })
 

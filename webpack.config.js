@@ -5,7 +5,20 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const outputPath = require('path').resolve(__dirname, "public")
-const appTitle = '3 Dark Towers'
+function getHTMLWebPackPlugin(pageEntry, destPath){
+    return new HtmlWebPackPlugin({
+        chunks: [pageEntry],
+        template: "./src/index.html",
+        filename: destPath + "/index.html",
+        title: '3 Dark Towers',
+        favicon: "./src/assets/favicon.png",
+        minify: {
+            removeComments: true,
+            collapseWhitespace: true,
+            preserveLineBreaks: true
+        }
+    })
+}
 
 module.exports = env => {
     const isProduction = env == 'production'
@@ -59,7 +72,6 @@ module.exports = env => {
                 ]
             }, {
                 test: /\.(jpg|png|svg|gif)$/,
-                exclude: /node_modules/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -74,23 +86,10 @@ module.exports = env => {
             }]
         },
         plugins: [
-            new CleanWebpackPlugin([
-                'public'
-            ], {
-                    verbose: false
-                }),
-            new HtmlWebPackPlugin({
-                chunks: ['index'],
-                template: "./src/index.html",
-                filename: "./index.html",
-                title: appTitle,
-                favicon: "./src/assets/favicon.png",
-                minify: {
-                    removeComments: true,
-                    collapseWhitespace: true,
-                    preserveLineBreaks: true
-                }
+            new CleanWebpackPlugin(['public'], {
+                verbose: false
             }),
+            getHTMLWebPackPlugin('index' , '.'),
             new MiniCssExtractPlugin({
                 filename: "./styles/[hash].css",
                 chunkFilename: "[hash].css"
@@ -125,6 +124,12 @@ module.exports = env => {
             modules: false,
             children: false,
             warnings: false,
-        }
+        },
+        devServer: {
+            contentBase: '../../public',
+            historyApiFallback: false,
+            host: 'localhost',
+            port: 8080
+        },
     }
 }

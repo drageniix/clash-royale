@@ -14,7 +14,7 @@ const defaultState = {
     query: "",
     filters: {
         filter: "none", //none, promotion, probation, demotion
-        order: "rank", //rank, name, donations, wars, missed, role
+        order: "rank", //rank, name, donations, wars, wins, missed, role
         dir: "ascending" //ascending and descending, automatic from order
     }
 }
@@ -24,15 +24,11 @@ export default (state = defaultState, action) => {
         case "SET_WEEK":
             return {
                 ...state,
+                current: action.current,
                 api: {
                     ...action.json,
                     lastWeeks: state.api.lastWeeks.length == 1 && action.json.lastWeeks ? [...state.api.lastWeeks, ...action.json.lastWeeks] : state.api.lastWeeks,
                 }
-            }
-        case "SET_CURRENT":
-            return {
-                ...state,
-                current: action.current
             }
         case "SET_QUERY":
             return {
