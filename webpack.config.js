@@ -25,7 +25,7 @@ module.exports = env => {
 
     return {
         entry: {
-            index: ['babel-polyfill', './src/app.js'],
+            index: ['babel-polyfill', './src/app.js', './src/styles/index.scss'],
         },
         output: {
             path: outputPath,
