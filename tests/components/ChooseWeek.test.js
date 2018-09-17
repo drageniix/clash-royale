@@ -17,7 +17,7 @@ test('ChooseWeek: set current', () => {
     const wrapper = shallow(<ChooseWeek
         current={0}
         lastWeeks={lastWeeks}
-        setCurrent={dispatchSpy} />)
+        setNewWeek={dispatchSpy} />)
 
     wrapper.find('select').simulate('change', {
         preventDefault: () => { },

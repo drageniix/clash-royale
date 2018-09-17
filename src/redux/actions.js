@@ -2,17 +2,17 @@ import fetch from 'isomorphic-fetch'
 import promise from 'es6-promise';
 promise.polyfill()
 
-const setNewWeek = (json, current) => ({ //from setCurrent
+const setFetchedWeek = (json, current) => ({
     type: "SET_WEEK",
     json,
     current
 })
 
-export const setCurrent = (stateLastWeeks, current = 0) => dispatch =>  
+export const setNewWeek = (stateLastWeeks, current = 0) => dispatch =>  
     fetch('https://drageniix.github.io/api' + stateLastWeeks[current].url)
     .then(response => response.json())
     .then(api => {
-        dispatch(setNewWeek(api, current))
+        dispatch(setFetchedWeek(api, current))
         return api
     })
 

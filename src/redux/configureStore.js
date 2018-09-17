@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
 import reducer from './reducer'
-import { setCurrent, setQuery } from './actions';
+import { setNewWeek , setQuery } from './actions';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
@@ -9,7 +9,7 @@ export default () => {
     const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
     
     //initialize
-    store.dispatch(setCurrent(store.getState().api.lastWeeks, 0))
+    store.dispatch(setNewWeek(store.getState().api.lastWeeks, 0))
     
     //search query url
     const query = window.location.href.split('#')

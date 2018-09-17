@@ -14,12 +14,9 @@ import Footer from "./components/Footer";
 
 import { Provider } from 'react-redux'
 import configureStore from './redux/configureStore'
-import './styles/index.scss'
 
-importAll(require.context('./generated', true))
-function importAll(r){
-    r.keys().map(r)
-}
+import './styles/index.scss'
+require.context('./generated', true, /\.(jpg|png|svg|gif)$/)
 
 const store = configureStore()
 const App = () => (

@@ -1,4 +1,4 @@
-import { setQuery, setFilter, setOrder, setCurrent } from "../../src/redux/actions";
+import { setQuery, setFilter, setOrder, setNewWeek } from "../../src/redux/actions";
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 
@@ -11,7 +11,7 @@ test('action: set new week', done => {
         display: "Current Week"
     }]
 
-    return store.dispatch(setCurrent(lastWeeks, 0)).then(json => {
+    return store.dispatch(setNewWeek(lastWeeks, 0)).then(json => {
         expect(store.getActions()[0]).toEqual({
             type:'SET_WEEK',
             current: 0,
