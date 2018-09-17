@@ -1,22 +1,23 @@
-import { setQuery, setFilter, setOrder, setNewWeek } from "../../src/redux/actions";
+import { setQuery, setFilter, setOrder, setCurrent } from "../../src/redux/actions";
+import configureMockStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
 
-// test('action: set current', () => {
-//     expect(setCurrent(123)).toEqual({
-//         type: 'SET_CURRENT',
-//         current: 123
-//     })
-//     expect(setCurrent()).toEqual({
-//         type: 'SET_CURRENT',
-//         current: 0
-//     })
-// })
+const createMockStore = configureMockStore([thunk])
 
-test('action: set new week json', () => {
-    const jsonData = {test: '123'}
-    expect(setNewWeek(jsonData, 0)).toEqual({
-        type: 'SET_WEEK',
-        json: jsonData,
-        current: 0
+test('action: set new week', done => {
+    const store = createMockStore({})
+    const lastWeeks = [{
+        url: "/clan.json",
+        display: "Current Week"
+    }]
+
+    return store.dispatch(setCurrent(lastWeeks, 0)).then(json => {
+        expect(store.getActions()[0]).toEqual({
+            type:'SET_WEEK',
+            current: 0,
+            json
+        })
+        done()
     })
 })
 
