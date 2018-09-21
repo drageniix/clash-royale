@@ -1,16 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import ClanDescription from "./components/ClanDescription";
-import ChooseWeek from "./components/ChooseWeek";
-import Header from "./components/Header";
-import SearchResult from "./components/SearchResult";
-import Search from "./components/Search";
-import MemberTable from "./components/MemberTable";
-import SortOptions from "./components/SortOptions";
-import TopPlayers from "./components/TopPlayers";
-import FilterOptions from "./components/FilterOptions";
-import Footer from "./components/Footer";
+import ClanDescription from "./components/ClanDescription"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import FilterOptions from "./components/FilterOptions"
+import SortOptions from "./components/SortOptions"
+import MemberTable from "./components/MemberTable"
 
 import { Provider } from 'react-redux'
 import configureStore from './redux/configureStore'
@@ -18,32 +14,22 @@ import configureStore from './redux/configureStore'
 require.context('./generated', true, /\.(jpg|png|svg|gif)$/)
 
 const store = configureStore()
+
 const App = () => (
     <Provider store={store}>
-        <div>
+        <div className="body">
             <Header />
-            <main className="main">
-                <section className="flex-content">
-                    <section className="half">
+            <main>
+                <div className="hero">
+                    <div className="hero__content flex-content">
                         <ClanDescription />
-                        <ChooseWeek />
-                        <section className="topPlayers">
-                            <TopPlayers order="wins" title="Most Wins"/>
-                            <TopPlayers order="donations" title="Top Donators"/>
-                        </section>
-                    </section>
-                    <section className="half">
-                        <Search />
-                        <SearchResult />
-                    </section>
-                    <section className="whole">
-                        <FilterOptions />
-                        <table className="clanMembers">
-                            <SortOptions />
-                            <MemberTable />
-                        </table>
-                    </section>
-                </section>
+                    </div>
+                </div>
+                <FilterOptions id="members"/>
+                <table className="clanMembers">
+                    <SortOptions />
+                    <MemberTable />
+                </table>
             </main>
             <Footer />
         </div>

@@ -91,7 +91,7 @@ module.exports = env => {
             }),
             getHTMLWebPackPlugin('index' , '.'),
             new MiniCssExtractPlugin({
-                filename: "./styles/[hash].css",
+                filename: "./styles/[name]-[hash].css",
                 chunkFilename: "[hash].css"
             })
         ],
@@ -128,7 +128,7 @@ module.exports = env => {
         devServer: {
             contentBase: '../../public',
             historyApiFallback: false,
-            host: 'localhost',
+            host: '192.168.1.165',
             port: 8080
         },
     }

@@ -1,40 +1,30 @@
 .filter {
-
-    &__list{
-        border-bottom: 1px solid #aaa;
-        margin: 0 0 10px;
-        padding: 0;
+    width: 100%;
+    
+    &__list {
+        background-color: $color-filter;
+                
+        @include respond(phone){
+            margin: -2rem 0 10px 0;
+        }
 
         &--item {
+            font-weight: 600;
             display: inline-block;
             border: 1px solid transparent;
-            border-bottom: none;
-            bottom: -1px;
+            bottom: -1px;   
             position: relative;
             list-style: none;
             padding: 6px 12px;
             cursor: pointer;
-
+            color: white;
+            
             &--selected {
                 background: #fff;
                 border-color: #aaa;
-                border-radius: 5px 5px 0 0;
-            }
-            
-            &:focus {
-                //box-shadow: 0 0 5px hsl(208, 99%, 50%);
-                //border-color: hsl(208, 99%, 50%);
-                outline: none;
-
-                &:after {
-                    content: "";
-                    position: absolute;
-                    height: 5px;
-                    left: -4px;
-                    right: -4px;
-                    bottom: -5px;
-                    background: #fff;
-                }
+                border-bottom: none;
+                color: $color-grey-dark-3;
+                
             }
         }
     }

@@ -4,10 +4,14 @@ import { connect } from 'react-redux'
 export const Header = ({ name, discord }) => (
     <header className="header">
         <div className="header__content">
-            <img src="./favicon.png" />
-            <div className="header__text">
-                <h1>{name}</h1>
-                <p>2+ Years Strong! Come chat with us on <a href={discord}>Discord</a>.</p>
+            <div className="header__brand">
+                <img className="header__brand--logo" src="./favicon.png" />
+                <h1 className="header__brand--title">{name}</h1>
+            </div>
+            <div className="header__links">
+                <a href="#">History</a>
+                <a href={discord}>Discord</a>
+                <a href="https://royaleapi.com/clan/PGVRPVG">All Stats</a>
             </div>
         </div>
     </header>

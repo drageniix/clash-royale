@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import '../generated/view/sprite';
 @import './abstract/variables';
 @import './abstract/mixins';
 @import './base/base';
@@ -10,7 +10,8 @@
 @import './components/searchResult';
 @import './components/filter';
 @import './components/weekSelection';
-@import './components/topPlayers';
 @import './layout/header';
 @import './layout/footer';
 @import './layout/grid';
+
+

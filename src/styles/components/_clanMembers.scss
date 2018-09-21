@@ -1,7 +1,14 @@
 .clanMembers {
+    padding: 0 1rem;
     border-collapse: collapse;
+    border-right: 1px solid #aaa;
+    border-left: 1px solid #aaa;
     width: 100%;
-    
+
+    @include respond(tabPort){
+        border:none;
+    }
+
     &__promotion {
         background-color: rgba($color-promote, 0.4); 
         font-weight: 400;
@@ -24,7 +31,7 @@
     th {
         text-transform: uppercase;
         padding: 3px 2px;
-        border-bottom: 1px solid #aaa;;
+        border-bottom: 1px solid #aaa;
     }  
 }
 

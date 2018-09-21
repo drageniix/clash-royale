@@ -1,5 +1,5 @@
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Latos", sans-serif;
     font-weight: 300;
     line-height: 1.7;
     color: $color-grey-dark-3;
@@ -7,9 +7,6 @@ body {
 }
 
 strong {
-    color: $color-primary
-}
-
-a:link, a:active, a:hover, a {
-    color: $color-grey-light-1;
+    font-size: 1.6rem;
+    color: $color-bold;    
 }

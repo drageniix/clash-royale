@@ -16,12 +16,14 @@
 // <600 <900 <1200 <1800 >1800
 //$breakpoint : phone tabPort tabLand desk deskBig
 @mixin respond($breakpoint) {
-    @if $breakpoint == tinyPhone {
-        @media only screen and (max-width: 24em) { @content }
+    @if $breakpoint == tinierPhone {
+        @media only screen and (max-width: 25em) { @content }
+    } @else if $breakpoint == tinyPhone {
+        @media only screen and (max-width: 31.25em) { @content }
     } @else if $breakpoint == phone {
-        @media only screen and (max-width: 44.75em) { @content }
+        @media only screen and (max-width: 43.125em) { @content }
     } @else if $breakpoint == tabPort { 
-        @media only screen and (max-width: 55em) { @content }
+        @media only screen and (max-width: 57.5em) { @content }
     } @else if $breakpoint == tabLand {
         @media only screen and (max-width: 81.25em) { @content }
     } @else if $breakpoint == desk {

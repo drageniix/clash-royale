@@ -10,18 +10,18 @@ export class TopPlayers extends React.Component {
 
     render() {
         return (
-            <div className="topPlayers__type">
+            <div className="topPlayers">
                 <h4>{this.props.title}</h4>
                 <table>
                     <tbody>
-                    {this.props.members.map((member, index) => (
-                        <tr key={index}>
-                            <td>{index + 1}.</td>
-                            <td className='pointer member-link' onClick={this.onClick(member.tag)}>
-                                {member.name}
-                            </td>
-                        </tr>
-                    ))}
+                        {this.props.members.map((member, index) => (
+                            <tr key={index}>
+                                <td>{index + 1}.</td>
+                                <td className='pointer member-link' onClick={this.onClick(member.tag)}>
+                                    {member.name}
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
@@ -30,7 +30,7 @@ export class TopPlayers extends React.Component {
 }
 
 const mapStateToProps = (state, { order }) => ({
-    members: getMembers(state.api.members, {order}).slice(0, 3),
+    members: getMembers(state.api.members, { order }).slice(0, 3),
 })
 
 const mapDispatchToProps = dispatch => ({

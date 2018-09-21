@@ -7,7 +7,7 @@
         "**/.DS_Store": true,
         "**/.vscode": true,
         "**/node_modules": true,
-        "**/generated": true,
+        "**/generated": false,
         "**/public": true
     }
 }

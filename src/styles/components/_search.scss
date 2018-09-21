@@ -1,41 +1,45 @@
 .form {
-    margin: 1rem 0;
+    width: 100%;
+    padding-bottom: 3rem;
+
+    @include respond(tabLand){
+        padding: 0;
+    }
 
     &__input { //doesn't inherit font properties
         font-size: 1.5rem;
         font-family: inherit;
-        color: $color-grey-dark-2;
-        padding: 1.5rem 2rem;
+        color: $color-grey-dark-3;
+        padding: 0.5rem;
         border-radius: 2px;
-        background-color: rgba($color-white, .9);
-        border: none;
+        background-color: $color-grey-light-1;
         width: 100%;
         display: block;
         transition: all .2s;
-        border: 2px solid $color-grey-light-2;
-        
-        @include respond(tabPort) {
-            width: 100%;
-        }
-        
+        border: 3px solid $color-grey-light-2;
+        border-radius: 0.5rem;
         
         &:focus {
             outline: none;
-            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            box-shadow: 0 1px 3px rgba($color-black, .1);
         }
         
         &::-webkit-input-placeholder {
-            color: $color-grey-dark-2;
+            color: $color-grey-dark-3;
         }
     }
 
     &__label {
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-left: 2rem;
-        margin-top: .7rem;
-        display: block;
-        transition: all .3s;
+        display: none;
+
+        @include respond(tabLand){
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-left: 2rem;
+            margin-top: .7rem;
+            display: block;
+            transition: all .3s;
+        }
     }
 
     

@@ -10,12 +10,15 @@ export class FilterOptions extends React.Component {
 
     render(){
         return (
-            <ul className="filter__list">
-                <li className={this.props.getSelectedFilterClass("none")} onClick={this.onFilter("byNone")}>All Members</li>
-                <li className={this.props.getSelectedFilterClass("promotion")} onClick={this.onFilter("byPromotion")}>Promotions</li>
-                <li className={this.props.getSelectedFilterClass("probation")} onClick={this.onFilter("byProbation")}>Probation</li>
-                <li className={this.props.getSelectedFilterClass("demotion")} onClick={this.onFilter("byDemotion")}>Demotions</li>
-            </ul>
+            <div className="filter">
+                <div className="filter__vaporware"/>
+                <ul className="filter__list">
+                    <li className={this.props.getSelectedFilterClass("none")} onClick={this.onFilter("byNone")}>All Members</li>
+                    <li className={this.props.getSelectedFilterClass("promotion")} onClick={this.onFilter("byPromotion")}>Promotion</li>
+                    <li className={this.props.getSelectedFilterClass("probation")} onClick={this.onFilter("byProbation")}>Probation</li>
+                    <li className={this.props.getSelectedFilterClass("demotion")} onClick={this.onFilter("byDemotion")}>Demotion</li>
+                </ul>
+            </div>
         )
     }
 }

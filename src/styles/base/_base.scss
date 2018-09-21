@@ -27,15 +27,41 @@ body {
     min-width: 352px !important;
     width: auto !important;
 }
-
-.main {
-    padding: 2rem;
+main {
+    min-height: 80vh;
+}
+.body {
     margin: 0 auto;
-    width: 70%;
-    display: block;
+    width: 95%; 
     
-    @include respond(tabPort) {
-        padding: 1rem;
-        width: 95%;
+    @include respond(tabPort){
+        width: 100%;
+    }
+}
+
+
+.hero {
+    width: 100%;
+    background-image: linear-gradient(
+        rgba($color-primary, .98), 
+        rgba($color-primary, .8) 25%, 
+        rgba($color-primary-dark, .8) 75%, 
+        rgba($color-filter, .95) 95%, 
+        $color-filter), 
+        url('../assets/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    @include respond(phone){
+        padding-bottom: 3rem;
+    }
+
+    @include respond(tinyPhone) {
+        padding-bottom: 0;
+    }
+
+    &__content {
+        width: 100%;
     }
 }

@@ -3,13 +3,11 @@ import { capitalizeRole, getMemberColor } from '../utilities/members'
 import { getSearchResult } from '../redux/selectors'
 import { connect } from 'react-redux'
 
-export const SearchResult = ({ member }) => {
-    if (!member) {
-        return <section />
-    } else {
-        return (
-            <section className="searchResult" id={getMemberColor(member)}>
-                <table className="searchResult__table">
+export const SearchResult = ({ member }) => (
+    <section className="searchResult">
+        <div className="searchResult__content" id={member && getMemberColor(member)}>
+            <div className="searchResult__table--wrapper">
+                {member && <table className="searchResult__table">
                     <tbody>
                         <tr>
                             <td>Name</td>
@@ -37,18 +35,18 @@ export const SearchResult = ({ member }) => {
                         </tr>
                         <tr>
                             <td>War Battles (Last 10)</td>
-                            <td>{member.wins}W - {member.warBattles - member.wins}L</td>
+                            <td>{`${member.wins}W - ${member.warBattles - member.wins}L`}</td>
                         </tr>
                         <tr>
                             <td>Missed War Battles</td>
                             <td>{member.missedWarBattles}</td>
                         </tr>
                     </tbody>
-                </table>
-            </section>
-        )
-    }
-}
+                </table>}
+            </div>
+        </div>
+    </section>
+)
 
 export default connect(state => ({
     member: getSearchResult(state.query, state.api.members)

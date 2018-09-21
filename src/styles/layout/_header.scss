@@ -1,53 +1,98 @@
-.header{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 14.5%;
-    background-color: $color-grey-dark-3;
-    color: white;
+.header {
+    color: $color-grey-dark-3;
+    padding-bottom: 2rem;
 
-    @include respond(tabPort) {
-        padding-left: 1.75%;
+    @include respond(phone){
+        padding: 0;
     }
 
     &__content {
-        padding: 0 3rem;
+        width: 100%;
+        height: 8.5rem;
+        margin-bottom: -2rem;
         
-        img {
-            margin: auto 0;
+        @include respond(phone){
+            padding: 0;
+            height: auto;
+        }
+    }
+
+    &__brand {
+        padding: 1.5rem;
+        float: left;
+        
+        @include respond(phone){
+            display: block;
+            float: none;
+        }
+        
+        &--logo {
+            vertical-align: middle;
             display: inline-block;
             padding-right: 1.5rem;
-            height: 6rem;
+            height: 5.5rem;
             width: auto;
 
-            @include respond(phone){
-                height: 5rem;   
-            }
-            
-            @include respond(tinyPhone){
-                display: none;
+            @include respond(tabPort){
+                height: 4.5rem;
             }
         }
 
-        .header__text {
-            display: inline-block;
+        &--title {
+            vertical-align: middle;
+            display: inline-block;  
+            font-size: 3rem;
 
-            h1 {
-                font-size: 4rem;
-
-                @include respond(phone){
-                    font-size: 3rem;
-                }
-
-                @include respond(tinyPhone){
-                    font-size: 2rem;
-                }
+            @include respond(tabPort){
+                font-size: 2.5rem;
             }
 
-            p { 
-                margin-top: -0.5rem;
-                word-wrap: break-word;
+            @include respond(tinyPhone){
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__links {
+        padding-top: 2.50rem;
+        float: right;
+        
+        @include respond(phone){
+            float: none;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 2rem;
+            padding-top: 1.5rem;
+            background-color: $color-primary;
+        }
+        
+        a, a:link, a:active {
+            letter-spacing: 0.2rem;
+            padding: 0 3rem;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: $color-grey-dark-2;
+
+            @include respond(tabPort){
+                font-size: 1.4rem;
+                padding: 0 1rem;
             }
 
+            @include respond(phone){
+                padding: 0 3rem;
+                color: $color-grey-light-1;
+            }
+            
+            @include respond(tinyPhone){
+                font-size: 1.2rem;
+            }
+
+        }
+
+        a:hover {
+            color: $color-grey-dark-3;
         }
     }
 }

@@ -10,10 +10,12 @@ export class Search extends React.Component {
 
     render(){
         return (
-            <div className="form form__group">
-                <input onChange={this.setQuery} value={this.props.query} type="text" placeholder="Member Search" 
-                    id="search" className="form__input" spellCheck={false} autoFocus />
-                <label htmlFor="search" className="form__label">Member Search</label>
+            <div className="form">
+                <form>
+                    <input onChange={this.setQuery} value={this.props.query} type="text" placeholder="Member Search"
+                        id="search" className="form__input" spellCheck={false} autoFocus />
+                    <label htmlFor="search" className="form__label">Member Search</label>
+                </form>
             </div>
         )
     }

@@ -9,7 +9,11 @@ $color-grey-dark-3: #333;
 $color-white: #ffffff;
 $color-black: #000000;
 
-$color-primary: #2E7AE5;
+$color-bold: rgb(255, 223, 82);
+
+$color-primary: #da2ee5;
+$color-primary-dark: darken(#1F4A82, 0.8);
+$color-filter: rgb(42, 196, 183);
 
 $color-promote:rgb(60, 148, 79);
 $color-probation:rgb(228, 176, 35);
