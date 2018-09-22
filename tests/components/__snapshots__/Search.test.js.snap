@@ -2,23 +2,25 @@
 
 exports[`Search: set query 1`] = `
 <div
-  className="form form__group"
+  className="form"
 >
-  <input
-    autoFocus={true}
-    className="form__input"
-    id="search"
-    onChange={[Function]}
-    placeholder="Member Search"
-    spellCheck={false}
-    type="text"
-    value="potato"
-  />
-  <label
-    className="form__label"
-    htmlFor="search"
-  >
-    Member Search
-  </label>
+  <form>
+    <input
+      autoFocus={true}
+      className="form__input"
+      id="search"
+      onChange={[Function]}
+      placeholder="Member Search"
+      spellCheck={false}
+      type="text"
+      value="potato"
+    />
+    <label
+      className="form__label"
+      htmlFor="search"
+    >
+      Member Search
+    </label>
+  </form>
 </div>
 `;

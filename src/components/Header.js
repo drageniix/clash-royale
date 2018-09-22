@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import ChooseWeek from './ChooseWeek';
 
 export const Header = ({ name, discord }) => (
     <header className="header">
@@ -9,7 +10,7 @@ export const Header = ({ name, discord }) => (
                 <h1 className="header__brand--title">{name}</h1>
             </div>
             <div className="header__links">
-                <a href="#">History</a>
+                <ChooseWeek/>
                 <a href={discord}>Discord</a>
                 <a href="https://royaleapi.com/clan/PGVRPVG">All Stats</a>
             </div>

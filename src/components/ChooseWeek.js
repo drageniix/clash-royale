@@ -3,20 +3,23 @@ import { setNewWeek } from '../redux/actions'
 import { connect } from 'react-redux'
 
 export class ChooseWeek extends React.Component {
-    setNewWeek = e => {
-        const value = parseInt(e.target.value)
-        this.props.setNewWeek(this.props.lastWeeks, value)
+    setNewWeek = index => e => {
+        this.props.setNewWeek(this.props.lastWeeks, index)
     }
 
     render(){
         return (
-            <section className="weekSelection">
-                <select onChange={this.setNewWeek} value={this.props.current}>
+            <span className="weekSelection">
+                <a>History</a>
+                <div className="weekSelection__weeks">
                     {this.props.lastWeeks.map((item, index) => (
-                        <option className="weekSelection__option" value={index} key={index}>{item.display}</option>
+                        <li className={(this.props.current === index ? "selectedWeek" : "")} 
+                            key={index} 
+                            onClick={this.setNewWeek(index)}>
+                            {item.display}</li>
                     ))}
-                </select>
-            </section>
+                </div>
+            </span>
         )
     }
 

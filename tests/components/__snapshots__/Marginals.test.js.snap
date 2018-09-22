@@ -66,22 +66,31 @@ exports[`render: Header 1`] = `
   <div
     className="header__content"
   >
-    <img
-      src="./favicon.png"
-    />
     <div
-      className="header__text"
+      className="header__brand"
     >
-      <h1 />
-      <p>
-        2+ Years Strong! Come chat with us on 
-        <a
-          href="https://discord.gg/XvFGctt"
-        >
-          Discord
-        </a>
-        .
-      </p>
+      <img
+        className="header__brand--logo"
+        src="./favicon.png"
+      />
+      <h1
+        className="header__brand--title"
+      />
+    </div>
+    <div
+      className="header__links"
+    >
+      <Connect(ChooseWeek) />
+      <a
+        href="https://discord.gg/XvFGctt"
+      >
+        Discord
+      </a>
+      <a
+        href="https://royaleapi.com/clan/PGVRPVG"
+      >
+        All Stats
+      </a>
     </div>
   </div>
 </header>

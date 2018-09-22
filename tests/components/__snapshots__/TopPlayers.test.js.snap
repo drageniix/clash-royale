@@ -2,7 +2,7 @@
 
 exports[`render: Description 1`] = `
 <div
-  className="topPlayers__type"
+  className="topPlayers"
 >
   <h4>
     Most Wins

@@ -19,9 +19,8 @@ test('ChooseWeek: set current', () => {
         lastWeeks={lastWeeks}
         setNewWeek={dispatchSpy} />)
 
-    wrapper.find('select').simulate('change', {
-        preventDefault: () => { },
-        target: { value: 1 }
+    wrapper.find('li').at(1).simulate('click', {
+        preventDefault: () => { }
     })
 
     expect(dispatchSpy).toHaveBeenLastCalledWith(lastWeeks, 1)

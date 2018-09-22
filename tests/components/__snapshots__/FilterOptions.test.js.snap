@@ -1,32 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FilterOptions: set and display filter 1`] = `
-<ul
-  className="filter__list"
+<div
+  className="filter"
 >
-  <li
-    className="pointer filter__list--item filter__list--item--selected"
-    onClick={[Function]}
+  <div
+    className="filter__vaporware"
+  />
+  <ul
+    className="filter__list"
   >
-    All Members
-  </li>
-  <li
-    className="pointer filter__list--item"
-    onClick={[Function]}
-  >
-    Promotions
-  </li>
-  <li
-    className="pointer filter__list--item"
-    onClick={[Function]}
-  >
-    Probation
-  </li>
-  <li
-    className="pointer filter__list--item"
-    onClick={[Function]}
-  >
-    Demotions
-  </li>
-</ul>
+    <li
+      className="pointer filter__list--item filter__list--item--selected"
+      onClick={[Function]}
+    >
+      All Members
+    </li>
+    <li
+      className="pointer filter__list--item"
+      onClick={[Function]}
+    >
+      Promotion
+    </li>
+    <li
+      className="pointer filter__list--item"
+      onClick={[Function]}
+    >
+      Probation
+    </li>
+    <li
+      className="pointer filter__list--item"
+      onClick={[Function]}
+    >
+      Demotion
+    </li>
+  </ul>
+</div>
 `;

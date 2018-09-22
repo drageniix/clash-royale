@@ -56,7 +56,9 @@
     &__links {
         padding-top: 2.50rem;
         float: right;
-        
+        vertical-align: top;
+        user-select: none;
+
         @include respond(phone){
             float: none;
             display: flex;

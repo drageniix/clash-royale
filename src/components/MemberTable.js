@@ -34,7 +34,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onClick: query => {
-        window.scroll({ top: 200, left: 0, behavior: 'smooth' }) //can't use in tests
+        window.scroll({ top: 150, left: 0, behavior: 'smooth' }) //can't use in tests
         dispatch(setQuery(query))
     }
 })
