@@ -1,15 +1,15 @@
 .description {
-    flex-basis: 40%;
+    width: 40%;
     padding: 6rem;
-    width: 100%;
         
     @include respond(tabLand){
+        margin: 0 auto;
         padding: 3rem;
-        flex-basis: 80%;
+        width: 80%;
     }
 
     @include respond(phone){
-        flex-basis: 100%;
+        width: 100%;
         padding: 3rem;
         padding-bottom: 6rem;
     }

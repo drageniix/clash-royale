@@ -21,9 +21,7 @@ const App = () => (
             <Header />
             <main>
                 <div className="hero">
-                    <div className="hero__content flex-content">
-                        <ClanDescription />
-                    </div>
+                    <ClanDescription />
                 </div>
                 <FilterOptions id="members"/>
                 <table className="clanMembers">

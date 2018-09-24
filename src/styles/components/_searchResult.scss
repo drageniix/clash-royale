@@ -23,6 +23,7 @@
     &__table {
         border-collapse: collapse;
         font-size: 1.4rem;
+        transition: all .2s;
 
         @include respond(phone){
             font-weight: 400;

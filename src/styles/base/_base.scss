@@ -60,8 +60,4 @@ main {
     @include respond(tinyPhone) {
         padding-bottom: 0;
     }
-
-    &__content {
-        width: 100%;
-    }
 }

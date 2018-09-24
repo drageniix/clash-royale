@@ -8,20 +8,24 @@ gulp.task('createImageJSON', () => (
     fs.emptyDir(outputDirectory)
         .then(() => fs.emptyDir('./src/generated/data'))
         .then(() => fs.readdir('./gulp/templates/data'))
-        .then(dataFiles => createJSON(dataFiles, true))
-        .then(json => fs.writeJSON('./src/generated/data/data.json', json))
+        .then(dataFolders => createJSONFolders(dataFolders, true))
 ))
 
 gulp.task('createDataJSON', () => (
     fs.ensureDir(outputDirectory)
         .then(() => fs.emptyDir('./src/generated/data'))
         .then(() => fs.readdir('./gulp/templates/data'))
-        .then(dataFiles => createJSON(dataFiles, false))
-        .then(json => fs.writeJSON('./src/generated/data/data.json', json))
+        .then(dataFolders => createJSONFolders(dataFolders, false))
 ))
 
-function createJSON(dataFiles, saveImages) {
-    
+function createJSONFolders(dataFolders, saveImages) {
+    dataFolders.forEach(folder => 
+        fs.readdir(`./gulp/templates/data/${folder}`)
+            .then(dataFiles => createDataJSON(folder, dataFiles, saveImages))
+            .then(json => fs.writeJSON(`./src/generated/data/${folder}.json`, json)))
+}
+
+function createDataJSON(folder, dataFiles, saveImages){
     return new Promise((resolve, reject) => {
         const combinedJSON = {}
         let count = -1;
@@ -35,19 +39,19 @@ function createJSON(dataFiles, saveImages) {
         incrementCount()
         dataFiles.forEach(file => {
             let readData
-            const filename = file.substring(1, file.includes('--') ? file.indexOf('--') : file.indexOf('.'))
-            
-            if (fs.existsSync(`./gulp/templates/images/${file}`)) {
-                fs.readJSON(`./gulp/templates/data/${file}`)
-                .then(data => {
-                    readData = data
-                    return fs.readJSON(`./gulp/templates/images/${file}`)})
-                .then(images => {
-                    combinedJSON[filename] = insertJSONPictureResultsIntoData(readData, images, saveImages)
-                    incrementCount()
-                }).catch(err => reject(err))
+            const filename = file.substring(1, file.indexOf('.'))
+
+            if (fs.existsSync(`./gulp/templates/images/${folder}/${file}`)) {
+                fs.readJSON(`./gulp/templates/data/${folder}/${file}`)
+                    .then(data => {
+                        readData = data
+                        return fs.readJSON(`./gulp/templates/images/${folder}/${file}`)
+                    }).then(images => {
+                        combinedJSON[filename] = insertJSONPictureResultsIntoData(readData, images, saveImages)
+                        incrementCount()
+                    }).catch(err => reject(err))
             } else {
-                fs.readJSON(`./gulp/templates/data/${file}`).then(data => {
+                fs.readJSON(`./gulp/templates/data/${folder}/${file}`).then(data => {
                     combinedJSON[filename] = data
                     incrementCount()
                 }).catch(err => reject(err))
