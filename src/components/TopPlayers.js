@@ -41,7 +41,7 @@ const mapDispatchToProps = dispatch => ({
 TopPlayers.propTypes = {
     title: PropTypes.string.isRequired,
     members: PropTypes.array.isRequired,
-    onClick: PropTypes.function
+    onClick: PropTypes.func
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopPlayers)

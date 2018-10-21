@@ -4,13 +4,15 @@ const setFetchedWeek = (json, current) => ({
     current
 })
 
-export const setNewWeek = (stateLastWeeks, current = 0) => dispatch =>  
-    fetch(' ./assets/data' + stateLastWeeks[current].url)
+export const setNewWeek = (stateLastWeeks, current = 0) => dispatch =>  {
+    const url = ' ./assets/data' + stateLastWeeks[current].url
+    fetch(url)
         .then(response => response.json())
         .then(api => {
             dispatch(setFetchedWeek(api, current))
             return api
         })
+}
 
 export const setQuery = (query = '') => ({
     type: 'SET_QUERY',

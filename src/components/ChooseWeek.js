@@ -36,7 +36,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 ChooseWeek.propTypes = {
-    setNewWeek: PropTypes.object.isRequired,
+    setNewWeek: PropTypes.func.isRequired,
     current: PropTypes.number.isRequired,
     lastWeeks: PropTypes.array.isRequired
 }

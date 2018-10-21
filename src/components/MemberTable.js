@@ -43,7 +43,7 @@ const mapDispatchToProps = dispatch => ({
 
 MemberTable.propTypes = {
     members: PropTypes.array.isRequired,
-    onClick: PropTypes.function.isRequired
+    onClick: PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MemberTable)

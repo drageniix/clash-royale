@@ -33,8 +33,8 @@ const mapDispatchToProps = dispatch => ({
 })
 
 SortOptions.propTypes = {
-    getDirectionIndicator: PropTypes.function.isRequired,
-    onSort: PropTypes.function.isRequired
+    getDirectionIndicator: PropTypes.func.isRequired,
+    onSort: PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SortOptions)

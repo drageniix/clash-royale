@@ -37,7 +37,7 @@ const mapDispatchToProps = dispatch => ({
 
 Search.propTypes = {
     query: PropTypes.string.isRequired,
-    setQuery: PropTypes.function.isRequired
+    setQuery: PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search)

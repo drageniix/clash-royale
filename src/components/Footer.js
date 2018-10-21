@@ -13,7 +13,7 @@ export const Footer = ({ pastDate, time, discord }) => (
             </a>
         </div>
         {pastDate ? 
-            <p className= "footer__updated">Clan data from {pastDate}</p> :
+            <p className= "footer__updated">Clan data from {time}</p> :
             <p className="footer__updated">Clan data last updated {time}.</p>
         }
         <p className="footer__credits">@meliaesc</p>
@@ -22,12 +22,12 @@ export const Footer = ({ pastDate, time, discord }) => (
 
 Footer.propTypes = {
     time: PropTypes.string.isRequired,
-    pastDate: PropTypes.string,
+    pastDate: PropTypes.boolean,
     discord: PropTypes.string.isRequired
 }
 
 export default connect(state => ({
     pastDate: isPastDate(state.current, state.api.lastWeeks),
-    time: state.api.time,
+    time: state.api.lastWeeks[state.current].display,
     discord: state.api.discord
 }))(Footer)

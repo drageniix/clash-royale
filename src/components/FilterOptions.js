@@ -33,8 +33,8 @@ const mapDispatchToProps = dispatch => ({
 })
 
 FilterOptions.propTypes = {
-    getSelectedFilterClass: PropTypes.function.isRequired,
-    onFilter: PropTypes.function.isRequired,
+    getSelectedFilterClass: PropTypes.func.isRequired,
+    onFilter: PropTypes.func.isRequired,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(FilterOptions)
