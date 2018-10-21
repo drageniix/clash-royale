@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Search from './Search';
 import { getSearchResult } from '../redux/selectors'
 import SearchResult from './SearchResult';
+import PropTypes from 'prop-types'
 
 
 export const ClanDescription = ({ admin, member }) => (
@@ -17,6 +18,11 @@ export const ClanDescription = ({ admin, member }) => (
         
     </section>
 )
+
+ClanDescription.propTypes = {
+    admin: PropTypes.object.isRequired,
+    member: PropTypes.object
+}
 
 export default connect(state => ({
     admin: state.api.admin,

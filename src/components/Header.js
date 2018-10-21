@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import ChooseWeek from './ChooseWeek';
+import PropTypes from 'prop-types'
 
 export const Header = ({ name, discord }) => (
     <header className="header">
@@ -17,6 +18,11 @@ export const Header = ({ name, discord }) => (
         </div>
     </header>
 )
+
+Header.propTypes = {
+    name: PropTypes.string.isRequired,
+    discord: PropTypes.string.isRequired
+}
 
 export default connect(state => ({
     name: state.api.clan.name,

@@ -2,9 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { getMembers } from '../redux/selectors'
 import { setQuery } from '../redux/actions'
+import PropTypes from 'prop-types'
 
 export class TopPlayers extends React.Component {
-    onClick = memberTag => e => {
+    onClick = memberTag => () => {
         this.props.onClick(memberTag)
     }
 
@@ -36,5 +37,11 @@ const mapStateToProps = (state, { order }) => ({
 const mapDispatchToProps = dispatch => ({
     onClick: query => dispatch(setQuery(query))
 })
+
+TopPlayers.propTypes = {
+    title: PropTypes.string.isRequired,
+    members: PropTypes.array.isRequired,
+    onClick: PropTypes.function
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopPlayers)

@@ -1,4 +1,4 @@
-import { firstBy } from "../utilities/basic";
+import { firstBy } from '../utilities/basic';
 
 const filterOptions = {
     none: member => member,
@@ -67,16 +67,16 @@ sortOptions.wars = {
 
 function getRoleValue(role){
     switch (role) {
-        case 'leader':
-            return 1
-        case 'coleader':
-            return 2
-        case 'elder':
-            return 3
-        case 'member':
-            return 4
-        case 'new':
-            return 5
+    case 'leader':
+        return 1
+    case 'coleader':
+        return 2
+    case 'elder':
+        return 3
+    case 'member':
+        return 4
+    case 'new':
+        return 5
     }
 }
 export const isPastDate = (stateCurrent, stateLastWeeks) => stateCurrent === 0 ? undefined : stateLastWeeks[stateCurrent].display
@@ -91,7 +91,7 @@ export const getSearchResult = (stateQuery, stateMembers) => stateQuery ? stateM
 
 export const getDirectionIndicator = ({ order , dir }, currentOrder) => (
     currentOrder.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()) +
-    (order  === currentOrder ? (dir === 'ascending' ? " ▼" : " ▲") : "")
+    (order  === currentOrder ? (dir === 'ascending' ? ' ▼' : ' ▲') : '')
 )
 
-export const getSelectedFilterClass = (stateFilter, filter) => "pointer filter__list--item" + (stateFilter === filter ? " filter__list--item--selected" : "")
+export const getSelectedFilterClass = (stateFilter, filter) => 'pointer filter__list--item' + (stateFilter === filter ? ' filter__list--item--selected' : '')

@@ -1,7 +1,7 @@
-import moment from 'moment'
 import React from 'react'
 import { connect } from 'react-redux'
 import { isPastDate } from '../redux/selectors';
+import PropTypes from 'prop-types'
 
 export const Footer = ({ pastDate, time, discord }) => (
     <footer className="footer">
@@ -14,11 +14,17 @@ export const Footer = ({ pastDate, time, discord }) => (
         </div>
         {pastDate ? 
             <p className= "footer__updated">Clan data from {pastDate}</p> :
-            <p className="footer__updated">Clan data last updated {time && moment.unix(time).fromNow()}.</p>
+            <p className="footer__updated">Clan data last updated {time}.</p>
         }
         <p className="footer__credits">@meliaesc</p>
     </footer>
 )
+
+Footer.propTypes = {
+    time: PropTypes.string.isRequired,
+    pastDate: PropTypes.string,
+    discord: PropTypes.string.isRequired
+}
 
 export default connect(state => ({
     pastDate: isPastDate(state.current, state.api.lastWeeks),

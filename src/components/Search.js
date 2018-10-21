@@ -1,6 +1,7 @@
 import React from 'react'
 import { setQuery } from '../redux/actions'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 export class Search extends React.Component {
     setQuery = e => {
@@ -33,5 +34,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     setQuery: query => dispatch(setQuery(query))
 })
+
+Search.propTypes = {
+    query: PropTypes.string.isRequired,
+    setQuery: PropTypes.function.isRequired
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search)

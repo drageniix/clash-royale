@@ -2,6 +2,7 @@ import React from 'react'
 import { capitalizeRole, getMemberColor } from '../utilities/members'
 import { getSearchResult } from '../redux/selectors'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 export const SearchResult = ({ member }) => (
     <section className="searchResult">
@@ -47,6 +48,10 @@ export const SearchResult = ({ member }) => (
         </div>
     </section>
 )
+
+SearchResult.propTypes = {
+    member: PropTypes.object
+}
 
 export default connect(state => ({
     member: getSearchResult(state.query, state.api.members)
