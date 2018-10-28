@@ -6,7 +6,7 @@
     justify-content: start;
     flex-wrap: wrap;
 
-    @include respond(tabLand){
+    @include respond(tabLand) {
         justify-content: space-around; //main
     }
 }

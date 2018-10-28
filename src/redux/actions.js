@@ -2,41 +2,41 @@ const setFetchedWeek = (json, current) => ({
     type: 'SET_WEEK',
     json,
     current
-})
+});
 
-export const setNewWeek = (stateLastWeeks, current = 0) => dispatch =>  {
-    const url = ' ./assets/data' + stateLastWeeks[current].url
+export const setNewWeek = (stateLastWeeks, current = 0) => dispatch => {
+    const url = ' ./assets/data' + stateLastWeeks[current].url;
     fetch(url)
         .then(response => response.json())
         .then(api => {
-            dispatch(setFetchedWeek(api, current))
-            return api
-        })
-}
+            dispatch(setFetchedWeek(api, current));
+            return api;
+        });
+};
 
 export const setQuery = (query = '') => ({
     type: 'SET_QUERY',
     query
-})
+});
 
 export const setFilter = {
-    byNone : () => ({
+    byNone: () => ({
         type: 'SET_FILTER',
         filter: 'none'
     }),
-    byPromotion : () => ({
+    byPromotion: () => ({
         type: 'SET_FILTER',
         filter: 'promotion'
     }),
-    byProbation : () => ({
+    byProbation: () => ({
         type: 'SET_FILTER',
         filter: 'probation'
     }),
-    byDemotion : () => ({
+    byDemotion: () => ({
         type: 'SET_FILTER',
         filter: 'demotion'
     })
-}
+};
 
 export const setOrder = {
     byRank: () => ({
@@ -74,5 +74,5 @@ export const setOrder = {
     byRole: () => ({
         type: 'SET_ORDER',
         order: 'role'
-    }),
-}
+    })
+};

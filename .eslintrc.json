@@ -1,16 +1,16 @@
 {
-    "parser" : "babel-eslint",
+    "parser": "babel-eslint",
     "parserOptions": {
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
         }
     },
-    "env" : {
-        "node" : true,
+    "env": {
+        "node": true,
         "browser": true,
         "jest": true,
-        "es6" : true
+        "es6": true
     },
     "extends": [
         "eslint:recommended",
@@ -18,17 +18,13 @@
         "plugin:jest/recommended"
     ],
     "rules": {
-        "indent": ["error", 4],
         "quotes": ["error", "single"],
         "no-console": "warn"
     },
-    "settings" : {
-        "react" : {
-            "version" : "16.5.0"
+    "settings": {
+        "react": {
+            "version": "16.5.0"
         }
     },
-    "plugins" : [
-        "react",
-        "jest"
-    ]
+    "plugins": ["react", "jest"]
 }

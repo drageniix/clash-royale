@@ -1,10 +1,10 @@
-import React from 'react'
-import ClanDescription from '../components/ClanDescription'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import FilterOptions from '../components/FilterOptions'
-import SortOptions from '../components/SortOptions'
-import MemberTable from '../components/MemberTable'
+import React from 'react';
+import ClanDescription from '../components/ClanDescription';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import FilterOptions from '../components/FilterOptions';
+import SortOptions from '../components/SortOptions';
+import MemberTable from '../components/MemberTable';
 
 export const HomePage = () => (
     <div className="body">
@@ -21,6 +21,6 @@ export const HomePage = () => (
         </main>
         <Footer />
     </div>
-)
+);
 
-export default HomePage
+export default HomePage;

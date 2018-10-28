@@ -1,31 +1,35 @@
-export const capitalizeRole = member => member.role.charAt(0).toUpperCase() + member.role.slice(1)
+export const capitalizeRole = member =>
+    member.role.charAt(0).toUpperCase() + member.role.slice(1);
 
-export const checkDonations = (member) => {
+export const checkDonations = member => {
     if (member.donations === 0 && member.donationsReceived === 0) {
-        return "none"
+        return 'none';
     } else if (member.donationsReceived == 0) {
-        return `${member.donations} - 0`
+        return `${member.donations} - 0`;
     } else if (member.donations == 0) {
-        return `0 - ${member.donationsReceived}`
+        return `0 - ${member.donationsReceived}`;
     } else {
-        return `${member.donations} (${((member.donations / member.donationsReceived) * 100).toFixed(1)}%)`
+        return `${member.donations} (${(
+            (member.donations / member.donationsReceived) *
+            100
+        ).toFixed(1)}%)`;
     }
-}
+};
 
-export const getMemberColor = (member) => {
+export const getMemberColor = member => {
     if (member.role === 'leader') {
-        return "leader"
+        return 'leader';
     } else if (member.role === 'coleader') {
-        return "coleader"
+        return 'coleader';
     } else if (member.eligibleForPromotion) {
-        return "promotion"
+        return 'promotion';
     } else if (member.onProbation) {
-        return "probation"
+        return 'probation';
     } else if (member.dangerOfDemotion) {
-        return "demotion"
+        return 'demotion';
     } else if (member.role === 'elder') {
-        return "elder"
+        return 'elder';
     } else {
-        return "member" //good standing member or new 
+        return 'member'; //good standing member or new
     }
-}
+};

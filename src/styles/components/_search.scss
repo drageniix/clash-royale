@@ -1,18 +1,19 @@
-.form {    
+.form {
     width: 100%;
     padding-bottom: 3rem;
 
-    @include respond(tabLand){
+    @include respond(tabLand) {
         padding: 0;
     }
 
     &__content {
-        display: flex;  
+        display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    &__input { //doesn't inherit font properties
+    &__input {
+        //doesn't inherit font properties
         font-size: 1.5rem;
         font-family: inherit;
         color: $color-grey-dark-3;
@@ -20,20 +21,20 @@
         border-radius: 2px;
         background-color: $color-grey-light-1;
         flex-basis: 88%;
-        transition: all .2s;
+        transition: all 0.2s;
         border: 3px solid $color-grey-light-2;
         border-radius: 0.5rem;
-        
-        margin-right: -3.5rem; 
-        transition: all .2s;
-        
+
+        margin-right: -3.5rem;
+        transition: all 0.2s;
+
         &:focus,
         &:hover {
             outline: none;
             flex-basis: 100%;
-            box-shadow: 0 1px 3px rgba($color-black, .1);
+            box-shadow: 0 1px 3px rgba($color-black, 0.1);
         }
-        
+
         &::-webkit-input-placeholder {
             font-weight: 100;
             color: $color-grey-dark-1;
@@ -44,18 +45,18 @@
         display: none;
         flex-basis: 100%;
 
-        @include respond(tabLand){
+        @include respond(tabLand) {
             font-size: 1.2rem;
             font-weight: 700;
             margin-left: 2rem;
-            margin-top: .7rem;
+            margin-top: 0.7rem;
             display: block;
-            transition: all .3s;
+            transition: all 0.3s;
         }
     }
 
-    
-    &__input:placeholder-shown + &__label { //adjacent sibling
+    &__input:placeholder-shown + &__label {
+        //adjacent sibling
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
@@ -65,14 +66,13 @@
         border: none;
         background-color: $color-grey-light-1;
 
-        &:focus{
-            outline: none
+        &:focus {
+            outline: none;
         }
 
-        &:active{
+        &:active {
             transform: translateY(2px);
         }
-        
     }
 
     &__icon {

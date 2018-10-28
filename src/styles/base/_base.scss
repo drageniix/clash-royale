@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -11,11 +13,11 @@ html {
     @include respond(deskBig) {
         font-size: 75%;
     }
-    
+
     @include respond(tabLand) {
         font-size: 56.25%;
     }
-    
+
     @include respond(tabPort) {
         font-size: 50%;
     }
@@ -32,28 +34,28 @@ main {
 }
 .body {
     margin: 0 auto;
-    width: 95%; 
-    
-    @include respond(tabPort){
+    width: 95%;
+
+    @include respond(tabPort) {
         width: 100%;
     }
 }
 
-
 .hero {
     width: 100%;
     background-image: linear-gradient(
-        rgba($color-primary, .98), 
-        rgba($color-primary, .8) 25%, 
-        rgba($color-primary-dark, .8) 75%, 
-        rgba($color-filter, .95) 95%, 
-        $color-filter), 
+            rgba($color-primary, 0.98),
+            rgba($color-primary, 0.8) 25%,
+            rgba($color-primary-dark, 0.8) 75%,
+            rgba($color-filter, 0.95) 95%,
+            $color-filter
+        ),
         url('../assets/images/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    @include respond(phone){
+
+    @include respond(phone) {
         padding-bottom: 3rem;
     }
 

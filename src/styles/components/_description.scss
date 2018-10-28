@@ -1,14 +1,14 @@
 .description {
     width: 40%;
     padding: 6rem;
-        
-    @include respond(tabLand){
+
+    @include respond(tabLand) {
         margin: 0 auto;
         padding: 3rem;
         width: 80%;
     }
 
-    @include respond(phone){
+    @include respond(phone) {
         width: 100%;
         padding: 3rem;
         padding-bottom: 6rem;
@@ -21,17 +21,17 @@
         text-align: justify;
         color: $color-grey-light-2;
         border-radius: 1rem;
-        
+
         @include respond(tabLand) {
             font-size: 1.3rem;
             font-weight: 300;
             padding: 2rem 1rem;
-            column-gap: 6rem; 
+            column-gap: 6rem;
             column-rule: 1px solid $color-grey-light-2;
             column-count: 2;
         }
 
-        @include respond(tinierPhone){
+        @include respond(tinierPhone) {
             column-count: 1;
         }
 
@@ -39,7 +39,7 @@
             break-inside: avoid-column;
             margin-bottom: 1rem;
 
-            @include respond(phone){
+            @include respond(phone) {
                 margin-bottom: 0;
             }
         }

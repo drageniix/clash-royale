@@ -1,49 +1,48 @@
 .searchResult {
-    
-    @include respond(tabLand){
+    @include respond(tabLand) {
         padding: 3rem;
         width: 100%;
         flex-basis: 60%;
     }
 
-    @include respond(phone){
+    @include respond(phone) {
         padding: 3rem;
         flex-basis: 100%;
     }
 
     &__content {
-        padding: 1rem 1rem;   
+        padding: 1rem 1rem;
         margin: 0 auto;
         border-radius: 1rem;
         color: $color-grey-light-1;
         width: 95%;
-        background-color: rgba($color-grey-light-2, .3);
+        background-color: rgba($color-grey-light-2, 0.3);
     }
 
     &__table {
         border-collapse: collapse;
         font-size: 1.4rem;
-        transition: all .2s;
+        transition: all 0.2s;
 
-        @include respond(phone){
+        @include respond(phone) {
             font-weight: 400;
         }
-        
+
         &--wrapper {
             column-count: 2;
 
-            @include respond(tinyPhone){
+            @include respond(tinyPhone) {
                 column-count: 1;
             }
         }
-        
+
         td {
             padding: 0.25rem 1rem;
             white-space: nowrap;
         }
 
         td:nth-child(even) {
-            @include respond(phone){
+            @include respond(phone) {
                 padding-left: 1rem;
             }
         }
@@ -52,58 +51,63 @@
             text-align: right;
             border-right: 1px solid $color-grey-dark-1;
 
-            @include respond(phone){
+            @include respond(phone) {
                 padding-right: 1rem;
             }
         }
     }
 }
 
-#coleader, {
+#coleader {
     border-bottom: 4px solid $color-coleader;
-    border-top: 4px solid $color-coleader; 
-    @include respond(tabLand){
+    border-top: 4px solid $color-coleader;
+    @include respond(tabLand) {
         border-top: none;
     }
 }
 
-#elder, {
+#elder {
     border-bottom: 4px solid $color-elder;
-    border-top: 4px solid $color-elder; 
-    @include respond(tabLand){
+    border-top: 4px solid $color-elder;
+    @include respond(tabLand) {
         border-top: none;
     }
 }
 
-
-#member, {
+#member {
     border-bottom: 4px solid $color-member;
-    border-top: 4px solid $color-member; 
-    @include respond(tabLand){
+    border-top: 4px solid $color-member;
+    @include respond(tabLand) {
         border-top: none;
     }
 }
 
 #promotion {
-    border-bottom: 4px solid $color-promote; border-bottom: 4px solid $color-promote;
-    border-top: 4px solid $color-promote; border-bottom: 4px solid $color-promote;
-    @include respond(tabLand){
+    border-bottom: 4px solid $color-promote;
+    border-bottom: 4px solid $color-promote;
+    border-top: 4px solid $color-promote;
+    border-bottom: 4px solid $color-promote;
+    @include respond(tabLand) {
         border-top: none;
     }
 }
 
 #probation {
-    border-bottom: 4px solid $color-probation; border-bottom: 4px solid $color-probation;
-    border-top: 4px solid $color-probation; border-bottom: 4px solid $color-probation;
-    @include respond(tabLand){
+    border-bottom: 4px solid $color-probation;
+    border-bottom: 4px solid $color-probation;
+    border-top: 4px solid $color-probation;
+    border-bottom: 4px solid $color-probation;
+    @include respond(tabLand) {
         border-top: none;
     }
 }
 
 #demotion {
-    border-bottom: 4px solid $color-demote; border-bottom: 4px solid $color-demote;
-    border-top: 4px solid $color-demote; border-bottom: 4px solid $color-demote;
-    @include respond(tabLand){
+    border-bottom: 4px solid $color-demote;
+    border-bottom: 4px solid $color-demote;
+    border-top: 4px solid $color-demote;
+    border-bottom: 4px solid $color-demote;
+    @include respond(tabLand) {
         border-top: none;
     }
 }

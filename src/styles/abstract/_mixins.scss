@@ -1,6 +1,6 @@
 @mixin clearfix {
     &::after {
-        content: "";
+        content: '';
         display: table;
         clear: both;
     }
@@ -17,18 +17,32 @@
 //$breakpoint : phone tabPort tabLand desk deskBig
 @mixin respond($breakpoint) {
     @if $breakpoint == tinierPhone {
-        @media only screen and (max-width: 25em) { @content }
+        @media only screen and (max-width: 25em) {
+            @content;
+        }
     } @else if $breakpoint == tinyPhone {
-        @media only screen and (max-width: 34em) { @content }
+        @media only screen and (max-width: 34em) {
+            @content;
+        }
     } @else if $breakpoint == phone {
-        @media only screen and (max-width: 43.125em) { @content }
-    } @else if $breakpoint == tabPort { 
-        @media only screen and (max-width: 57.5em) { @content }
+        @media only screen and (max-width: 43.125em) {
+            @content;
+        }
+    } @else if $breakpoint == tabPort {
+        @media only screen and (max-width: 57.5em) {
+            @content;
+        }
     } @else if $breakpoint == tabLand {
-        @media only screen and (max-width: 61.25em) { @content }
+        @media only screen and (max-width: 61.25em) {
+            @content;
+        }
     } @else if $breakpoint == desk {
-        @media only screen and (max-width: 112.5em) { @content }
+        @media only screen and (max-width: 112.5em) {
+            @content;
+        }
     } @else if $breakpoint == deskBig {
-        @media only screen and (min-width: 112.5em) { @content }
+        @media only screen and (min-width: 112.5em) {
+            @content;
+        }
     }
 }
