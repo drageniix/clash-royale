@@ -3,17 +3,17 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest')
-const ResponsiveJSONWebpackPlugin = require('responsive-json-webpack-plugin')
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const ResponsiveJSONWebpackPlugin = require('responsive-json-webpack-plugin');
 //const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
-const path = require('path')
+//const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const path = require('path');
 
-const outputPath = path.resolve(__dirname, 'public/')
+const outputPath = path.resolve(__dirname, 'public/');
 
-const appTitle = '3 Dark Towers'
-const themeColor = '#da2ee5'
-const appDescription = 'Clash Royale Clan | Est 2016'
+const appTitle = '3 Dark Towers';
+const themeColor = '#da2ee5';
+const appDescription = 'Clash Royale Clan | Est 2016';
 const manifest = {
     name: appTitle,
     short_name: '3DT',
@@ -27,26 +27,26 @@ const manifest = {
             sizes: [96, 128, 192, 256, 384, 512]
         }
     ]
-}
+};
 
 function getPlugins(isProduction) {
     const plugins = [
         getHTMLWebPackPlugin('index', '.'),
-        new SWPrecacheWebpackPlugin({
-            cacheId: 'sample-cache-id',
-            dontCacheBustUrlsMatching: /\.\w{8}\./,
-            filename: 'service-worker.js',
-            minify: true,
-            navigateFallback: outputPath + 'index.html',
-            staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
-        }),
+        // new SWPrecacheWebpackPlugin({
+        //     cacheId: 'sample-cache-id',
+        //     dontCacheBustUrlsMatching: /\.\w{8}\./,
+        //     filename: 'service-worker.js',
+        //     minify: true,
+        //     navigateFallback: outputPath + 'index.html',
+        //     staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+        // }),
         new WebpackPwaManifest(manifest),
         new MiniCssExtractPlugin({
             filename: './styles/[hash].css',
             chunkFilename: '[hash].css'
         }),
-        new ResponsiveJSONWebpackPlugin(),
-    ]
+        new ResponsiveJSONWebpackPlugin()
+    ];
 
     if (isProduction) {
         plugins.unshift(
@@ -54,11 +54,10 @@ function getPlugins(isProduction) {
             new CleanWebpackPlugin(['public'], {
                 verbose: false
             })
-        )
-
+        );
     }
 
-    return plugins
+    return plugins;
 }
 
 function getHTMLWebPackPlugin(pageEntry, destPath) {
@@ -69,21 +68,27 @@ function getHTMLWebPackPlugin(pageEntry, destPath) {
         title: appTitle,
         description: appDescription,
         themeColor: themeColor,
-        favicon: `./src/assets/${pageEntry === 'index' ? '' : 'images/' + pageEntry + '/'}favicon.png`,
+        favicon: `./src/assets/${
+            pageEntry === 'index' ? '' : 'images/' + pageEntry + '/'
+        }favicon.png`,
         minify: {
             removeComments: true,
             collapseWhitespace: true,
             preserveLineBreaks: false
         }
-    })
+    });
 }
 
 module.exports = env => {
-    const isProduction = env == 'production'
+    const isProduction = env == 'production';
 
     return {
         entry: {
-            index: ['@babel/polyfill', './src/app.js', './src/styles/index.scss']
+            index: [
+                '@babel/polyfill',
+                './src/app.js',
+                './src/styles/index.scss'
+            ]
         },
         output: {
             path: outputPath,
@@ -94,10 +99,9 @@ module.exports = env => {
                 {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
-                    use: [
-                        'babel-loader'
-                    ],
-                }, {
+                    use: ['babel-loader']
+                },
+                {
                     test: /\.s?css$/,
                     exclude: /node_modules/,
                     use: [
@@ -113,9 +117,11 @@ module.exports = env => {
                             loader: 'postcss-loader',
                             options: {
                                 sourceMap: true,
-                                plugins: () => [require('autoprefixer')({
-                                    'browsers': ['> 1%', 'last 2 versions']
-                                })],
+                                plugins: () => [
+                                    require('autoprefixer')({
+                                        browsers: ['> 1%', 'last 2 versions']
+                                    })
+                                ]
                             }
                         },
                         {
@@ -157,10 +163,10 @@ module.exports = env => {
             chunks: false,
             modules: false,
             children: false,
-            warnings: false,
+            warnings: false
         },
         devServer: {
-            contentBase: outputPath,
-        },
-    }
-}
+            contentBase: outputPath
+        }
+    };
+};
