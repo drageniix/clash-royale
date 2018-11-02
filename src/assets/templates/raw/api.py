@@ -33,7 +33,7 @@ clanData = {
 }
 
 #Compare last week's data for new members
-dated_files = [(os.path.getmtime('./' + fn), os.path.basename(fn)) for fn in os.listdir('./') if fn.lower().endswith('.json') and time not in fn]
+dated_files = [(os.path.getmtime('./' + fn), os.path.basename(fn)) for fn in os.listdir('./') if fn.lower().endswith('.json') and time not in fn and not fn.lower().endswith('clan.json')]
 if(len(dated_files) > 0):
     dated_files.sort()
     dated_files.reverse()
