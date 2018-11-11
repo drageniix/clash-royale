@@ -9,5 +9,6 @@
         "**/node_modules": true,
         "**/public": true,
         "**/package-lock.json" : true
-    }
+    },
+    "python.linting.pylintEnabled": false
 }
