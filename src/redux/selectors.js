@@ -9,18 +9,18 @@ const filterOptions = {
 
 const sortOptions = {
     rank: {
-        ascending: (a, b) => a.clanRank - b.clanRank,
-        descending: (a, b) => b.clanRank - a.clanRank
+        ascending: (a, b) => a.clanrank - b.clanrank,
+        descending: (a, b) => b.clanrank - a.clanrank
     },
     name: {
         ascending: (a, b) => {
-            const aName = a.name.toLowerCase();
-            const bName = b.name.toLowerCase();
+            const aName = a.playername.toLowerCase();
+            const bName = b.playername.toLowerCase();
             return aName < bName ? -1 : aName > bName ? 1 : 0;
         },
         descending: (a, b) => {
-            const aName = a.name.toLowerCase();
-            const bName = b.name.toLowerCase();
+            const aName = a.playername.toLowerCase();
+            const bName = b.playername.toLowerCase();
             return aName < bName ? 1 : aName > bName ? -1 : 0;
         }
     },
@@ -29,8 +29,8 @@ const sortOptions = {
         descending: (a, b) => a.donations - b.donations
     },
     warBattles: {
-        ascending: (a, b) => b.warBattles - a.warBattles,
-        descending: (a, b) => a.warBattles - b.warBattles
+        ascending: (a, b) => b.battles - a.battles,
+        descending: (a, b) => a.battles - b.battles
     },
     wins: {
         ascending: (a, b) => b.wins - a.wins,
@@ -41,8 +41,8 @@ const sortOptions = {
         descending: (a, b) => a.losses - b.losses
     },
     missed: {
-        ascending: (a, b) => b.missedWarBattles - a.missedWarBattles,
-        descending: (a, b) => a.missedWarBattles - b.missedWarBattles
+        ascending: (a, b) => b.missed - a.missed,
+        descending: (a, b) => a.missed - b.missed
     },
     role: {
         ascending(a, b) {
@@ -88,13 +88,16 @@ export const isPastDate = stateCurrent => stateCurrent === 0;
 export const getMembers = (
     stateMembers,
     { filter = 'none', order = 'rank', dir = 'ascending' } = {}
-) => stateMembers.filter(filterOptions[filter]).sort(sortOptions[order][dir]);
-
+) => {
+    return stateMembers
+        .filter(filterOptions[filter])
+        .sort(sortOptions[order][dir]);
+};
 export const getSearchResult = (stateQuery, stateMembers) =>
     stateQuery
         ? stateMembers.find(
               member =>
-                  member.name
+                  member.playername
                       .toLowerCase()
                       .includes(stateQuery.toLowerCase().trim()) ||
                   member.tag === stateQuery

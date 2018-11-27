@@ -21,15 +21,15 @@ export class MemberTable extends React.Component {
                             (member.eligibleForPromotion
                                 ? 'promotion'
                                 : member.onProbation
-                                    ? 'probation'
-                                    : member.dangerOfDemotion
-                                        ? 'demotion'
-                                        : 'row')
+                                ? 'probation'
+                                : member.dangerOfDemotion
+                                ? 'demotion'
+                                : 'row')
                         }
                     >
                         <td className="align-left">
                             {' '}
-                            #{member.clanRank} ({member.trophies})
+                            #{member.clanrank} ({member.trophies})
                         </td>
                         <td className="align-right">
                             {capitalizeRole(member)}
@@ -38,16 +38,14 @@ export class MemberTable extends React.Component {
                             className="pointer align-left member-link"
                             onClick={this.onClick(member.tag)}
                         >
-                            {member.name}
+                            {member.playername}
                         </td>
                         <td className="align-right">
                             {checkDonations(member)}
                         </td>
                         <td className="align-right">
-                            {member.warBattles}
-                            {member.missedWarBattles
-                                ? ' (' + member.missedWarBattles + 'M)'
-                                : ''}
+                            {member.battles}
+                            {member.missed ? ' (' + member.missed + 'M)' : ''}
                         </td>
                     </tr>
                 ))}
@@ -57,7 +55,7 @@ export class MemberTable extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    members: getMembers(state.api.members, state.filters)
+    members: getMembers(state.members, state.filters)
 });
 
 const mapDispatchToProps = dispatch => ({

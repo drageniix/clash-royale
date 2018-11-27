@@ -2,15 +2,15 @@ export const capitalizeRole = member =>
     member.role.charAt(0).toUpperCase() + member.role.slice(1);
 
 export const checkDonations = member => {
-    if (member.donations === 0 && member.donationsReceived === 0) {
+    if (member.donations === 0 && member.donationsreceived === 0) {
         return 'none';
-    } else if (member.donationsReceived == 0) {
+    } else if (member.donationsreceived == 0) {
         return `${member.donations} - 0`;
     } else if (member.donations == 0) {
-        return `0 - ${member.donationsReceived}`;
+        return `0 - ${member.donationsreceived}`;
     } else {
         return `${member.donations} (${(
-            (member.donations / member.donationsReceived) *
+            (member.donations / member.donationsreceived) *
             100
         ).toFixed(1)}%)`;
     }

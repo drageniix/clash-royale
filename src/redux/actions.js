@@ -1,16 +1,12 @@
-const setFetchedWeek = (json, current) => ({
-    type: 'SET_WEEK',
-    json,
-    current
-});
-
-export const setNewWeek = (stateLastWeeks, current = 0) => dispatch => {
-    const url = ' ./assets/data' + stateLastWeeks[current].url;
+export const setMembers = () => dispatch => {
+    const url = './assets/data/members.json';
     fetch(url)
         .then(response => response.json())
         .then(api => {
-            dispatch(setFetchedWeek(api, current));
-            return api;
+            dispatch({
+                type: 'SET_MEMBERS',
+                members: api.members
+            });
         });
 };
 

@@ -16,7 +16,7 @@ export const SearchResult = ({ member }) => (
                         <tbody>
                             <tr>
                                 <td>Name</td>
-                                <td>{member.name}</td>
+                                <td>{member.playername}</td>
                             </tr>
                             <tr>
                                 <td>Tag</td>
@@ -36,16 +36,15 @@ export const SearchResult = ({ member }) => (
                             </tr>
                             <tr>
                                 <td>Donations Received</td>
-                                <td>{member.donationsReceived}</td>
+                                <td>{member.donationsreceived}</td>
                             </tr>
                             <tr>
-                                <td>War Battles (Last 10)</td>
-                                <td>{`${member.wins}W - ${member.warBattles -
-                                    member.wins}L`}</td>
+                                <td>War Battles (Last {member.wars})</td>
+                                <td>{`${member.wins}W - ${member.losses}L`}</td>
                             </tr>
                             <tr>
                                 <td>Missed War Battles</td>
-                                <td>{member.missedWarBattles}</td>
+                                <td>{member.missed}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -60,5 +59,5 @@ SearchResult.propTypes = {
 };
 
 export default connect(state => ({
-    member: getSearchResult(state.query, state.api.members)
+    member: getSearchResult(state.query, state.members)
 }))(SearchResult);

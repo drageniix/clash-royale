@@ -1,18 +1,5 @@
 const defaultState = {
-    current: 0,
-    api: {
-        time: 0,
-        discord: '',
-        admin: {},
-        clan: {},
-        members: [],
-        lastWeeks: [
-            {
-                url: '/clan.json',
-                display: 'Current Week'
-            }
-        ]
-    },
+    members: [],
     query: '',
     filters: {
         filter: 'none', //none, promotion, probation, demotion
@@ -23,17 +10,10 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
     switch (action.type) {
-        case 'SET_WEEK':
+        case 'SET_MEMBERS':
             return {
                 ...state,
-                current: action.current,
-                api: {
-                    ...action.json,
-                    lastWeeks:
-                        state.api.lastWeeks.length == 1 && action.json.lastWeeks
-                            ? [...state.api.lastWeeks, ...action.json.lastWeeks]
-                            : state.api.lastWeeks
-                }
+                members: action.members
             };
         case 'SET_QUERY':
             return {

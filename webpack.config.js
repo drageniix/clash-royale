@@ -6,7 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const ResponsiveJSONWebpackPlugin = require('responsive-json-webpack-plugin');
 //const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-//const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const path = require('path');
 
 const outputPath = path.resolve(__dirname, 'public/');
@@ -32,14 +32,14 @@ const manifest = {
 function getPlugins(isProduction) {
     const plugins = [
         getHTMLWebPackPlugin('index', '.'),
-        // new SWPrecacheWebpackPlugin({
-        //     cacheId: 'sample-cache-id',
-        //     dontCacheBustUrlsMatching: /\.\w{8}\./,
-        //     filename: 'service-worker.js',
-        //     minify: true,
-        //     navigateFallback: outputPath + 'index.html',
-        //     staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
-        // }),
+        new SWPrecacheWebpackPlugin({
+            cacheId: 'sample-cache-id',
+            dontCacheBustUrlsMatching: /\.\w{8}\./,
+            filename: 'service-worker.js',
+            minify: true,
+            navigateFallback: outputPath + 'index.html',
+            staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/]
+        }),
         new WebpackPwaManifest(manifest),
         new MiniCssExtractPlugin({
             filename: './styles/[hash].css',
