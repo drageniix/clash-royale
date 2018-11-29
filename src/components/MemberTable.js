@@ -44,8 +44,10 @@ export class MemberTable extends React.Component {
                             {checkDonations(member)}
                         </td>
                         <td className="align-right">
-                            {member.battles}
-                            {member.missed ? ' (' + member.missed + 'M)' : ''}
+                            {member.battles || '0'}
+                            {member.missed > 0
+                                ? ' (' + member.missed + 'M)'
+                                : ''}
                         </td>
                     </tr>
                 ))}

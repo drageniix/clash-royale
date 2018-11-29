@@ -9,10 +9,7 @@ export const checkDonations = member => {
     } else if (member.donations == 0) {
         return `0 - ${member.donationsreceived}`;
     } else {
-        return `${member.donations} (${(
-            (member.donations / member.donationsreceived) *
-            100
-        ).toFixed(1)}%)`;
+        return `${member.donations} (${member.donationRatio}%)`;
     }
 };
 

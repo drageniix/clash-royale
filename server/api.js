@@ -13,11 +13,7 @@ const getDate = dateString => {
             6
         )}`;
     } else {
-        const today = new Date();
-        let dd = today.getUTCDate();
-        let mm = today.getUTCMonth() + 1;
-        let yyyy = today.getUTCFullYear();
-        return `${yyyy}-${mm < 10 ? '0' + mm : mm}-${dd < 10 ? '0' + dd : dd}`;
+        return new Date().toISOString();
     }
 };
 

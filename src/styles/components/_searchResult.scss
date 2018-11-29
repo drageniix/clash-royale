@@ -20,6 +20,7 @@
     }
 
     &__table {
+        margin: 0 auto;
         border-collapse: collapse;
         font-size: 1.4rem;
         transition: all 0.2s;
@@ -29,7 +30,11 @@
         }
 
         &--wrapper {
-            column-count: 2;
+            column-count: 1;
+
+            @include respond(tabLand) {
+                column-count: 2;
+            }
 
             @include respond(tinyPhone) {
                 column-count: 1;

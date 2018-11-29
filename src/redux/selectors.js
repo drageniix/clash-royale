@@ -1,5 +1,3 @@
-import { firstBy } from '../utilities/basic';
-
 const filterOptions = {
     none: member => member,
     promotion: member => member.eligibleForPromotion,
@@ -57,16 +55,17 @@ const sortOptions = {
 
             return bRole - aRole;
         }
+    },
+    wars: {
+        ascending: (a, b) =>
+            b.warParticipationRatio +
+            b.winRatio -
+            (a.warParticipationRatio + a.winRatio),
+        descending: (a, b) =>
+            a.warParticipationRatio +
+            a.winRatio -
+            (b.warParticipationRatio + b.winRatio)
     }
-};
-
-sortOptions.wars = {
-    ascending: firstBy(sortOptions.warBattles.ascending).thenBy(
-        sortOptions.wins.ascending
-    ),
-    descending: firstBy(sortOptions.missed.ascending)
-        .thenBy(sortOptions.warBattles.descending)
-        .thenBy(sortOptions.losses.ascending)
 };
 
 function getRoleValue(role) {

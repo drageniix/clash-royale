@@ -1,5 +1,5 @@
 const { Client } = require('pg');
-const fs = require('fs-extra');
+const assembleMembers = require('./assembleMember');
 
 const ELDER_TROPHIES = 4000,
     MIN_DONATIONS = 100,
@@ -7,7 +7,8 @@ const ELDER_TROPHIES = 4000,
     MAX_MISSED_WARS = 0,
     MIN_WARS = 1,
     ELDER_WARS = 6,
-    WEEKS_NEW = 1;
+    WEEKS_NEW = 1,
+    DEMOTION_DATE_DONATION_AVERAGE = 200;
 
 const client = new Client({
     user: process.env.DB_USER,
@@ -19,63 +20,17 @@ const client = new Client({
 
 client
     .connect()
-    .then(() => getMembers())
-    .then(async members => {
-        const promotions = await getPromotions();
-        const probations = await getProbations();
-        const demotions = await getDemotions();
-        const wars = await client
-            .query(
-                'SELECT COUNT(*) FROM war_participants WHERE ' +
-                    warDateSelect +
-                    ' GROUP BY wardate'
-            )
-            .then(result => result.rows.length);
-
-        return members.map(member => {
-            if (
-                promotions.find(
-                    promotionCanidate => member.tag === promotionCanidate.tag
-                )
-            ) {
-                member.eligibleForPromotion = true;
-            } else if (
-                new Date().getUTCDay >= 5 &&
-                demotions.find(
-                    demotionCanidate => member.tag === demotionCanidate.tag
-                )
-            ) {
-                if (
-                    probations.find(
-                        probationCanidate =>
-                            member.tag === probationCanidate.tag
-                    )
-                ) {
-                    member.onProbation = true;
-                } else {
-                    member.dangerOfDemotion = true;
-                }
-            }
-
-            /* prettier-ignore */
-            member.winRatio = ((100 * member.wins) / member.battles).toFixed(2) || null;
-            /* prettier-ignore */
-            member.warParticipationRatio = ((100 * member.wars) / wars).toFixed(2) || null;
-            /* prettier-ignore */
-            member.donationRatio =((100 * member.donations) / member.donationsreceived).toFixed(2) || null;
-
-            return member;
-        });
+    .then(async () => {
+        const inDemotionDateRange = await isInDemotionDateRange();
+        return assembleMembers(
+            await getMembers(),
+            await countWars(),
+            await getPromotions(),
+            inDemotionDateRange ? await getProbations() : [],
+            inDemotionDateRange ? await getDemotions() : [],
+            getWarHistory
+        );
     })
-    .then(members =>
-        fs.writeJSON(
-            './src/assets/templates/raw/members.json',
-            { members },
-            {
-                spaces: 4
-            }
-        )
-    )
     .catch(err => {
         console.log(err);
     })
@@ -87,8 +42,46 @@ client
 const warDateSelect = 'war_participants.wardate >= (SELECT MAX(entrydate) FROM members) - interval \'30\' day';
 /* prettier-ignore */
 const dateSelect =
-    'members._id = to_char((SELECT MAX(entrydate) FROM members), \'YYYY-MM-DD\') || members.tag AND ' +
+    'members._id = to_char((SELECT MAX(entrydate) FROM members), \'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"\') || members.tag AND ' +
     '(war_participants.wardate IS NULL OR ' + warDateSelect + ') '
+
+async function getWarHistory(tag) {
+    /* prettier-ignore */
+    return client
+        .query(
+            'SELECT to_char(wardate, \'YYYY-MM-DD\') as wardate, battlesplayed, wins ' +
+                'FROM war_participants ' +
+                'WHERE tag = $1 AND ' +
+                warDateSelect,
+            [tag]
+        )
+        .then(result => result.rows);
+}
+
+async function countWars() {
+    return client
+        .query(
+            'SELECT COUNT(*) ' +
+                'FROM war_participants ' +
+                'WHERE ' +
+                warDateSelect +
+                ' GROUP BY wardate'
+        )
+        .then(result => result.rows.length);
+}
+
+async function isInDemotionDateRange() {
+    return client
+        .query(
+            'SELECT entrydate, SUM(donations) / COUNT(tag) as average ' +
+                'FROM members ' +
+                'WHERE entrydate = (SELECT MAX(entrydate) FROM members) ' +
+                'GROUP BY entrydate'
+        )
+        .then(
+            result => result.rows[0].average >= DEMOTION_DATE_DONATION_AVERAGE
+        );
+}
 
 async function getMembers() {
     /* prettier-ignore */
@@ -171,7 +164,7 @@ async function getProbations() {
         'WHERE ' + dateSelect +
         'GROUP BY members._id ' +
         'HAVING ' +     
-            '((SELECT COUNT(tag) FROM members mems WHERE mems.tag = members.tag) < $1) OR ' + //new
+            '((SELECT COUNT(tag) FROM members mems WHERE mems.tag = members.tag) <= $1) OR ' + //new
             '(members.donations >= $2) OR ' + //elder donations
             'SUM(war_participants.battlesplayed) >= $3'; //elder wars
     const probation_values = [WEEKS_NEW, ELDER_DONATIONS, ELDER_WARS];

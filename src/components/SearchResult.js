@@ -40,11 +40,20 @@ export const SearchResult = ({ member }) => (
                             </tr>
                             <tr>
                                 <td>War Battles (Last {member.wars})</td>
-                                <td>{`${member.wins}W - ${member.losses}L`}</td>
+                                <td>{`${member.wins ||
+                                    '0'}W - ${member.losses || '0'}L - ${
+                                    member.missed
+                                }M`}</td>
                             </tr>
                             <tr>
-                                <td>Missed War Battles</td>
-                                <td>{member.missed}</td>
+                                <td>War Grade</td>
+                                <td>
+                                    <p>Win Ratio: {member.winRatio}%</p>
+                                    <p>
+                                        Participation:{' '}
+                                        {member.warParticipationRatio}%
+                                    </p>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
