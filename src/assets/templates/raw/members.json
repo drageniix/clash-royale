@@ -15,74 +15,7 @@
             "missed": "0",
             "winRatio": 92.3,
             "warParticipationRatio": 92.9,
-            "donationRatio": 171.1,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 171.1
         },
         {
             "tag": "#PYP8VCRG",
@@ -99,79 +32,7 @@
             "missed": "0",
             "winRatio": 57.1,
             "warParticipationRatio": 100,
-            "donationRatio": 173,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 173
         },
         {
             "tag": "#9LQCCVLY",
@@ -188,69 +49,7 @@
             "missed": "1",
             "winRatio": 81.8,
             "warParticipationRatio": 85.7,
-            "donationRatio": 128.9,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 0,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 128.9
         },
         {
             "tag": "#UVCGVVQC",
@@ -267,39 +66,7 @@
             "missed": "0",
             "winRatio": 33.3,
             "warParticipationRatio": 42.9,
-            "donationRatio": 159.7,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 159.7
         },
         {
             "tag": "#2CCL092UY",
@@ -316,74 +83,7 @@
             "missed": "0",
             "winRatio": 73.3,
             "warParticipationRatio": 92.9,
-            "donationRatio": 32.2,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 2,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 2,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 32.2
         },
         {
             "tag": "#92G8UPJU",
@@ -400,59 +100,7 @@
             "missed": "0",
             "winRatio": 40,
             "warParticipationRatio": 71.4,
-            "donationRatio": 74.3,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 74.3
         },
         {
             "tag": "#C0G2JQ2P",
@@ -469,79 +117,7 @@
             "missed": "0",
             "winRatio": 60,
             "warParticipationRatio": 100,
-            "donationRatio": 110.6,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 2,
-                    "wins": 2
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 110.6
         },
         {
             "tag": "#2YGQQ0V2C",
@@ -558,74 +134,7 @@
             "missed": "0",
             "winRatio": 35.7,
             "warParticipationRatio": 92.9,
-            "donationRatio": 202.5,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 2,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 202.5
         },
         {
             "tag": "#29UGCU0LY",
@@ -643,79 +152,7 @@
             "onProbation": true,
             "winRatio": 64.3,
             "warParticipationRatio": 100,
-            "donationRatio": 46,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 46
         },
         {
             "tag": "#8QCRQ8RR",
@@ -732,74 +169,7 @@
             "missed": "0",
             "winRatio": 53.3,
             "warParticipationRatio": 92.9,
-            "donationRatio": 109.8,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 2,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 2,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 109.8
         },
         {
             "tag": "#RGLVUQJC",
@@ -817,59 +187,7 @@
             "onProbation": true,
             "winRatio": 80,
             "warParticipationRatio": 71.4,
-            "donationRatio": 0,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 0
         },
         {
             "tag": "#YQ820CJ2",
@@ -886,44 +204,7 @@
             "missed": "0",
             "winRatio": 42.9,
             "warParticipationRatio": 50,
-            "donationRatio": 101.3,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 101.3
         },
         {
             "tag": "#88PU8282",
@@ -941,44 +222,7 @@
             "onProbation": true,
             "winRatio": 57.1,
             "warParticipationRatio": 50,
-            "donationRatio": 27.5,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 27.5
         },
         {
             "tag": "#80UUG9R2U",
@@ -995,74 +239,7 @@
             "missed": "0",
             "winRatio": 53.8,
             "warParticipationRatio": 92.9,
-            "donationRatio": 119.8,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 119.8
         },
         {
             "tag": "#V2UCRJ0R",
@@ -1080,24 +257,7 @@
             "onProbation": true,
             "winRatio": 66.7,
             "warParticipationRatio": 21.4,
-            "donationRatio": 26.3,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 26.3
         },
         {
             "tag": "#9VUJVGVU",
@@ -1114,79 +274,7 @@
             "missed": "0",
             "winRatio": 33.3,
             "warParticipationRatio": 100,
-            "donationRatio": 150.6,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 2,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 150.6
         },
         {
             "tag": "#8CJP88JLJ",
@@ -1203,59 +291,7 @@
             "missed": "0",
             "winRatio": 30,
             "warParticipationRatio": 71.4,
-            "donationRatio": 105.6,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 105.6
         },
         {
             "tag": "#8VJUR0R9Q",
@@ -1272,49 +308,7 @@
             "missed": "0",
             "winRatio": 75,
             "warParticipationRatio": 57.1,
-            "donationRatio": 210.5,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 210.5
         },
         {
             "tag": "#9JCJLGQL",
@@ -1331,64 +325,7 @@
             "missed": "2",
             "winRatio": 33.3,
             "warParticipationRatio": 78.6,
-            "donationRatio": 72,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 0,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 0,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 72
         },
         {
             "tag": "#U9UL9U9U",
@@ -1405,79 +342,7 @@
             "missed": "0",
             "winRatio": 28.6,
             "warParticipationRatio": 100,
-            "donationRatio": 163.5,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 163.5
         },
         {
             "tag": "#VPVLQJ2V",
@@ -1494,79 +359,7 @@
             "missed": "0",
             "winRatio": 73.3,
             "warParticipationRatio": 100,
-            "donationRatio": 150,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 2,
-                    "wins": 2
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 150
         },
         {
             "tag": "#8LVVQRQC",
@@ -1583,69 +376,7 @@
             "missed": "1",
             "winRatio": 54.5,
             "warParticipationRatio": 85.7,
-            "donationRatio": 105.8,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 0,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 105.8
         },
         {
             "tag": "#U922UR8",
@@ -1662,49 +393,7 @@
             "missed": "0",
             "winRatio": 25,
             "warParticipationRatio": 57.1,
-            "donationRatio": 42.1,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 42.1
         },
         {
             "tag": "#8LV909VR",
@@ -1721,69 +410,7 @@
             "missed": "0",
             "winRatio": 25,
             "warParticipationRatio": 85.7,
-            "donationRatio": 103.8,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 103.8
         },
         {
             "tag": "#2PUYVLVCU",
@@ -1801,74 +428,7 @@
             "onProbation": true,
             "winRatio": 50,
             "warParticipationRatio": 92.9,
-            "donationRatio": 45,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 0,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 2,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 2,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 45
         },
         {
             "tag": "#2LYG9C9R2",
@@ -1885,64 +445,7 @@
             "missed": "0",
             "winRatio": 16.7,
             "warParticipationRatio": 78.6,
-            "donationRatio": 146.9,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 2,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 146.9
         },
         {
             "tag": "#82J0YJ82Q",
@@ -1960,64 +463,7 @@
             "onProbation": true,
             "winRatio": 44.4,
             "warParticipationRatio": 78.6,
-            "donationRatio": 68.3,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 0,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 0,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 68.3
         },
         {
             "tag": "#9QL0QGLR",
@@ -2034,39 +480,7 @@
             "missed": "0",
             "winRatio": 85.7,
             "warParticipationRatio": 42.9,
-            "donationRatio": 60.7,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 2,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 60.7
         },
         {
             "tag": "#22PUP0C",
@@ -2083,59 +497,7 @@
             "missed": "0",
             "winRatio": 30,
             "warParticipationRatio": 71.4,
-            "donationRatio": 108.8,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 108.8
         },
         {
             "tag": "#88CGCQ8L",
@@ -2152,64 +514,7 @@
             "missed": "0",
             "winRatio": 63.6,
             "warParticipationRatio": 78.6,
-            "donationRatio": 103.5,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 103.5
         },
         {
             "tag": "#8LVQ9RJYJ",
@@ -2226,34 +531,7 @@
             "missed": "0",
             "winRatio": 60,
             "warParticipationRatio": 35.7,
-            "donationRatio": 60,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 60
         },
         {
             "tag": "#LLL9UJ8",
@@ -2270,19 +548,7 @@
             "missed": "0",
             "winRatio": 50,
             "warParticipationRatio": 14.3,
-            "donationRatio": 86.8,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 86.8
         },
         {
             "tag": "#2200VCJ9",
@@ -2299,69 +565,7 @@
             "missed": "0",
             "winRatio": 7.7,
             "warParticipationRatio": 85.7,
-            "donationRatio": 110.6,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 2,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 110.6
         },
         {
             "tag": "#LCRQURRR",
@@ -2379,24 +583,7 @@
             "onProbation": true,
             "winRatio": 0,
             "warParticipationRatio": 21.4,
-            "donationRatio": 30.7,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 30.7
         },
         {
             "tag": "#8YQC89PV",
@@ -2413,39 +600,7 @@
             "missed": "0",
             "winRatio": 28.6,
             "warParticipationRatio": 42.9,
-            "donationRatio": 50,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 2,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 50
         },
         {
             "tag": "#PP2P898R",
@@ -2462,59 +617,7 @@
             "missed": "0",
             "winRatio": 70,
             "warParticipationRatio": 71.4,
-            "donationRatio": 51.9,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 51.9
         },
         {
             "tag": "#PULVR2",
@@ -2532,74 +635,7 @@
             "onProbation": true,
             "winRatio": 57.1,
             "warParticipationRatio": 92.9,
-            "donationRatio": 17.5,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 2,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 17.5
         },
         {
             "tag": "#28GVQ0G98",
@@ -2616,49 +652,7 @@
             "missed": "0",
             "winRatio": 62.5,
             "warParticipationRatio": 57.1,
-            "donationRatio": 74.3,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 74.3
         },
         {
             "tag": "#28PVUV89J",
@@ -2676,34 +670,7 @@
             "onProbation": true,
             "winRatio": 60,
             "warParticipationRatio": 35.7,
-            "donationRatio": 56.3,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 2,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 0,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 56.3
         },
         {
             "tag": "#QPUL2V29",
@@ -2720,29 +687,7 @@
             "missed": "1",
             "winRatio": 66.7,
             "warParticipationRatio": 28.6,
-            "donationRatio": 45,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 0,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 45
         },
         {
             "tag": "#2J920Q0LV",
@@ -2759,24 +704,7 @@
             "missed": "0",
             "winRatio": 66.7,
             "warParticipationRatio": 21.4,
-            "donationRatio": 81.5,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 81.5
         },
         {
             "tag": "#2CL9PUY8",
@@ -2794,44 +722,7 @@
             "onProbation": true,
             "winRatio": 42.9,
             "warParticipationRatio": 50,
-            "donationRatio": 52.5,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 52.5
         },
         {
             "tag": "#9GVPG08G",
@@ -2848,29 +739,7 @@
             "missed": "0",
             "winRatio": 75,
             "warParticipationRatio": 28.6,
-            "donationRatio": 47.8,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 47.8
         },
         {
             "tag": "#922L29UCL",
@@ -2888,54 +757,7 @@
             "eligibleForPromotion": true,
             "winRatio": 22.2,
             "warParticipationRatio": 64.3,
-            "donationRatio": 138.1,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 138.1
         },
         {
             "tag": "#8828PPJP",
@@ -2953,14 +775,7 @@
             "onProbation": true,
             "winRatio": 0,
             "warParticipationRatio": 7.1,
-            "donationRatio": 10,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 0,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 10
         },
         {
             "tag": "#2J0QJG0UV",
@@ -2978,19 +793,7 @@
             "onProbation": true,
             "winRatio": 100,
             "warParticipationRatio": 14.3,
-            "donationRatio": 34.3,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 0,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 34.3
         },
         {
             "tag": "#GJLYVL8Y",
@@ -3007,14 +810,7 @@
             "missed": "0",
             "winRatio": 0,
             "warParticipationRatio": 7.1,
-            "donationRatio": 119.4,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 119.4
         },
         {
             "tag": "#2PLRQUUQQ",
@@ -3031,69 +827,7 @@
             "missed": "0",
             "winRatio": 35.7,
             "warParticipationRatio": 85.7,
-            "donationRatio": 126.3,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 2,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 2,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 126.3
         },
         {
             "tag": "#YCPJJ8G",
@@ -3110,79 +844,7 @@
             "missed": "0",
             "winRatio": 66.7,
             "warParticipationRatio": 100,
-            "donationRatio": 82.5,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-02",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-04",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-06",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-08",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-10",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-12",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-14",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-16",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-18",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-20",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-22",
-                    "battlesplayed": 1,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 2,
-                    "wins": 1
-                },
-                {
-                    "wardate": "2018-11-26",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 1,
-                    "wins": 1
-                }
-            ]
+            "donationRatio": 82.5
         },
         {
             "tag": "#R0UYUCCU",
@@ -3199,19 +861,7 @@
             "missed": "0",
             "winRatio": 0,
             "warParticipationRatio": 14.3,
-            "donationRatio": 143.3,
-            "warHistory": [
-                {
-                    "wardate": "2018-11-24",
-                    "battlesplayed": 1,
-                    "wins": 0
-                },
-                {
-                    "wardate": "2018-11-28",
-                    "battlesplayed": 2,
-                    "wins": 0
-                }
-            ]
+            "donationRatio": 143.3
         }
     ]
 }

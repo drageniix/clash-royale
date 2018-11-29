@@ -17,7 +17,7 @@ export default () => {
     //search query url
     const query = window.location.href.split('#');
     if (query.length > 1) {
-        store.dispatch(setQuery(query[1]));
+        store.dispatch(setQuery('#' + query[1]));
     }
 
     return store;

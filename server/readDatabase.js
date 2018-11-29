@@ -1,5 +1,5 @@
 const { Client } = require('pg');
-const assembleMembers = require('./assembleMember');
+const assembleMembers = require('./assembleMembers');
 
 const ELDER_TROPHIES = 4000,
     MIN_DONATIONS = 100,
@@ -7,7 +7,7 @@ const ELDER_TROPHIES = 4000,
     MAX_MISSED_WARS = 0,
     MIN_WARS = 1,
     ELDER_WARS = 6,
-    WEEKS_NEW = 1,
+    DAYS_NEW = 7,
     DEMOTION_DATE_DONATION_AVERAGE = 200;
 
 const client = new Client({
@@ -164,10 +164,11 @@ async function getProbations() {
         'WHERE ' + dateSelect +
         'GROUP BY members._id ' +
         'HAVING ' +     
-            '((SELECT COUNT(tag) FROM members mems WHERE mems.tag = members.tag) <= $1) OR ' + //new
-            '(members.donations >= $2) OR ' + //elder donations
-            'SUM(war_participants.battlesplayed) >= $3'; //elder wars
-    const probation_values = [WEEKS_NEW, ELDER_DONATIONS, ELDER_WARS];
+            '((SELECT MIN(entrydate) FROM members mems WHERE mems.tag = members.tag) >= '+
+                '((SELECT MAX(entrydate) FROM members mems WHERE mems.tag = members.tag) - interval \'' + DAYS_NEW + '\' day)) OR ' + //new
+            '(members.donations >= $1) OR ' + //elder donations
+            'SUM(war_participants.battlesplayed) >= $2'; //elder wars
+    const probation_values = [ELDER_DONATIONS, ELDER_WARS];
     return client
         .query(probation_query, probation_values)
         .then(result => result.rows);

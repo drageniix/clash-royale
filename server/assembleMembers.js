@@ -1,13 +1,6 @@
 const fs = require('fs-extra');
 
-module.exports = async (
-    members,
-    wars,
-    promotions,
-    probations,
-    demotions,
-    getWarHistory
-) => {
+module.exports = async (members, wars, promotions, probations, demotions) => {
     const assembledMembers = await Promise.all(
         members.map(async member => {
             if (
@@ -40,7 +33,7 @@ module.exports = async (
             /* prettier-ignore */
             member.donationRatio = parseFloat(((100 * member.donations) / member.donationsreceived).toFixed(1)) || 0;
 
-            member.warHistory = await getWarHistory(member.tag);
+            // member.warHistory = await getWarHistory(member.tag);
 
             return member;
         })
