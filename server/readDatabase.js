@@ -7,7 +7,7 @@ const ELDER_TROPHIES = 4000,
     MAX_MISSED_WARS = 0,
     MIN_WARS = 1,
     ELDER_WARS = 6,
-    DAYS_NEW = 7,
+    DAYS_NEW = 4,
     DEMOTION_DATE_DONATION_AVERAGE = 200;
 
 const client = new Client({
