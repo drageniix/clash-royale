@@ -1,3 +1,4 @@
+/*eslint-disable*/
 const { Client } = require('pg');
 const assembleMembers = require('./assembleMembers');
 
@@ -99,9 +100,10 @@ async function getMembers() {
             'SUM(war_participants.wins) AS wins, ' +
             '(SUM(war_participants.battlesplayed) - SUM(war_participants.wins)) AS losses, ' +
             'COUNT(war_participants.wardate) FILTER (WHERE war_participants.battlesplayed = 0) as missed ' +
-        'FROM members ' +
-            'FULL JOIN war_participants ON war_participants.tag = members.tag ' +
-        'WHERE ' + dateSelect +
+    'FROM members ' +
+        'FULL JOIN war_participants ON war_participants.tag = members.tag ' +
+        'WHERE ' +
+        dateSelect +
         'GROUP BY members._id ' +
         'ORDER BY members.clanrank';
 

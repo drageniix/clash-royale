@@ -1,8 +1,8 @@
 const fs = require('fs-extra');
 
-module.exports = async (members, wars, promotions, probations, demotions) => {
-    const assembledMembers = await Promise.all(
-        members.map(async member => {
+module.exports = async (members, wars, promotions, probations, demotions) =>
+    Promise.all(
+        members.map(member => {
             if (
                 promotions.find(
                     promotionCanidate => member.tag === promotionCanidate.tag
@@ -29,7 +29,7 @@ module.exports = async (members, wars, promotions, probations, demotions) => {
             /* prettier-ignore */
             member.winRatio = parseFloat(((100 * member.wins) / (parseInt(member.missed) + parseInt(member.battles))).toFixed(1)) || 0;
             /* prettier-ignore */
-            member.warParticipationRatio = parseFloat(((100 * member.battles) / wars).toFixed(1)) || 0;
+            member.warParticipationRatio = parseFloat(((100 * member.wars) / wars).toFixed(1)) || 0;
             /* prettier-ignore */
             member.donationRatio = parseFloat(((100 * member.donations) / member.donationsreceived).toFixed(1)) || 0;
 
@@ -37,13 +37,12 @@ module.exports = async (members, wars, promotions, probations, demotions) => {
 
             return member;
         })
+    ).then(assembledMembers =>
+        fs.writeJSON(
+            './src/assets/templates/raw/members.json',
+            { members: assembledMembers },
+            {
+                spaces: 4
+            }
+        )
     );
-
-    return fs.writeJSON(
-        './src/assets/templates/raw/members.json',
-        { members: assembledMembers },
-        {
-            spaces: 4
-        }
-    );
-};
