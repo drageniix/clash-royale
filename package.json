@@ -12,6 +12,7 @@
         "build": "webpack -p --env production",
         "preview": "http-server public -s -o",
         "updateDatabase": "node -r dotenv/config server/writeDatabase.js",
+        "restore": "node -r dotenv/config server/restore.js",
         "saveRoles": "node -r dotenv/config server/readDatabase.js"
     },
     "keywords": [],

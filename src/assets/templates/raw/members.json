@@ -47,8 +47,8 @@
             "wins": "9",
             "losses": "2",
             "missed": "1",
-            "winRatio": 81.8,
-            "warParticipationRatio": 85.7,
+            "winRatio": 8.1,
+            "warParticipationRatio": 78.6,
             "donationRatio": 128.9
         },
         {
@@ -82,7 +82,7 @@
             "losses": "4",
             "missed": "0",
             "winRatio": 73.3,
-            "warParticipationRatio": 92.9,
+            "warParticipationRatio": 107.1,
             "donationRatio": 32.2
         },
         {
@@ -116,7 +116,7 @@
             "losses": "6",
             "missed": "0",
             "winRatio": 60,
-            "warParticipationRatio": 100,
+            "warParticipationRatio": 107.1,
             "donationRatio": 110.6
         },
         {
@@ -133,7 +133,7 @@
             "losses": "9",
             "missed": "0",
             "winRatio": 35.7,
-            "warParticipationRatio": 92.9,
+            "warParticipationRatio": 100,
             "donationRatio": 202.5
         },
         {
@@ -168,7 +168,7 @@
             "losses": "7",
             "missed": "0",
             "winRatio": 53.3,
-            "warParticipationRatio": 92.9,
+            "warParticipationRatio": 107.1,
             "donationRatio": 109.8
         },
         {
@@ -273,7 +273,7 @@
             "losses": "10",
             "missed": "0",
             "winRatio": 33.3,
-            "warParticipationRatio": 100,
+            "warParticipationRatio": 107.1,
             "donationRatio": 150.6
         },
         {
@@ -323,8 +323,8 @@
             "wins": "3",
             "losses": "6",
             "missed": "2",
-            "winRatio": 33.3,
-            "warParticipationRatio": 78.6,
+            "winRatio": 10.3,
+            "warParticipationRatio": 64.3,
             "donationRatio": 72
         },
         {
@@ -358,7 +358,7 @@
             "losses": "4",
             "missed": "0",
             "winRatio": 73.3,
-            "warParticipationRatio": 100,
+            "warParticipationRatio": 107.1,
             "donationRatio": 150
         },
         {
@@ -374,8 +374,8 @@
             "wins": "6",
             "losses": "5",
             "missed": "1",
-            "winRatio": 54.5,
-            "warParticipationRatio": 85.7,
+            "winRatio": 5.4,
+            "warParticipationRatio": 78.6,
             "donationRatio": 105.8
         },
         {
@@ -426,8 +426,8 @@
             "losses": "7",
             "missed": "1",
             "onProbation": true,
-            "winRatio": 50,
-            "warParticipationRatio": 92.9,
+            "winRatio": 6.1,
+            "warParticipationRatio": 100,
             "donationRatio": 45
         },
         {
@@ -444,7 +444,7 @@
             "losses": "10",
             "missed": "0",
             "winRatio": 16.7,
-            "warParticipationRatio": 78.6,
+            "warParticipationRatio": 85.7,
             "donationRatio": 146.9
         },
         {
@@ -461,8 +461,8 @@
             "losses": "5",
             "missed": "2",
             "onProbation": true,
-            "winRatio": 44.4,
-            "warParticipationRatio": 78.6,
+            "winRatio": 13.8,
+            "warParticipationRatio": 64.3,
             "donationRatio": 68.3
         },
         {
@@ -479,7 +479,7 @@
             "losses": "1",
             "missed": "0",
             "winRatio": 85.7,
-            "warParticipationRatio": 42.9,
+            "warParticipationRatio": 50,
             "donationRatio": 60.7
         },
         {
@@ -564,7 +564,7 @@
             "losses": "12",
             "missed": "0",
             "winRatio": 7.7,
-            "warParticipationRatio": 85.7,
+            "warParticipationRatio": 92.9,
             "donationRatio": 110.6
         },
         {
@@ -599,7 +599,7 @@
             "losses": "5",
             "missed": "0",
             "winRatio": 28.6,
-            "warParticipationRatio": 42.9,
+            "warParticipationRatio": 50,
             "donationRatio": 50
         },
         {
@@ -634,7 +634,7 @@
             "missed": "0",
             "onProbation": true,
             "winRatio": 57.1,
-            "warParticipationRatio": 92.9,
+            "warParticipationRatio": 100,
             "donationRatio": 17.5
         },
         {
@@ -668,7 +668,7 @@
             "losses": "2",
             "missed": "1",
             "onProbation": true,
-            "winRatio": 60,
+            "winRatio": 20,
             "warParticipationRatio": 35.7,
             "donationRatio": 56.3
         },
@@ -685,8 +685,8 @@
             "wins": "2",
             "losses": "1",
             "missed": "1",
-            "winRatio": 66.7,
-            "warParticipationRatio": 28.6,
+            "winRatio": 15.4,
+            "warParticipationRatio": 21.4,
             "donationRatio": 45
         },
         {
@@ -774,7 +774,7 @@
             "missed": "1",
             "onProbation": true,
             "winRatio": 0,
-            "warParticipationRatio": 7.1,
+            "warParticipationRatio": 0,
             "donationRatio": 10
         },
         {
@@ -791,8 +791,8 @@
             "losses": "0",
             "missed": "1",
             "onProbation": true,
-            "winRatio": 100,
-            "warParticipationRatio": 14.3,
+            "winRatio": 9.1,
+            "warParticipationRatio": 7.1,
             "donationRatio": 34.3
         },
         {
@@ -826,7 +826,7 @@
             "losses": "9",
             "missed": "0",
             "winRatio": 35.7,
-            "warParticipationRatio": 85.7,
+            "warParticipationRatio": 100,
             "donationRatio": 126.3
         },
         {
@@ -843,7 +843,7 @@
             "losses": "5",
             "missed": "0",
             "winRatio": 66.7,
-            "warParticipationRatio": 100,
+            "warParticipationRatio": 107.1,
             "donationRatio": 82.5
         },
         {
@@ -860,7 +860,7 @@
             "losses": "3",
             "missed": "0",
             "winRatio": 0,
-            "warParticipationRatio": 14.3,
+            "warParticipationRatio": 21.4,
             "donationRatio": 143.3
         }
     ]

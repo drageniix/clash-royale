@@ -27,9 +27,9 @@ module.exports = async (members, wars, promotions, probations, demotions) => {
             }
 
             /* prettier-ignore */
-            member.winRatio = parseFloat(((100 * member.wins) / member.battles).toFixed(1)) || 0;
+            member.winRatio = parseFloat(((100 * member.wins) / (member.missed + member.battles)).toFixed(1)) || 0;
             /* prettier-ignore */
-            member.warParticipationRatio = parseFloat(((100 * member.wars) / wars).toFixed(1)) || 0;
+            member.warParticipationRatio = parseFloat(((100 * member.battles) / wars).toFixed(1)) || 0;
             /* prettier-ignore */
             member.donationRatio = parseFloat(((100 * member.donations) / member.donationsreceived).toFixed(1)) || 0;
 
