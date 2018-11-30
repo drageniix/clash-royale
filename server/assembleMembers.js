@@ -38,11 +38,19 @@ module.exports = async (members, wars, promotions, probations, demotions) =>
             return member;
         })
     ).then(assembledMembers =>
-        fs.writeJSON(
-            './src/assets/templates/raw/members.json',
-            { members: assembledMembers },
-            {
-                spaces: 4
-            }
-        )
+        fs
+            .writeJSON(
+                './src/assets/templates/raw/members.json',
+                { members: assembledMembers },
+                {
+                    spaces: 4
+                }
+            )
+            .then(() =>
+                //just data change
+                fs.copyFile(
+                    './src/assets/templates/raw/members.json',
+                    './public/assets/data/members.json'
+                )
+            )
     );

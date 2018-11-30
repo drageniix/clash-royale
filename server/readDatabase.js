@@ -7,9 +7,9 @@ const ELDER_TROPHIES = 4000,
     ELDER_DONATIONS = 400,
     MAX_MISSED_WARS = 0,
     MIN_WARS = 1,
-    ELDER_WARS = 6,
+    ELDER_WARS = 7,
     DAYS_NEW = 4,
-    DEMOTION_DATE_DONATION_AVERAGE = 200;
+    DEMOTION_DATE_DONATION_AVERAGE = 350;
 
 const client = new Client({
     user: process.env.DB_USER,

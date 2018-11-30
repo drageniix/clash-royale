@@ -12,6 +12,7 @@ const client = new Client({
 
 client
     .connect()
+    .then(() => preserveSundays())
     .then(() => updateClan())
     .then(() => updateWarLog())
     .catch(err => {
@@ -20,6 +21,16 @@ client
     .finally(() => {
         client.end();
     });
+
+async function preserveSundays() {
+    // await client.query(
+    //     'DELETE FROM clan WHERE extract(isodow from entrydate) != 7'
+    // );
+
+    await client.query(
+        'DELETE FROM members WHERE extract(isodow from entrydate) != 7'
+    );
+}
 
 async function updateClan() {
     const data = await api.getClanData();
