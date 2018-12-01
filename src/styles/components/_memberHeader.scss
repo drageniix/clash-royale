@@ -1,0 +1,37 @@
+.memberHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    @include respond(phone) {
+        flex-wrap: wrap;
+    }
+
+    &__name {
+        &--user {
+            font-size: 4rem;
+
+            @include respond(phone) {
+                font-size: 3.5rem;
+            }
+        }
+        &--tag {
+            margin-top: -2rem;
+        }
+    }
+
+    &__rank {
+        font-size: 1.75rem;
+
+        &--trophies {
+        }
+
+        &--role {
+            display: inline-block;
+            margin-top: -1rem;
+            font-size: 2.1rem;
+            font-weight: 400;
+        }
+    }
+}

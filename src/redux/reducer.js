@@ -1,6 +1,6 @@
 const defaultState = {
     members: [],
-    query: 'meliaesc',
+    query: '',
     filters: {
         filter: 'none', //none, promotion, probation, demotion
         order: 'rank', //rank, name, donations, wars, wins, missed, role

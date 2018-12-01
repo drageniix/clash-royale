@@ -1,0 +1,40 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { setQuery } from '../../redux/actions';
+import { getSearchResult } from '../../redux/selectors';
+import MemberHeader from '../member/MemberHeader';
+import Grades from '../member/Grades';
+
+const Modal = ({ member, setModalClose }) =>
+    member ? (
+        <div className="modal" onClick={setModalClose}>
+            <div className="modal__content">
+                <MemberHeader member={member} />
+                <Grades member={member} />
+            </div>
+        </div>
+    ) : null;
+
+Modal.propTypes = {
+    member: PropTypes.object,
+    setModalClose: PropTypes.func.isRequired
+};
+
+const mapStateToProps = state => ({
+    member: getSearchResult(state.query, state.members)
+});
+
+const mapDispatchToProps = dispatch => ({
+    setModalClose: event => {
+        if (event.target === event.currentTarget) {
+            event.preventDefault();
+            dispatch(setQuery());
+        }
+    }
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Modal);

@@ -1,0 +1,43 @@
+.grades {
+    display: flex;
+    justify-content: space-around;
+
+    &__item {
+        margin: 1rem;
+        width: 25%;
+        flex: 1 0 auto;
+
+        @include respond(phone) {
+            width: 32%;
+        }
+    }
+
+    &__box {
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        color: #fff;
+
+        &--title {
+            text-transform: uppercase;
+            font-size: 1.4rem;
+        }
+        &--percentage {
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        &--green {
+            background-color: rgb(25, 138, 68);
+        }
+        &--blue {
+            background-color: rgb(196, 182, 60);
+        }
+        &--yellow {
+            background-color: rgba(197, 112, 0, 0.933);
+        }
+        &--red {
+            background-color: rgb(199, 0, 0);
+        }
+    }
+}
