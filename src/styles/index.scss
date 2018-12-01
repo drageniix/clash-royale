@@ -5,11 +5,11 @@
 @import './base/base';
 @import './base/typography';
 @import './components/clanMembers';
-@import './components/description';
+@import './components/memberHeader';
+@import './components/grades';
 @import './components/search';
 @import './components/searchResult';
+@import './components/modal';
 @import './components/filter';
-@import './components/weekSelection';
 @import './layout/header';
 @import './layout/footer';
-@import './layout/grid';

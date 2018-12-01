@@ -166,6 +166,7 @@ module.exports = env => {
             warnings: false
         },
         devServer: {
+            host: '192.168.1.216',
             contentBase: outputPath
         }
     };

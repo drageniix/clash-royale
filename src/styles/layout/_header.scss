@@ -1,6 +1,14 @@
 .header {
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    width: 100%;
     color: $color-grey-dark-3;
+    background-color: white;
     padding-bottom: 2rem;
+    z-index: 100;
+    box-shadow: 0 2px 3px rgba($color-black, 0.1);
+    border-bottom: 1px solid rgba($color-primary, 0.3);
 
     @include respond(phone) {
         padding: 0;
@@ -10,38 +18,31 @@
         width: 100%;
         height: 8.5rem;
         margin-bottom: -2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
 
         @include respond(phone) {
+            flex-wrap: wrap;
             padding: 0;
-            height: auto;
         }
     }
 
     &__brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
         padding: 1.5rem;
-        float: left;
-
-        @include respond(phone) {
-            display: block;
-            float: none;
-        }
 
         &--logo {
-            vertical-align: middle;
-            display: inline-block;
-            padding-right: 1.5rem;
-            height: 5.5rem;
-            width: auto;
-
-            @include respond(tabPort) {
-                height: 4.5rem;
-            }
+            width: 20%;
+            padding: 0.5rem 0;
         }
 
         &--title {
-            vertical-align: middle;
-            display: inline-block;
             font-size: 3rem;
+            white-space: nowrap;
 
             @include respond(tabPort) {
                 font-size: 2.5rem;
@@ -54,17 +55,15 @@
     }
 
     &__links {
-        padding-top: 2.5rem;
-        float: right;
-        vertical-align: top;
         user-select: none;
+        white-space: nowrap;
 
         @include respond(phone) {
-            float: none;
+            margin-top: -1.75rem;
+            padding: 0.75rem 6rem;
+            flex-basis: 100%;
             display: flex;
             justify-content: space-between;
-            padding-bottom: 2rem;
-            padding-top: 1.5rem;
             background-color: $color-primary;
         }
 

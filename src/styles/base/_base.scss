@@ -29,37 +29,18 @@ body {
     min-width: 352px !important;
     width: auto !important;
 }
-main {
-    min-height: 80vh;
-}
+
 .body {
-    margin: 0 auto;
-    width: 95%;
-
-    @include respond(tabPort) {
-        width: 100%;
-    }
+    position: relative;
 }
 
-.hero {
-    width: 100%;
-    background-image: linear-gradient(
-            rgba($color-primary, 0.98),
-            rgba($color-primary, 0.8) 25%,
-            rgba($color-primary-dark, 0.8) 75%,
-            rgba($color-filter, 0.95) 95%,
-            $color-filter
-        ),
-        url('../assets/images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.main {
+    margin: 0 auto;
+    min-height: 80vh;
+    width: 90%;
 
     @include respond(phone) {
-        padding-bottom: 3rem;
-    }
-
-    @include respond(tinyPhone) {
-        padding-bottom: 0;
+        width: 100%;
+        margin-top: 5rem;
     }
 }

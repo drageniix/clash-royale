@@ -1,24 +1,16 @@
 import React from 'react';
-import ClanDescription from '../components/ClanDescription';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import FilterOptions from '../components/FilterOptions';
-import SortOptions from '../components/SortOptions';
-import MemberTable from '../components/MemberTable';
+import Header from '../components/sticky/Header';
+import Modal from '../components/sticky/Modal';
+import Footer from '../components/sticky/Footer';
+import MemberTable from '../components/table/MemberTable';
 
 export const HomePage = () => (
     <div className="body">
         <Header />
-        <main>
-            <div className="hero">
-                <ClanDescription />
-            </div>
-            <FilterOptions id="members" />
-            <table className="clanMembers">
-                <SortOptions />
-                <MemberTable />
-            </table>
-        </main>
+        <Modal />
+        <div className="main">
+            <MemberTable />
+        </div>
         <Footer />
     </div>
 );

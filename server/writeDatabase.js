@@ -23,10 +23,6 @@ client
     });
 
 async function preserveSundays() {
-    // await client.query(
-    //     'DELETE FROM clan WHERE extract(isodow from entrydate) != 7'
-    // );
-
     await client.query(
         'DELETE FROM members WHERE extract(isodow from entrydate) != 7'
     );

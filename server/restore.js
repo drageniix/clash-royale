@@ -10,7 +10,7 @@ const client = new Client({
     port: process.env.DB_PORT
 });
 
-client.connect().then(() => {
+client.connect().then(() =>
     Papa.parse(fs.createReadStream('./server/old.csv'), {
         dynamicTyping: true,
         header: true,
@@ -48,5 +48,5 @@ client.connect().then(() => {
                 client.end();
             });
         }
-    });
-});
+    })
+);

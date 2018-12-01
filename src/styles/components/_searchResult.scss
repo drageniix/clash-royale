@@ -1,118 +1,30 @@
 .searchResult {
-    @include respond(tabLand) {
-        padding: 3rem;
-        width: 100%;
-        flex-basis: 60%;
-    }
+    margin: 1rem auto;
+    border-collapse: collapse;
+    font-size: 1.4rem;
+    transition: all 0.2s;
 
     @include respond(phone) {
-        padding: 3rem;
-        flex-basis: 100%;
+        font-weight: 400;
     }
 
-    &__content {
-        padding: 1rem 1rem;
-        margin: 0 auto;
-        border-radius: 1rem;
-        color: $color-grey-light-1;
-        width: 95%;
-        background-color: rgba($color-grey-light-2, 0.3);
+    td {
+        padding: 0.25rem 1rem;
+        white-space: nowrap;
     }
 
-    &__table {
-        margin: 0 auto;
-        border-collapse: collapse;
-        font-size: 1.4rem;
-        transition: all 0.2s;
+    td:nth-child(even) {
+        @include respond(phone) {
+            padding-left: 0.75rem;
+        }
+    }
+
+    td:nth-child(odd) {
+        text-align: right;
+        border-right: 1px solid $color-grey-dark-1;
 
         @include respond(phone) {
-            font-weight: 400;
+            padding-right: 0.75rem;
         }
-
-        &--wrapper {
-            column-count: 1;
-
-            @include respond(tabLand) {
-                column-count: 2;
-            }
-
-            @include respond(tinyPhone) {
-                column-count: 1;
-            }
-        }
-
-        td {
-            padding: 0.25rem 1rem;
-            white-space: nowrap;
-        }
-
-        td:nth-child(even) {
-            @include respond(phone) {
-                padding-left: 1rem;
-            }
-        }
-
-        td:nth-child(odd) {
-            text-align: right;
-            border-right: 1px solid $color-grey-dark-1;
-
-            @include respond(phone) {
-                padding-right: 1rem;
-            }
-        }
-    }
-}
-
-#coleader {
-    border-bottom: 4px solid $color-coleader;
-    border-top: 4px solid $color-coleader;
-    @include respond(tabLand) {
-        border-top: none;
-    }
-}
-
-#elder {
-    border-bottom: 4px solid $color-elder;
-    border-top: 4px solid $color-elder;
-    @include respond(tabLand) {
-        border-top: none;
-    }
-}
-
-#member {
-    border-bottom: 4px solid $color-member;
-    border-top: 4px solid $color-member;
-    @include respond(tabLand) {
-        border-top: none;
-    }
-}
-
-#promotion {
-    border-bottom: 4px solid $color-promote;
-    border-bottom: 4px solid $color-promote;
-    border-top: 4px solid $color-promote;
-    border-bottom: 4px solid $color-promote;
-    @include respond(tabLand) {
-        border-top: none;
-    }
-}
-
-#probation {
-    border-bottom: 4px solid $color-probation;
-    border-bottom: 4px solid $color-probation;
-    border-top: 4px solid $color-probation;
-    border-bottom: 4px solid $color-probation;
-    @include respond(tabLand) {
-        border-top: none;
-    }
-}
-
-#demotion {
-    border-bottom: 4px solid $color-demote;
-    border-bottom: 4px solid $color-demote;
-    border-top: 4px solid $color-demote;
-    border-bottom: 4px solid $color-demote;
-    @include respond(tabLand) {
-        border-top: none;
     }
 }
