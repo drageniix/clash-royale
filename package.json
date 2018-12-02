@@ -26,15 +26,18 @@
         "pg": "^7.6.1",
         "react": "^16.6.3",
         "react-dom": "^16.6.3",
+        "react-loadable": "^5.5.0",
         "react-redux": "^5.1.1",
         "redux": "^4.0.1",
-        "redux-thunk": "^2.3.0"
+        "redux-thunk": "^2.3.0",
+        "victory": "^31.0.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.1.5",
         "@babel/core": "^7.1.6",
         "@babel/plugin-proposal-class-properties": "^7.1.0",
         "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+        "@babel/plugin-syntax-dynamic-import": "^7.0.0",
         "@babel/preset-env": "^7.1.6",
         "@babel/preset-react": "^7.0.0",
         "autoprefixer": "^9.3.1",

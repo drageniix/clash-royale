@@ -29,7 +29,8 @@ client
             await getPromotions(),
             inDemotionDateRange ? await getProbations() : [],
             inDemotionDateRange ? await getDemotions() : [],
-            getWarHistory
+            getWarHistory,
+            getClanHistory
         );
     })
     .catch(err => {
@@ -50,10 +51,33 @@ async function getWarHistory(tag) {
     /* prettier-ignore */
     return client
         .query(
-            'SELECT to_char(wardate, \'YYYY-MM-DD\') as wardate, battlesplayed, wins ' +
-                'FROM war_participants ' +
-                'WHERE tag = $1 AND ' +
-                warDateSelect,
+            'SELECT ' + 
+                'date_trunc(\'week\', wardate::date) as week, ' +
+                'SUM(wins) AS wins, ' +
+                '(SUM(battlesplayed) - SUM(wins)) AS losses, ' +
+                'COUNT(wardate) AS wars, ' +
+                'COUNT(wardate) FILTER (WHERE battlesplayed = 0) AS missed ' +
+            'FROM war_participants ' +
+            'WHERE tag = $1 ' +
+            'GROUP BY week ' +
+            'ORDER BY week ', 
+            [tag]
+        )
+        .then(result => result.rows);
+}
+
+async function getClanHistory(tag) {
+    /* prettier-ignore */
+    return client
+        .query(
+            'SELECT ' +
+                'date_trunc(\'week\', entrydate::date) as week, ' +
+                'donations, ' +
+                'donationsreceived, ' +
+                'trophies ' +
+            'FROM members ' +
+            'WHERE tag = $1 ' +
+            'ORDER BY week ',
             [tag]
         )
         .then(result => result.rows);

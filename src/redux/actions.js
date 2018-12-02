@@ -1,5 +1,5 @@
 export const setMembers = () => dispatch => {
-    const url = './assets/data/members.json';
+    const url = './assets/data/_members.json';
     fetch(url)
         .then(response => response.json())
         .then(api => {
@@ -9,11 +9,38 @@ export const setMembers = () => dispatch => {
             });
         });
 };
+export const setQuery = (query = '') => {
+    return (dispatch, getState) => {
+        const member = query
+            ? getState().members.find(
+                  member =>
+                      member.playername
+                          .toLowerCase()
+                          .includes(query.toLowerCase().trim()) ||
+                      member.tag === query
+              )
+            : undefined;
 
-export const setQuery = (query = '') => ({
-    type: 'SET_QUERY',
-    query
-});
+        if (member) {
+            const url = './assets/data/' + member.tag.slice(1) + '.json';
+            fetch(url)
+                .then(response => response.json())
+                .then(api => {
+                    dispatch({
+                        type: 'SET_INDIVIDUAL_MEMBER',
+                        individualMember: { ...member, ...api },
+                        query
+                    });
+                });
+        } else {
+            dispatch({
+                type: 'SET_INDIVIDUAL_MEMBER',
+                individualMember: undefined,
+                query
+            });
+        }
+    };
+};
 
 export const setFilter = {
     byNone: () => ({

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { capitalizeRole } from '../../utilities/members';
 
 export const MemberHeader = ({ member }) => (
     <section className="memberHeader">
@@ -12,7 +11,7 @@ export const MemberHeader = ({ member }) => (
             <p className="memberHeader__rank--trophies">
                 Rank #{member.clanrank} ({member.trophies})
             </p>
-            <p className="memberHeader__rank--role">{capitalizeRole(member)}</p>
+            <p className="memberHeader__rank--role capitalize">{member.role}</p>
         </div>
     </section>
 );

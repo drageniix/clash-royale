@@ -1,5 +1,6 @@
 const defaultState = {
     members: [],
+    individualMember: undefined,
     query: '',
     filters: {
         filter: 'none', //none, promotion, probation, demotion
@@ -15,10 +16,11 @@ export default (state = defaultState, action) => {
                 ...state,
                 members: action.members
             };
-        case 'SET_QUERY':
+        case 'SET_INDIVIDUAL_MEMBER':
             return {
                 ...state,
-                query: action.query
+                query: action.query,
+                individualMember: action.individualMember
             };
         case 'SET_FILTER':
             return {

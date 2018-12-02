@@ -1,5 +1,4 @@
 import React from 'react';
-import { capitalizeRole } from '../../utilities/members';
 import { getMembers } from '../../redux/selectors';
 import { setQuery } from '../../redux/actions';
 import { connect } from 'react-redux';
@@ -31,8 +30,8 @@ export class AllMembers extends React.Component {
                             {' '}
                             #{member.clanrank} ({member.trophies})
                         </td>
-                        <td className="align-right">
-                            {capitalizeRole(member)}
+                        <td className="align-right capitalize">
+                            {member.role}
                         </td>
                         <td
                             className="pointer align-left member-link"

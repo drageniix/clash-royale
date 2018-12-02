@@ -92,17 +92,6 @@ export const getMembers = (
         .filter(filterOptions[filter])
         .sort(sortOptions[order][dir]);
 };
-export const getSearchResult = (stateQuery, stateMembers) =>
-    stateQuery
-        ? stateMembers.find(
-              member =>
-                  member.playername
-                      .toLowerCase()
-                      .includes(stateQuery.toLowerCase().trim()) ||
-                  member.tag === stateQuery
-          )
-        : undefined;
-
 export const getDirectionIndicator = ({ order, dir }, currentOrder) =>
     currentOrder
         .replace(/([A-Z])/g, ' $1')

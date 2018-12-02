@@ -1,6 +1,6 @@
 const fs = require('fs-extra');
 
-module.exports = async (members, wars, promotions, probations, demotions) =>
+const currentWeek = async (members, wars, promotions, probations, demotions) =>
     Promise.all(
         members.map(member => {
             if (
@@ -33,24 +33,56 @@ module.exports = async (members, wars, promotions, probations, demotions) =>
             /* prettier-ignore */
             member.donationRatio = parseFloat(((100 * member.donations) / member.donationsreceived).toFixed(1)) || 0;
 
-            // member.warHistory = await getWarHistory(member.tag);
-
             return member;
         })
     ).then(assembledMembers =>
-        fs
-            .writeJSON(
-                './src/assets/templates/raw/members.json',
-                { members: assembledMembers },
-                {
-                    spaces: 4
-                }
-            )
-            .then(() =>
-                //just data change
-                fs.copyFile(
-                    './src/assets/templates/raw/members.json',
-                    './public/assets/data/members.json'
+        fs.writeJSON(
+            './src/assets/templates/raw/_members.json',
+            { members: assembledMembers },
+            {
+                spaces: 4
+            }
+        )
+    );
+
+const getHistory = async (member, getWarHistory, getClanHistory) => {
+    let warSum = 0;
+    const wars = await getWarHistory(member.tag);
+    wars.forEach(war => {
+        for (let key in war) {
+            if (key !== 'week') {
+                war[key] = parseInt(war[key]);
+            }
+        }
+        warSum += war.wars;
+    });
+
+    const clan = await getClanHistory(member.tag);
+
+    return fs.writeJSON(
+        './src/assets/templates/raw/' + member.tag.slice(1) + '.json',
+        { warSum, warHistory: wars, clanHistory: clan },
+        {
+            spaces: 4
+        }
+    );
+};
+
+module.exports = async (
+    members,
+    wars,
+    promotions,
+    probations,
+    demotions,
+    getWarHistory,
+    getClanHistory
+) =>
+    currentWeek(members, wars, promotions, probations, demotions)
+        .then(() =>
+            Promise.all(
+                members.map(member =>
+                    getHistory(member, getWarHistory, getClanHistory)
                 )
             )
-    );
+        )
+        .then(fs.copy('./src/assets/templates/raw', './public/assets/data'));

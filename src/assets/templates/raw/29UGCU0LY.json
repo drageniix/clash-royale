@@ -1,0 +1,54 @@
+{
+    "warSum": 17,
+    "warHistory": [
+        {
+            "week": "2018-10-29T05:00:00.000Z",
+            "wins": 3,
+            "losses": 0,
+            "wars": 3,
+            "missed": 0
+        },
+        {
+            "week": "2018-11-05T06:00:00.000Z",
+            "wins": 3,
+            "losses": 0,
+            "wars": 3,
+            "missed": 0
+        },
+        {
+            "week": "2018-11-12T06:00:00.000Z",
+            "wins": 1,
+            "losses": 3,
+            "wars": 4,
+            "missed": 0
+        },
+        {
+            "week": "2018-11-19T06:00:00.000Z",
+            "wins": 2,
+            "losses": 1,
+            "wars": 3,
+            "missed": 0
+        },
+        {
+            "week": "2018-11-26T06:00:00.000Z",
+            "wins": 3,
+            "losses": 1,
+            "wars": 4,
+            "missed": 0
+        }
+    ],
+    "clanHistory": [
+        {
+            "week": "2018-11-19T06:00:00.000Z",
+            "donations": 116,
+            "donationsreceived": 240,
+            "trophies": 4205
+        },
+        {
+            "week": "2018-11-26T06:00:00.000Z",
+            "donations": 178,
+            "donationsreceived": 354,
+            "trophies": 4601
+        }
+    ]
+}

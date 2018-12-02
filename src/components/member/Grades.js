@@ -19,9 +19,9 @@ export const Grades = ({ member }) => {
             percentage: member.winRatio,
             name: 'Wins',
             details: [
-                { title: 'Wins', value: member.wins },
-                { title: 'Losses', value: member.losses },
-                { title: 'Missed', value: member.missed }
+                { title: 'Wins', value: member.wins || 0 },
+                { title: 'Losses', value: member.losses || 0 },
+                { title: 'Missed', value: member.missed || 0 }
             ]
         },
         {
@@ -35,7 +35,10 @@ export const Grades = ({ member }) => {
         {
             percentage: member.warParticipationRatio,
             name: 'Wars',
-            details: [{ title: 'Monthly', value: member.wars }]
+            details: [
+                { title: 'Month', value: member.wars },
+                { title: 'All Time', value: member.warSum }
+            ]
         }
     ];
 
