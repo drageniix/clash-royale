@@ -35,10 +35,7 @@ export const Grades = ({ member }) => {
         {
             percentage: member.warParticipationRatio,
             name: 'Wars',
-            details: [
-                { title: 'Month', value: member.wars },
-                { title: 'All Time', value: member.warSum }
-            ]
+            details: [{ title: 'Month', value: member.wars }]
         }
     ];
 

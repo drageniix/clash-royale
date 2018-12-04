@@ -5,7 +5,8 @@ const assembleMembers = require('./assembleMembers');
 const ELDER_TROPHIES = 4000,
     MIN_DONATIONS = 100,
     ELDER_DONATIONS = 400,
-    MAX_MISSED_WARS = 0,
+    MIN_MISSED_WARS = 0,
+    MAX_MISSED_WARS = 2,
     MIN_WARS = 1,
     ELDER_WARS = 7,
     DAYS_NEW = 4,
@@ -58,7 +59,8 @@ async function getWarHistory(tag) {
                 'COUNT(wardate) AS wars, ' +
                 'COUNT(wardate) FILTER (WHERE battlesplayed = 0) AS missed ' +
             'FROM war_participants ' +
-            'WHERE tag = $1 ' +
+            'WHERE tag = $1 AND ' +
+                'date_trunc(\'week\', wardate::date) >= date_trunc(\'week\', (SELECT MAX(wardate) from war_participants) - interval \'28\' day) ' +
             'GROUP BY week ' +
             'ORDER BY week ', 
             [tag]
@@ -175,7 +177,7 @@ async function getDemotions() {
                     'war_participants.wardate >= (SELECT MAX(entrydate) FROM members) - interval \'7\' day ' +
                 ') > $3)';
 
-    const demotion_values = [MIN_DONATIONS, MIN_WARS, MAX_MISSED_WARS];
+    const demotion_values = [MIN_DONATIONS, MIN_WARS, MIN_MISSED_WARS];
     return client
         .query(demotion_query, demotion_values)
         .then(result => result.rows);
@@ -190,11 +192,16 @@ async function getProbations() {
         'WHERE ' + dateSelect +
         'GROUP BY members._id ' +
         'HAVING ' +     
+            '(COUNT(war_participants.wardate) FILTER ( ' +  //max missed battle within last week
+                'WHERE '+
+                    'war_participants.battlesplayed = 0 AND ' +
+                    'war_participants.wardate >= (SELECT MAX(entrydate) FROM members) - interval \'7\' day ' +
+                ') <= $1) AND (' +
             '((SELECT MIN(entrydate) FROM members mems WHERE mems.tag = members.tag) >= '+
                 '((SELECT MAX(entrydate) FROM members mems WHERE mems.tag = members.tag) - interval \'' + DAYS_NEW + '\' day)) OR ' + //new
-            '(members.donations >= $1) OR ' + //elder donations
-            'SUM(war_participants.battlesplayed) >= $2'; //elder wars
-    const probation_values = [ELDER_DONATIONS, ELDER_WARS];
+            '(members.donations >= $2) OR ' + //elder donations
+            'SUM(war_participants.battlesplayed) >= $3)'; //elder wars
+    const probation_values = [MAX_MISSED_WARS, ELDER_DONATIONS, ELDER_WARS];
     return client
         .query(probation_query, probation_values)
         .then(result => result.rows);

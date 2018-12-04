@@ -92,11 +92,9 @@ const getHistory = async (member, getWarHistory, getClanHistory) => {
         });
     });
 
-    const warSum = wars.reduce((prev, curr) => prev + parseInt(curr.wars), 0);
-
     return fs.writeJSON(
         './src/assets/templates/raw/' + member.tag.slice(1) + '.json',
-        { warSum, history },
+        { history },
         {
             spaces: 4
         }
