@@ -12,8 +12,12 @@ export class Search extends React.Component {
     render() {
         return (
             <div className="form">
-                <form className="form__content" onSubmit={() => false}>
+                <form
+                    className="form__content"
+                    onSubmit={e => e.preventDefault()}
+                >
                     <input
+                        onSubmit={e => e.preventDefault()}
                         onChange={this.setQuery}
                         value={this.props.query}
                         type="text"

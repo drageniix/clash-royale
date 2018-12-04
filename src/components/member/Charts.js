@@ -7,7 +7,8 @@ import {
     VictoryLegend,
     VictoryAxis,
     VictoryChart,
-    VictoryBar
+    VictoryBar,
+    VictoryLabel
 } from 'victory';
 
 const Charts = ({
@@ -44,9 +45,13 @@ const Charts = ({
                 )}
             </VictoryStack>
             <VictoryBar
+                alignment="start"
                 labels={d => (d.y ? (d.y * normalize.scale).toFixed(0) : '')}
+                labelComponent={
+                    <VictoryLabel dx={40 / clan_donations.length} />
+                }
                 style={{
-                    data: { opacity: 0.7 }
+                    data: { opacity: 0.62 }
                 }}
                 data={clan_donations}
             />

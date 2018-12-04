@@ -34,6 +34,7 @@ export class AllMembers extends React.Component {
                             {member.role}
                         </td>
                         <td
+                            unselectable="on"
                             className="pointer align-left member-link"
                             onClick={this.onClick(member.tag)}
                         >

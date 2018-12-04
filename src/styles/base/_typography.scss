@@ -11,6 +11,10 @@ strong {
     color: $color-bold;
 }
 
+.member-link {
+    user-select: none;
+}
+
 .align-left {
     text-align: left;
 }
