@@ -46,22 +46,57 @@ const currentWeek = async (members, wars, promotions, probations, demotions) =>
     );
 
 const getHistory = async (member, getWarHistory, getClanHistory) => {
-    let warSum = 0;
     const wars = await getWarHistory(member.tag);
-    wars.forEach(war => {
-        for (let key in war) {
-            if (key !== 'week') {
-                war[key] = parseInt(war[key]);
-            }
+    const clan = await getClanHistory(member.tag);
+
+    const history = {
+        normalize: { max: 6, scale: 250 },
+        warHistory: {
+            wins: [],
+            losses: [],
+            missed: []
+        },
+        clanHistory: {
+            donations: []
         }
-        warSum += war.wars;
+    };
+
+    const weeks = wars
+        .map(war => war.week.toISOString())
+        .concat(clan.map(clan => clan.week.toISOString()))
+        .filter((week, i, arr) => arr.indexOf(week) === i);
+
+    weeks.sort();
+
+    weeks.forEach(week => {
+        let foundWar = wars.find(war => war.week.toISOString() === week);
+        let foundClan = clan.find(clan => clan.week.toISOString() === week);
+
+        history.warHistory.wins.push({
+            x: week,
+            y: foundWar ? parseInt(foundWar.wins) : 0
+        });
+        history.warHistory.losses.push({
+            x: week,
+            y: foundWar ? parseInt(foundWar.losses) : 0
+        });
+        history.warHistory.missed.push({
+            x: week,
+            y: foundWar ? parseInt(foundWar.missed) : 0
+        });
+        history.clanHistory.donations.push({
+            x: week,
+            y: foundClan
+                ? parseInt(foundClan.donations) / history.normalize.scale
+                : 0
+        });
     });
 
-    const clan = await getClanHistory(member.tag);
+    const warSum = wars.reduce((prev, curr) => prev + parseInt(curr.wars), 0);
 
     return fs.writeJSON(
         './src/assets/templates/raw/' + member.tag.slice(1) + '.json',
-        { warSum, warHistory: wars, clanHistory: clan },
+        { warSum, history },
         {
             spaces: 4
         }

@@ -1,47 +1,79 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { VictoryArea, VictoryStack, VictoryLegend, VictoryAxis } from 'victory';
+import {
+    VictoryArea,
+    VictoryStack,
+    VictoryLegend,
+    VictoryAxis,
+    VictoryChart,
+    VictoryBar
+} from 'victory';
 
-const Charts = ({ max, weeks, wins, losses, missed }) => (
-    <div>
-        <VictoryStack
+const Charts = ({
+    normalize,
+    warHistory: { wins: war_wins, losses: war_losses, missed: war_missed },
+    clanHistory: { donations: clan_donations }
+}) => (
+    <div className="charts">
+        <VictoryChart
+            scale={{ x: 'time' }}
             animate={{
-                duration: 100
+                delay: 0,
+                duration: 1000
             }}
         >
-            {missed.some(war => war.y > 0) && (
-                <VictoryArea style={{ data: { fill: 'red' } }} data={missed} />
-            )}
-            {losses.some(war => war.y > 0) && (
-                <VictoryArea
-                    style={{ data: { fill: 'orange' } }}
-                    data={losses}
-                />
-            )}
-            {wins.some(war => war.y > 0) && (
-                <VictoryArea style={{ data: { fill: 'green' } }} data={wins} />
-            )}
-            <VictoryAxis tickValues={weeks} />
+            <VictoryStack>
+                {war_missed.some(war => war.y > 0) && (
+                    <VictoryArea
+                        style={{ data: { fill: 'red' } }}
+                        data={war_missed}
+                    />
+                )}
+                {war_losses.some(war => war.y > 0) && (
+                    <VictoryArea
+                        style={{ data: { fill: 'orange' } }}
+                        data={war_losses}
+                    />
+                )}
+                {war_wins.some(war => war.y > 0) && (
+                    <VictoryArea
+                        style={{ data: { fill: 'green' } }}
+                        data={war_wins}
+                    />
+                )}
+            </VictoryStack>
+            <VictoryBar
+                labels={d => (d.y ? (d.y * normalize.scale).toFixed(0) : '')}
+                style={{
+                    data: { opacity: 0.7 }
+                }}
+                data={clan_donations}
+            />
+
             <VictoryAxis
+                tickFormat={d => new Date(d).toDateString().slice(4, 10)}
+            />
+            <VictoryAxis
+                domain={[0, normalize.max]}
                 tickFormat={f => f.toFixed(0)}
-                tickCount={max}
+                tickCount={normalize.max}
                 dependentAxis
                 label="Battles"
             />
-        </VictoryStack>
+        </VictoryChart>
         <VictoryLegend
             height={75}
-            x={125}
-            y={10}
-            title="War Legend"
+            x={60}
+            title="Legend"
             centerTitle
-            orientation="horizontal"
             gutter={20}
-            colorScale={['green', 'orange', 'red']}
+            orientation="horizontal"
+            colorScale={['black', 'green', 'orange', 'red']}
             style={{ border: { stroke: 'black' }, title: { fontSize: 20 } }}
             data={[
-                { name: 'Wins', symbol: { type: 'star' } },
+                { name: 'Donations', symbol: { type: 'square' } },
+                { name: 'Wins' },
                 { name: 'Losses' },
                 { name: 'Missed' }
             ]}
@@ -49,32 +81,12 @@ const Charts = ({ max, weeks, wins, losses, missed }) => (
     </div>
 );
 
-const mapStateToProps = state => {
-    const data = {
-        max: 0,
-        weeks: [],
-        wins: [{ x: 0, y: 0 }],
-        losses: [{ x: 0, y: 0 }],
-        missed: [{ x: 0, y: 0 }]
-    };
-
-    state.individualMember.warHistory.forEach((war, index) => {
-        data.max = Math.max(data.max, war.wins + war.losses + war.missed);
-        data.weeks.push(new Date(war.week).toDateString().slice(4, 10));
-        data.wins.push({ x: index + 1, y: war.wins });
-        data.losses.push({ x: index + 1, y: war.losses });
-        data.missed.push({ x: index + 1, y: war.missed });
-    });
-
-    return data;
-};
+const mapStateToProps = state => state.individualMember.history;
 
 Charts.propTypes = {
-    max: PropTypes.number,
-    weeks: PropTypes.array,
-    wins: PropTypes.array,
-    losses: PropTypes.array,
-    missed: PropTypes.array
+    normalize: PropTypes.number,
+    warHistory: PropTypes.object,
+    clanHistory: PropTypes.object
 };
 
 export default connect(mapStateToProps)(Charts);
