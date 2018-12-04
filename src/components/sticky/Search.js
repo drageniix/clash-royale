@@ -12,10 +12,7 @@ export class Search extends React.Component {
     render() {
         return (
             <div className="form">
-                <form
-                    className="form__content"
-                    onSubmit={e => e.preventDefault()}
-                >
+                <form className="form__content">
                     <input
                         onSubmit={e => e.preventDefault()}
                         onChange={this.setQuery}

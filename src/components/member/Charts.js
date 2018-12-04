@@ -48,7 +48,7 @@ const Charts = ({
                 alignment="start"
                 labels={d => (d.y ? (d.y * normalize.scale).toFixed(0) : '')}
                 labelComponent={
-                    <VictoryLabel dx={40 / clan_donations.length} />
+                    <VictoryLabel dx={50 / clan_donations.length} />
                 }
                 style={{
                     data: { opacity: 0.62 }
@@ -89,7 +89,7 @@ const Charts = ({
 const mapStateToProps = state => state.individualMember.history;
 
 Charts.propTypes = {
-    normalize: PropTypes.number,
+    normalize: PropTypes.object,
     warHistory: PropTypes.object,
     clanHistory: PropTypes.object
 };

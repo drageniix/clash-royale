@@ -9,37 +9,37 @@ export const setMembers = () => dispatch => {
             });
         });
 };
-export const setQuery = (query = '') => {
-    return (dispatch, getState) => {
-        const member = query
-            ? getState().members.find(
-                  member =>
-                      member.playername
-                          .toLowerCase()
-                          .includes(query.toLowerCase().trim()) ||
-                      member.tag === query
-              )
-            : undefined;
 
-        if (member) {
-            const url = './assets/data/' + member.tag.slice(1) + '.json';
-            fetch(url)
-                .then(response => response.json())
-                .then(api => {
-                    dispatch({
-                        type: 'SET_INDIVIDUAL_MEMBER',
-                        individualMember: { ...member, ...api },
-                        query
-                    });
+export const setQuery = (query = '') => (dispatch, getState) => {
+    const oldMember = getState().individualMember;
+    const member = query
+        ? getState().members.find(
+              member =>
+                  member.playername
+                      .toLowerCase()
+                      .includes(query.toLowerCase().trim()) ||
+                  member.tag === query
+          )
+        : undefined;
+
+    if (member && (!oldMember || member.tag !== oldMember.tag)) {
+        const url = './assets/data/' + member.tag.slice(1) + '.json';
+        fetch(url)
+            .then(response => response.json())
+            .then(api => {
+                dispatch({
+                    type: 'SET_INDIVIDUAL_MEMBER',
+                    individualMember: { ...member, ...api },
+                    query
                 });
-        } else {
-            dispatch({
-                type: 'SET_INDIVIDUAL_MEMBER',
-                individualMember: undefined,
-                query
             });
-        }
-    };
+    } else {
+        dispatch({
+            type: 'SET_INDIVIDUAL_MEMBER',
+            individualMember: query && oldMember ? oldMember : undefined,
+            query
+        });
+    }
 };
 
 export const setFilter = {
