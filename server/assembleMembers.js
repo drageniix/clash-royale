@@ -50,7 +50,7 @@ const getHistory = async (member, getWarHistory, getClanHistory) => {
     const clan = await getClanHistory(member.tag);
 
     const history = {
-        normalize: { max: 4, scale: 300 },
+        normalize: { max: 4, scale: 200 },
         warHistory: {
             wins: [],
             losses: [],

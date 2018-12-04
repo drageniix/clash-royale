@@ -48,10 +48,11 @@ const Charts = ({
                 alignment="start"
                 labels={d => (d.y ? (d.y * normalize.scale).toFixed(0) : '')}
                 labelComponent={
-                    <VictoryLabel dx={50 / clan_donations.length} />
+                    <VictoryLabel dx={40 / clan_donations.length + 4} dy={30} />
                 }
                 style={{
-                    data: { opacity: 0.62 }
+                    data: { opacity: 0.62 },
+                    labels: { fill: 'white', fontSize: 11 }
                 }}
                 data={clan_donations}
             />
@@ -62,7 +63,6 @@ const Charts = ({
             <VictoryAxis
                 domain={[0, normalize.max]}
                 tickFormat={f => f.toFixed(0)}
-                tickCount={normalize.max}
                 dependentAxis
                 label="Battles"
             />
