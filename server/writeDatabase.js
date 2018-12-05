@@ -23,7 +23,7 @@ client
     });
 
 async function preserveSundays() {
-    await client.query(
+    return client.query(
         'DELETE FROM members WHERE extract(isodow from entrydate) != 7'
     );
 }
