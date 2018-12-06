@@ -109,13 +109,11 @@ module.exports = async (
     demotions,
     getWarHistory,
     getClanHistory
-) =>
-    currentWeek(members, wars, promotions, probations, demotions)
-        .then(() =>
-            Promise.all(
-                members.map(member =>
-                    getHistory(member, getWarHistory, getClanHistory)
-                )
-            )
-        )
-        .then(fs.copy('./src/assets/templates/raw', './public/assets/data'));
+) => {
+    await currentWeek(members, wars, promotions, probations, demotions);
+    await Promise.all(
+        members.map(member => getHistory(member, getWarHistory, getClanHistory))
+    );
+
+    return fs.copy('./src/assets/templates/raw', './public/assets/data');
+};
