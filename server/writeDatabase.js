@@ -1,26 +1,12 @@
-/*eslint-disable*/
-const { Client } = require('pg');
-const api = require('./api');
+const api = require('./retrieveAPI');
+let client;
 
-const client = new Client({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASS,
-    port: process.env.DB_PORT
-});
-
-client
-    .connect()
-    .then(() => preserveSundays())
-    .then(() => updateClan())
-    .then(() => updateWarLog())
-    .catch(err => {
-        console.log(err);
-    })
-    .finally(() => {
-        client.end();
-    });
+module.exports = async importedClient => {
+    client = importedClient;
+    await preserveSundays();
+    await updateClan();
+    await updateWarLog();
+};
 
 async function preserveSundays() {
     return client.query(

@@ -1,5 +1,6 @@
 const defaultState = {
     members: [],
+    history: undefined,
     individualMember: undefined,
     query: '',
     filters: {
@@ -21,6 +22,11 @@ export default (state = defaultState, action) => {
                 ...state,
                 query: action.query,
                 individualMember: action.individualMember
+            };
+        case 'SET_INDIVIDUAL_MEMBER_HISTORY':
+            return {
+                ...state,
+                history: action.history
             };
         case 'SET_FILTER':
             return {

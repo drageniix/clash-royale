@@ -5,8 +5,10 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const ResponsiveJSONWebpackPlugin = require('responsive-json-webpack-plugin');
-//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+    .BundleAnalyzerPlugin;
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 const path = require('path');
 
 const outputPath = path.resolve(__dirname, 'public/');
@@ -45,12 +47,13 @@ function getPlugins(isProduction) {
             filename: './styles/[hash].css',
             chunkFilename: '[hash].css'
         }),
-        new ResponsiveJSONWebpackPlugin()
+        new ResponsiveJSONWebpackPlugin(),
+        new Dotenv()
     ];
 
     if (isProduction) {
         plugins.unshift(
-            //new BundleAnalyzerPlugin(),
+            new BundleAnalyzerPlugin(),
             new CleanWebpackPlugin(['public'], {
                 verbose: false
             })

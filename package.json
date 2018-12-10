@@ -11,9 +11,7 @@
         "start": "webpack-dev-server",
         "build": "webpack -p --env production",
         "preview": "http-server public -s -o",
-        "updateDatabase": "node -r dotenv/config server/writeDatabase.js",
-        "restore": "node -r dotenv/config server/restore.js",
-        "saveRoles": "node -r dotenv/config server/readDatabase.js"
+        "updateData": "node -r dotenv/config server/updateData.js"
     },
     "keywords": [],
     "author": "Ashley Barrow",
@@ -21,6 +19,8 @@
     "dependencies": {
         "@babel/polyfill": "^7.0.0",
         "dotenv": "^6.1.0",
+        "dotenv-webpack": "^1.5.7",
+        "firebase": "^5.7.0",
         "fs-extra": "^7.0.1",
         "node-fetch": "^2.3.0",
         "pg": "^7.6.1",

@@ -12,24 +12,26 @@ const Charts = Loadable({
     loading: Loading
 });
 
-const Modal = ({ member, setModalClose }) =>
+const Modal = ({ member, history, setModalClose }) =>
     member ? (
         <div className="modal" onClick={setModalClose}>
             <div className="modal__content">
                 <MemberHeader member={member} />
                 <Grades member={member} />
-                <Charts />
+                {history && <Charts />}
             </div>
         </div>
     ) : null;
 
 Modal.propTypes = {
     member: PropTypes.object,
+    history: PropTypes.object,
     setModalClose: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
-    member: state.individualMember
+    member: state.individualMember,
+    history: state.history
 });
 
 const mapDispatchToProps = dispatch => ({

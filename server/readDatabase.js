@@ -1,6 +1,4 @@
-/*eslint-disable*/
-const { Client } = require('pg');
-const assembleMembers = require('./assembleMembers');
+const assembleMembers = require('./exportData');
 
 const ELDER_TROPHIES = 4000,
     MIN_DONATIONS = 100,
@@ -12,34 +10,32 @@ const ELDER_TROPHIES = 4000,
     DAYS_NEW = 4,
     DEMOTION_DATE_DONATION_AVERAGE = 350;
 
-const client = new Client({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASS,
-    port: process.env.DB_PORT
-});
+let client
 
-client
-    .connect()
-    .then(async () => {
-        const inDemotionDateRange = await isInDemotionDateRange();
-        return assembleMembers(
-            await getMembers(),
-            await countWars(),
-            await getPromotions(),
-            inDemotionDateRange ? await getProbations() : [],
-            inDemotionDateRange ? await getDemotions() : [],
-            getWarHistory,
-            getClanHistory
-        );
-    })
-    .catch(err => {
-        console.log(err);
-    })
-    .finally(() => {
-        client.end();
-    });
+module.exports = async importedClient => {
+    client = importedClient
+
+    const inDemotionDateRange = await isInDemotionDateRange();
+    const members = await getMembers();
+
+    await assembleMembers.currentWeek(
+        members,
+        await countWars(),
+        await getPromotions(),
+        inDemotionDateRange ? await getProbations() : [],
+        inDemotionDateRange ? await getDemotions() : []
+    );
+
+    await Promise.all(
+        members.map(member =>
+            assembleMembers.getHistory(
+                member,
+                getWarHistory,
+                getClanHistory
+            )
+        )
+    );
+}
 
 /* prettier-ignore */
 const warDateSelect = 'war_participants.wardate >= (SELECT MAX(entrydate) FROM members) - interval \'30\' day';

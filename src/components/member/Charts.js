@@ -86,7 +86,7 @@ const Charts = ({
     </div>
 );
 
-const mapStateToProps = state => state.individualMember.history;
+const mapStateToProps = state => state.history;
 
 Charts.propTypes = {
     normalize: PropTypes.object,
