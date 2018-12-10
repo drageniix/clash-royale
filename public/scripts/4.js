@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{542:function(e,a,o){var s=o(413);o(420);s.initializeApp({apiKey:"AIzaSyAXZXtMGXMuDT7NoPEeHRnlAZ9VKA6MrQ4",authDomain:"clash-royale-23ee2.firebaseapp.com",databaseURL:"https://clash-royale-23ee2.firebaseio.com",projectId:"clash-royale-23ee2",storageBucket:"clash-royale-23ee2.appspot.com",messagingSenderId:"906456046870"});var t=s.firestore();t.settings({timestampsInSnapshots:!0}),e.exports=t.collection("history")}}]);
-//# sourceMappingURL=4.js.map

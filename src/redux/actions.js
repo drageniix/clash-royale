@@ -1,13 +1,14 @@
+const db = require('../../server/firebase');
+
 export const setMembers = () => dispatch => {
-    const url = './assets/data/_members.json';
-    fetch(url)
-        .then(response => response.json())
-        .then(api =>
+    db.doc('members')
+        .get()
+        .then(api => {
             dispatch({
                 type: 'SET_MEMBERS',
-                members: api.members
-            })
-        );
+                members: api.data().members
+            });
+        });
 };
 
 export const setQuery = (query = '') => (dispatch, getState) => {
@@ -29,17 +30,16 @@ export const setQuery = (query = '') => (dispatch, getState) => {
     });
 
     if (member && (!oldMember || member.tag !== oldMember.tag)) {
-        import('../../server/firebase').then(db =>
-            db
-                .doc(member.tag.slice(1))
-                .get()
-                .then(api =>
-                    dispatch({
-                        type: 'SET_INDIVIDUAL_MEMBER_HISTORY',
-                        history: api.data()
-                    })
-                )
-        );
+        db.doc(member.tag.slice(1))
+            .get()
+            .then(api =>
+                dispatch({
+                    type: 'SET_INDIVIDUAL_MEMBER_HISTORY',
+                    history: api.data()
+                })
+            );
+    } else {
+        dispatch;
     }
 };
 
