@@ -87,11 +87,8 @@ export const isPastDate = stateCurrent => stateCurrent === 0;
 export const getMembers = (
     stateMembers,
     { filter = 'none', order = 'rank', dir = 'ascending' } = {}
-) => {
-    return stateMembers
-        .filter(filterOptions[filter])
-        .sort(sortOptions[order][dir]);
-};
+) => stateMembers.filter(filterOptions[filter]).sort(sortOptions[order][dir]);
+
 export const getDirectionIndicator = ({ order, dir }, currentOrder) =>
     currentOrder
         .replace(/([A-Z])/g, ' $1')

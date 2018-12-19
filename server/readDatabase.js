@@ -10,10 +10,10 @@ const ELDER_TROPHIES = 4000,
     DAYS_NEW = 4,
     DEMOTION_DATE_DONATION_AVERAGE = 350;
 
-let client
+let client;
 
 module.exports = async importedClient => {
-    client = importedClient
+    client = importedClient;
 
     const inDemotionDateRange = await isInDemotionDateRange();
     const members = await getMembers();
@@ -28,14 +28,10 @@ module.exports = async importedClient => {
 
     await Promise.all(
         members.map(member =>
-            assembleMembers.getHistory(
-                member,
-                getWarHistory,
-                getClanHistory
-            )
+            assembleMembers.getHistory(member, getWarHistory, getClanHistory)
         )
     );
-}
+};
 
 /* prettier-ignore */
 const warDateSelect = 'war_participants.wardate >= (SELECT MAX(entrydate) FROM members) - interval \'30\' day';
@@ -122,10 +118,9 @@ async function getMembers() {
             'SUM(war_participants.wins) AS wins, ' +
             '(SUM(war_participants.battlesplayed) - SUM(war_participants.wins)) AS losses, ' +
             'COUNT(war_participants.wardate) FILTER (WHERE war_participants.battlesplayed = 0) as missed ' +
-    'FROM members ' +
+        'FROM members ' +
         'FULL JOIN war_participants ON war_participants.tag = members.tag ' +
-        'WHERE ' +
-        dateSelect +
+        'WHERE ' + dateSelect +
         'GROUP BY members._id ' +
         'ORDER BY members.clanrank';
 

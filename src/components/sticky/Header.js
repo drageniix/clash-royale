@@ -10,8 +10,10 @@ export const Header = () => (
             </div>
             <Search />
             <div className="header__links">
-                <a href="">Discord</a>
-                <a href="https://royaleapi.com/clan/PGVRPVG">All Stats</a>
+                <a href="https://link.brawlstars.com/invite/band/en?tag=CJLQ2V&token=stt3a7es">
+                    Brawlstars
+                </a>
+                <a href="https://discord.gg/XvFGctt">Discord</a>
             </div>
         </div>
     </header>

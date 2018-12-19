@@ -17,7 +17,7 @@ const getDate = dateString => {
     }
 };
 
-const getClanData = () =>
+module.exports.getClanData = () =>
     fetch('https://api.clashroyale.com/v1/clans/%23' + clanTag, {
         headers
     })
@@ -27,7 +27,7 @@ const getClanData = () =>
             ...data
         }));
 
-const getWarLog = lastWar =>
+module.exports.getWarLog = lastWar =>
     fetch('https://api.clashroyale.com/v1/clans/%23' + clanTag + '/warlog', {
         headers
     })
@@ -56,8 +56,3 @@ const getWarLog = lastWar =>
                     };
                 })
         );
-
-module.exports = {
-    getWarLog,
-    getClanData
-};

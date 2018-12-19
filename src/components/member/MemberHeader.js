@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 export const MemberHeader = ({ member }) => (
     <section className="memberHeader">
@@ -20,4 +21,8 @@ MemberHeader.propTypes = {
     member: PropTypes.object
 };
 
-export default MemberHeader;
+const mapStateToProps = state => ({
+    member: state.individualMember
+});
+
+export default connect(mapStateToProps)(MemberHeader);

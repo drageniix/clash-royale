@@ -32,13 +32,45 @@ module.exports.currentWeek = async (
                 }
             }
 
-            /* prettier-ignore */
-            member.winRatio = parseFloat(((100 * member.wins) / (parseInt(member.missed) + parseInt(member.battles))).toFixed(1)) || 0;
-            /* prettier-ignore */
-            member.warParticipationRatio = parseFloat(((100 * member.wars) / wars).toFixed(1)) || 0;
-            /* prettier-ignore */
-            member.donationRatio = parseFloat(((100 * member.donations) / member.donationsreceived).toFixed(1)) || 0;
-
+            member.ratios = [
+                {
+                    percentage:
+                        parseFloat(
+                            (
+                                (100 * member.wins) /
+                                (parseInt(member.missed) +
+                                    parseInt(member.battles))
+                            ).toFixed(1)
+                        ) || 0,
+                    name: 'Wins',
+                    details: [
+                        { title: 'Wins', value: member.wins || 0 },
+                        { title: 'Losses', value: member.losses || 0 },
+                        { title: 'Missed', value: member.missed || 0 }
+                    ]
+                },
+                {
+                    percentage:
+                        parseFloat(((100 * member.wars) / wars).toFixed(1)) ||
+                        0,
+                    name: 'Donations',
+                    details: [
+                        { title: 'Given', value: member.donations },
+                        { title: 'Received', value: member.donationsreceived }
+                    ]
+                },
+                {
+                    percentage:
+                        parseFloat(
+                            (
+                                (100 * member.donations) /
+                                member.donationsreceived
+                            ).toFixed(1)
+                        ) || 0,
+                    name: 'Wars',
+                    details: [{ title: 'Month', value: member.wars }]
+                }
+            ];
             return member;
         })
     });
