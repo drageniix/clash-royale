@@ -1,4 +1,4 @@
-const assembleMembers = require('./exportData');
+const updateFirestore = require('./exportData');
 
 const ELDER_TROPHIES = 4000,
     MIN_DONATIONS = 100,
@@ -18,18 +18,14 @@ module.exports = async importedClient => {
     const inDemotionDateRange = await isInDemotionDateRange();
     const members = await getMembers();
 
-    await assembleMembers.currentWeek(
+    await updateFirestore(
         members,
         await countWars(),
         await getPromotions(),
         inDemotionDateRange ? await getProbations() : [],
-        inDemotionDateRange ? await getDemotions() : []
-    );
-
-    await Promise.all(
-        members.map(member =>
-            assembleMembers.getHistory(member, getWarHistory, getClanHistory)
-        )
+        inDemotionDateRange ? await getDemotions() : [],
+        getWarHistory,
+        getClanHistory
     );
 };
 

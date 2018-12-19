@@ -46,7 +46,7 @@ Grades.propTypes = {
 };
 
 const mapStateToProps = state => ({
-    ratios: state.individualMember.ratios
+    ratios: state.history.ratios
 });
 
 export default connect(mapStateToProps)(Grades);

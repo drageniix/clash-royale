@@ -17,7 +17,7 @@ const Modal = ({ member, history, setModalClose }) =>
         <div className="modal" onClick={setModalClose}>
             <div className="modal__content">
                 <MemberHeader />
-                <Grades />
+                {history && <Grades />}
                 {history && <Charts />}
             </div>
         </div>

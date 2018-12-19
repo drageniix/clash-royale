@@ -1,84 +1,109 @@
 const db = require('./firebase');
 
-module.exports.currentWeek = async (
+module.exports = async (
     members,
-    wars,
+    totalWars,
     promotions,
     probations,
-    demotions
-) =>
-    db.doc('members').set({
-        members: members.map(member => {
-            if (
-                promotions.find(
-                    promotionCanidate => member.tag === promotionCanidate.tag
-                )
-            ) {
-                member.eligibleForPromotion = true;
-            } else if (
-                demotions.find(
-                    demotionCanidate => member.tag === demotionCanidate.tag
-                )
-            ) {
-                if (
-                    probations.find(
-                        probationCanidate =>
-                            member.tag === probationCanidate.tag
-                    )
-                ) {
-                    member.onProbation = true;
-                } else {
-                    member.dangerOfDemotion = true;
-                }
-            }
+    demotions,
+    getWarHistory,
+    getClanHistory
+) => {
+    const processedMembers = await Promise.all(
+        members.map(async member => {
+            getRole(member, promotions, demotions, probations);
+            const ratios = getRatios(member, totalWars);
+            const history = await getHistory(
+                member,
+                getWarHistory,
+                getClanHistory
+            );
 
-            member.ratios = [
-                {
-                    percentage:
-                        parseFloat(
-                            (
-                                (100 * member.wins) /
-                                (parseInt(member.missed) +
-                                    parseInt(member.battles))
-                            ).toFixed(1)
-                        ) || 0,
-                    name: 'Wins',
-                    details: [
-                        { title: 'Wins', value: member.wins || 0 },
-                        { title: 'Losses', value: member.losses || 0 },
-                        { title: 'Missed', value: member.missed || 0 }
-                    ]
-                },
-                {
-                    percentage:
-                        parseFloat(((100 * member.wars) / wars).toFixed(1)) ||
-                        0,
-                    name: 'Donations',
-                    details: [
-                        { title: 'Given', value: member.donations },
-                        { title: 'Received', value: member.donationsreceived }
-                    ]
-                },
-                {
-                    percentage:
-                        parseFloat(
-                            (
-                                (100 * member.donations) /
-                                member.donationsreceived
-                            ).toFixed(1)
-                        ) || 0,
-                    name: 'Wars',
-                    details: [{ title: 'Month', value: member.wars }]
-                }
-            ];
-            return member;
+            member.warRatio = ratios[2].percentage + ratios[0].percentage;
+
+            return db
+                .doc(member.tag.slice(1))
+                .set({
+                    ...history,
+                    ratios
+                })
+                .then(() => member);
         })
+    );
+
+    return db.doc('members').set({
+        members: processedMembers
     });
+};
 
-module.exports.getHistory = async (member, getWarHistory, getClanHistory) => {
-    const wars = await getWarHistory(member.tag);
-    const clan = await getClanHistory(member.tag);
+function getRole(member, promotions, demotions, probations) {
+    if (
+        promotions.find(
+            promotionCanidate => member.tag === promotionCanidate.tag
+        )
+    ) {
+        member.eligibleForPromotion = true;
+    } else if (
+        demotions.find(demotionCanidate => member.tag === demotionCanidate.tag)
+    ) {
+        if (
+            probations.find(
+                probationCanidate => member.tag === probationCanidate.tag
+            )
+        ) {
+            member.onProbation = true;
+        } else {
+            member.dangerOfDemotion = true;
+        }
+    }
+}
 
+function getRatios(member, totalWars) {
+    const ratios = [
+        {
+            percentage:
+                parseFloat(
+                    (
+                        (100 * member.wins) /
+                        (parseInt(member.missed) + parseInt(member.battles))
+                    ).toFixed(1)
+                ) || 0,
+            name: 'Wins',
+            details: [
+                { title: 'Wins', value: member.wins || 0 },
+                { title: 'Losses', value: member.losses || 0 },
+                { title: 'Missed', value: member.missed || 0 }
+            ]
+        },
+        {
+            percentage:
+                parseFloat(
+                    (
+                        (100 * member.donations) /
+                        member.donationsreceived
+                    ).toFixed(1)
+                ) || 0,
+            name: 'Donations',
+            details: [
+                { title: 'Given', value: member.donations },
+                {
+                    title: 'Received',
+                    value: member.donationsreceived
+                }
+            ]
+        },
+        {
+            percentage:
+                parseFloat(((100 * member.wars) / totalWars).toFixed(1)) || 0,
+            name: 'Wars',
+            details: [{ title: 'Month', value: member.wars }]
+        }
+    ];
+
+    return ratios;
+}
+
+async function getHistory(member, getWarHistory, getClanHistory) {
     const history = {
         normalize: { max: 4, scale: 200 },
         warHistory: {
@@ -90,6 +115,9 @@ module.exports.getHistory = async (member, getWarHistory, getClanHistory) => {
             donations: []
         }
     };
+
+    const wars = await getWarHistory(member.tag);
+    const clan = await getClanHistory(member.tag);
 
     const weeks = wars
         .map(war => war.week.toISOString())
@@ -122,5 +150,5 @@ module.exports.getHistory = async (member, getWarHistory, getClanHistory) => {
         });
     });
 
-    return db.doc(member.tag.slice(1)).set(history);
-};
+    return history;
+}

@@ -57,14 +57,8 @@ const sortOptions = {
         }
     },
     wars: {
-        ascending: (a, b) =>
-            b.warParticipationRatio +
-            b.winRatio -
-            (a.warParticipationRatio + a.winRatio),
-        descending: (a, b) =>
-            a.warParticipationRatio +
-            a.winRatio -
-            (b.warParticipationRatio + b.winRatio)
+        ascending: (a, b) => b.warRatio - a.warRatio,
+        descending: (a, b) => a.warRatio - b.warRatio
     }
 };
 
