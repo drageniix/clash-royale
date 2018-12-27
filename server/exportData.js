@@ -11,15 +11,14 @@ module.exports = async (
 ) => {
     const processedMembers = await Promise.all(
         members.map(async member => {
-            getRole(member, promotions, demotions, probations);
-            const ratios = getRatios(member, totalWars);
             const history = await getHistory(
                 member,
                 getWarHistory,
                 getClanHistory
             );
 
-            member.warRatio = ratios[2].percentage + ratios[0].percentage;
+            const ratios = getRatios(member, totalWars);
+            getRole(member, promotions, demotions, probations, ratios);
 
             return db
                 .doc(member.tag.slice(1))
@@ -36,7 +35,9 @@ module.exports = async (
     });
 };
 
-function getRole(member, promotions, demotions, probations) {
+function getRole(member, promotions, demotions, probations, ratios) {
+    member.warRatio = ratios[2].percentage + ratios[0].percentage;
+
     if (
         promotions.find(
             promotionCanidate => member.tag === promotionCanidate.tag
